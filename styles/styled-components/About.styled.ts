@@ -1,0 +1,154 @@
+'use client'
+import styled from "styled-components";
+import { device } from "./Breakpoints";
+import { padding, selection, titleLine } from "./Helpers";
+import { titleFont } from './Helpers'
+
+export const StyledAbout = styled.section`
+    &.about {
+        position: relative;
+        min-height: 100vh;
+        width: 100%;
+        display: flex;
+        grid-gap: 50px;
+        margin-top: 100px;
+        @media ${device.md} {
+            flex-direction: column;
+        }
+        align-items: center;
+        color: var(--white);
+        overflow-x: hidden;
+        ${padding()}
+        .about__left-col {
+            position: relative;
+            max-width: 1000px;
+            h1 {
+                text-transform: capitalize;
+                font-family: var(--font-roboto);
+                margin-bottom: 25px;
+                position: relative;
+                /* features */
+                ${selection()}
+                ${titleFont(false)}
+                ${titleLine()}
+            }
+            p {
+                font-family: var(--font-roboto-mono);
+                line-height: 2.5rem;
+                color: var(--c2);
+                &:last-child {
+                    margin-top: 20px;
+                    color: var(--c2);
+                    opacity: 0.3;
+                }
+            }
+            &::after {
+                content: 'about me';
+                text-transform: capitalize;
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                font-size: clamp(100px, 7vw, 200px);
+                word-wrap: break-word;
+                color: transparent;
+                -webkit-text-stroke: 2px var(--white);
+                /* transform: rotate(90deg); */
+                display: none;
+                z-index: -1;
+                opacity: 0.05;
+                font-weight: 900;
+                @media (max-width: 350px) {
+                    font-size: 50rem;
+                }
+            }
+        }
+        .about__right-col {
+            text-align: center;
+            margin: 0 auto;
+            max-width: 300px;
+            max-height: 300px;
+            min-width: 250px;
+            min-height: 250px;
+            object-fit: cover;
+            position: relative;
+            /* border: 2px solid var(--orchid);
+            border-radius: 50%; */
+            padding: 14px;
+            &::after {
+                content: '';
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                border: 2px solid var(--orchid);
+                background: var(--orchid);
+                object-fit: cover;
+                z-index: -1;
+                border-radius: 50%;
+                padding: 10px;
+                opacity: 0.1;
+                border: 4px solid var(--c2);
+                transition: all 0.4s ease-in-out;
+                transform-origin: 50% 50%;
+            }
+            &::before {
+                content: '';
+                width: 90%;
+                height: 90%;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                border: 2px solid var(--orchid);
+                background: var(--orchid);
+                object-fit: cover;
+
+                border-radius: 50%;
+                padding: 10px;
+                opacity: 0.1;
+                border: 4px solid var(--c2);
+                transition: all 0.2s ease-in-out;
+                transform-origin: 50% 50%;
+            }
+            @media ${device.xs} {
+                max-width: 250px;
+                max-height: 250px;
+            }
+            img:first-of-type {
+                user-select: none;
+                width: 100%;
+                height: 100%;
+                border: 4px solid var(--c2);
+                border-radius: 50%;
+            }
+
+            .icon {
+                position: absolute;
+                background: var(--c2);
+                mix-blend-mode: overlay;
+                bottom: 30px;
+                left: 50%;
+                transform: translate(-50%, 0%);
+                opacity: 0.5;
+                width: 25px;
+                height: 25px;
+                @media ${device.xs} {
+                    bottom: 28px;
+                }
+                transition: all 0.25s ease-in-out;
+            }
+            &:hover {
+                .icon {
+                    opacity: 1;
+                }
+                &::after,
+                &::before {
+                    transform: translate(-50%, -50%) scale(1.05);
+                    z-index: -1;
+                }
+            }
+        }
+    }
+` 
