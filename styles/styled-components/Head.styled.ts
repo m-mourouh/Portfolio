@@ -41,15 +41,19 @@ export const StyledSelection = styled.section`
             position: relative;
             font-family: var(--font-roboto);
             text-transform: uppercase;
+            /* background: -webkit-linear-gradient(0turn, var(--orchid), black);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent; */
+            opacity: 1;
             ${titleFont()}
             span:first-of-type {
-                ${selection()}
+                ${selection()}/* color: var(--orchid); */
             }
 
             span:last-of-type {
                 ${selection(false, '#fff')}
             }
-            /* &::after {
+            &::after {
                 content: '${data.user.name}';
                 position: absolute;
                 top: -15px;
@@ -66,7 +70,7 @@ export const StyledSelection = styled.section`
                 @media (max-width: 350px) {
                     font-size: clamp(25px, 4vw, 40px);
                 }
-            } */
+            }
         }
         h5 {
             font-family: var(--font-roboto);
@@ -99,6 +103,7 @@ export const StyledSelection = styled.section`
             /* font-size: 0.9rem; */
             max-width: 880px;
             color: var(--c2);
+            line-height: 2.5rem;
         }
         a {
             display: block;

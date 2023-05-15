@@ -14,8 +14,11 @@ export default function NavBar() {
         setToggle((prevValue) => !prevValue)
     }
     return (
-        <StyledNav className={fira_code.variable}>
-            <div className={toggle ? 'overlay active' : 'overlay '} onClick={toggleMenu}></div>
+        <StyledNav>
+            <div
+                className={toggle ? 'overlay active' : 'overlay '}
+                onClick={toggleMenu}
+            ></div>
             <Link href="/">
                 <Image src={Logo} alt={data.user.name} width={50} height={50} />
             </Link>
@@ -23,8 +26,12 @@ export default function NavBar() {
                 <ul>
                     {data.nav.map((item, index) => (
                         <li key={index}>
-                            <Link href={`#${item}`} onClick={toggleMenu}>
-                                {item}
+                            <Link
+                                className={fira_code.variable}
+                                href={`#${item.toLowerCase()}`}
+                                onClick={toggleMenu}
+                            >
+                                {item.toLowerCase()}
                             </Link>
                         </li>
                     ))}
@@ -33,9 +40,9 @@ export default function NavBar() {
                     className={`link ${fira_code.variable}`}
                     onClick={toggleMenu}
                     as="a"
-                    width={120}
+                    // width={120}
                 >
-                    Resume
+                    Get in touch
                 </StyledButton>
             </div>
             <div

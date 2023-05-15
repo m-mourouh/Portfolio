@@ -17,9 +17,16 @@ export const StyledButton = styled.button<ButtonProps>`
     padding: 10px 20px;
     text-align: center;
     text-decoration: none;
+
     ${({ width }) =>
         width &&
         css`
             max-width: ${width}px;
         `}
+    transition: all 0.2s ease-in-out;
+    &:hover {
+        background-color: rgba(63, 24, 90, 0.5);
+        color: var(--white);
+        opacity: 1;
+    }
 `

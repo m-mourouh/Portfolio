@@ -1,0 +1,153 @@
+'use client'
+import styled from 'styled-components'
+import { padding, selection, titleFont, titleLine } from './Helpers'
+import { device } from './Breakpoints'
+
+ 
+export const StyledSkills = styled.section`
+    ${padding()}
+    position: relative;
+    /* min-height: 100vh; */
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    @media ${device.sm} {
+        margin-top: 100px;
+    }
+    h1 {
+        text-transform: capitalize;
+        font-family: var(--font-roboto);
+        margin-bottom: 55px;
+        position: relative;
+        color: var(--white);
+        /* features */
+        ${selection()}
+        ${titleFont(false)}
+        ${titleLine()}
+    }
+    .inner-wrapper {
+        display: flex;
+        justify-content: space-between;
+        grid-gap: 30px;
+        @media (max-width: 976px) {
+            flex-direction: column;
+        }
+        .fields {
+            &:hover {
+                cursor: all-scroll;
+            }
+            .field {
+                
+                @media (max-width: 976px) {
+                    min-width: max-content;
+                    height: max-content;
+                }
+                padding: 12px 20px;
+                color: var(--white);
+                background: transparent;
+                border: 1px solid var(--orchid);
+                text-align: center;
+                font-family: var(--font-roboto-mono);
+                cursor: pointer;
+                border-radius: 50px;
+                opacity: 0.2;
+                transition: all 0.2s ease-in-out;
+                &.active,
+                &:hover {
+                    background-color: rgba(63, 24, 90, 0.5);
+                    color: var(--white);
+                    opacity: 1;
+                }
+            }
+        }
+        .mySwiper {
+            &:hover {
+                cursor: all-scroll;
+            }
+            position: relative;
+            width: 80%;
+            padding-right: 100px;
+            @media (max-width: 1176px) {
+                padding-right: 50px;
+                width: 100%;
+            }
+            @media (max-width: 669px) {
+                padding-right: 30px;
+            }
+            @media (max-width: 440px) {
+                padding: 0;
+            }
+            height: 400px;
+            font-family: var(--font-roboto-mono);
+            .swiper-slide {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                @media (max-width: 650px) {
+                    grid-template-columns: repeat(2, 1fr);
+                }
+                @media (max-width: 440px) {
+                    grid-template-columns: repeat(1, 1fr);
+                }
+                grid-gap: 20px;
+                justify-content: center;
+                /* align-items: center; */
+                .skill {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    /* height: max-content; */
+                    padding: 25px 10px;
+                    background-color: rgba(63, 24, 90, 0.5);
+                    
+                    color: var(--white);
+                    border-radius: 10px;
+                    border: 1px solid var(--orchid);
+                    /* font-weight: 900; */
+                    font-size: 1rem;
+                    p {
+                        text-transform: uppercase;
+                        .extension {
+                            text-transform: lowercase;
+                            font-weight: normal;
+                            font-size: 1rem;
+                            align-self: flex-end;
+                        }
+                    }
+                }
+            }
+        }
+        .mySwiper2 {
+            height: 400px;
+            font-family: var(--font-roboto-mono);
+            @media (max-width: 976px) {
+                height: max-content;
+                padding: 5px 0;
+            }
+        }
+
+        .swiper-pagination {
+            span {
+                &.swiper-pagination-bullet {
+                    background: rgba(63, 24, 90, 0.8);
+                    border: 1px solid rgba(63, 24, 90, 1);
+                    width: 4px;
+                    height: 50px;
+                    border-radius: 10px;
+                    transition: 0.2s ease-in-out;
+                    @media (max-width: 440px) {
+                        height: 20px;
+                    }
+                    &:hover {
+                        background: rgba(63, 24, 90, 0.8) !important;
+                        border: 1px solid rgba(63, 24, 90, 1) !important;
+                        opacity: 1;
+                    }
+                }
+            }
+            @media (max-width: 440px) {
+                display: none;
+            }
+        }
+    }
+`

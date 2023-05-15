@@ -11,13 +11,12 @@ export const StyledAbout = styled.section`
         width: 100%;
         display: flex;
         grid-gap: 50px;
-        margin-top: 100px;
         @media ${device.md} {
             flex-direction: column;
         }
         align-items: center;
         color: var(--white);
-        overflow-x: hidden;
+        /* overflow: hidden; */
         ${padding()}
         .about__left-col {
             position: relative;

@@ -6,6 +6,9 @@ export const StyledHeader = styled.header`
     padding: 0 50px;
     width: 100%;
     height: var(--nav-height);
+    /* margin-top: 10px;
+    position: sticky;
+    top: 0; */
     @media ${device.sm} {
         height: 80px;
     }

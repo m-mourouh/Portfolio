@@ -3,7 +3,7 @@ import data from '@/data/data.json'
 import Image from 'next/image'
 import Picture from '@/public/images/picture.png'
 import { roboto_mono, roboto } from '@/fonts/fonts'
-import { IoGameControllerOutline } from 'react-icons/io5'
+
 import Logo from '@/public/images/logo.svg'
 export default function About() {
     function getDescription(): string {
