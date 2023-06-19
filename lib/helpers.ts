@@ -1,3 +1,5 @@
+import { ProjectType } from "@/types/types"
+
 export function splitArray<T>(arr: T[] , chunkSize: number) {
     let result = []
 
@@ -7,4 +9,8 @@ export function splitArray<T>(arr: T[] , chunkSize: number) {
     }
 
     return result
+}
+
+export function isObjEmpty(obj: object) {
+    return Object.keys(obj).length === 0
 }

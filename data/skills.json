@@ -1,0 +1,61 @@
+{
+      "data": [
+            [
+                "HTML",
+                "CSS",
+                "SASS",
+                "Bootstrap",
+                "Tailwind CSS",
+                "Material UI",
+                "JavaScript",
+                "JQuery",
+                "JSON",
+                "Typescript",
+                "React.js",
+                "Redux",
+                "Vue.js",
+                "Next.js",
+                "Nuxt.js",
+                "Webpack",
+                "Babel",
+                "Vite"
+            ],
+            [
+                "Node.js",
+                "Express.js",
+                "Python",
+                "Django",
+                "Flask",
+                "PHP",
+                "Rest API"
+            ],
+            ["MySQL", "PostgreSQL", "MongoDB", "FireBase"],
+            ["C", "Java", "PHP", "Javascript", "Typescript", "Python"],
+            [
+                "Testing Library",
+                "Jest",
+                "Cypress"
+            ],
+            [
+                "Git",
+                "GitHub",
+                "Azure DevOps",
+                "GitLab",
+                "Gulp.js",
+                "Pug.js",
+                "Grunt.js",
+                "NPM",
+                "YARN",
+                "ESLint",
+                "TSLint",
+                "Lighthouse",
+                "VS Code",
+                "WebStorm",
+                "IntelliJ IDEA"
+            ],
+            ["Java Swing", "Electrons.js"],
+            ["WordPress", "Drupal", "Sanity"],
+            ["Photoshop", "Illustrator", "Adobe XD", "Figma"],
+            ["French", "English", "Arabic", "Tamazight"]
+        ]
+}

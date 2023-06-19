@@ -1,39 +1,39 @@
 'use client'
-import React, { useRef, useState, useEffect } from 'react'
-import { roboto, fira_code, roboto_mono } from '@/fonts/fonts'
-import data from '@/data/data.json'
+import React, { useState, useEffect } from 'react'
+import { roboto, roboto_mono } from '@/fonts/fonts'
+import skillsData from '@/data/skills.json'
+import fieldsData from '@/data/fields.json'
 import { StyledSkills } from '@/styles/styled-components/Skills.styled'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { Mousewheel } from 'swiper'
-import { splitArray } from '@/lib/functions'
+import { splitArray } from '@/lib/helpers'
 import { useMediaQuery } from 'react-responsive'
-
 // Import Swiper styles
 import 'swiper/css'
 import 'swiper/css/pagination'
 import { Pagination } from 'swiper'
+
 export default function Skills() {
-    const [fields, setFields] = useState(data.user.fields)
+    const [fields, setFields] = useState(fieldsData.data)
     const [selectedFieldID, setselectedFieldID] = useState(0)
-    const [slides, setSlides] = useState(3)
+    const [slides, setSlides] = useState(4)
     const [skills, setSkills] = useState(
-        splitArray<string>(data.user.skills[0], slides)
+        splitArray<string>(skillsData.data[0], slides)
     ) //Default values
     const isTablet = useMediaQuery({ query: '(max-width: 640px)' })
     const isDesktop = useMediaQuery({ query: '(min-width: 650px)' })
     const isMobile = useMediaQuery({ query: '(max-width: 440px)' })
     useEffect(() => {
-        console.log(isTablet)
         if (isTablet) {
-            setSlides(2)
-        }
-        if (isDesktop) {
             setSlides(3)
         }
-        if (isMobile) {
-            setSlides(1)
+        if (isDesktop) {
+            setSlides(4)
         }
-         setSkills(splitArray<string>(data.user.skills[selectedFieldID], slides))
+        if (isMobile) {
+            setSlides(2)
+        }
+        setSkills(splitArray<string>(skillsData.data[selectedFieldID], slides))
     }, [isDesktop, isMobile, isTablet, selectedFieldID, slides])
 
     const activate = (
@@ -46,7 +46,7 @@ export default function Skills() {
             )
         )
         setselectedFieldID(idx)
-        setSkills(splitArray<string>(data.user.skills[idx], slides))
+        setSkills(splitArray<string>(skillsData.data[idx], slides))
     }
 
     return (
@@ -61,20 +61,20 @@ export default function Skills() {
                             // when window width is >= 640px
                             976: {
                                 direction: 'vertical',
-                                slidesPerView: 6
+                                slidesPerView: 6,
                             },
                             640: {
                                 direction: 'horizontal',
-                                slidesPerView: 4
+                                slidesPerView: 4,
                             },
                             510: {
-                                slidesPerView: 3
+                                slidesPerView: 3,
                             },
                             300: {
-                                slidesPerView: 2
+                                slidesPerView: 2,
                             },
                             100: {
-                                slidesPerView: 1
+                                slidesPerView: 1,
                             },
                         }}
                         pagination={{
@@ -106,7 +106,7 @@ export default function Skills() {
                     }}
                     mousewheel={true}
                     spaceBetween={20}
-                    slidesPerView={3}
+                    slidesPerView={4}
                     modules={[Pagination, Mousewheel]}
                     className={`${roboto_mono.variable} mySwiper`}
                 >
@@ -128,24 +128,6 @@ export default function Skills() {
                     ))}
                 </Swiper>
             </div>
-
-            {/* <div className="skills">
-                {blocks.map((block, idx) => (
-                    <>
-                        <h6 className={roboto_mono.variable}>{block}:</h6>
-                        <div className="technologies">
-                            {data.user.skills[idx].map((skill, idx) => (
-                                <span
-                                    className={roboto_mono.variable}
-                                    key={idx}
-                                >
-                                    {skill}
-                                </span>
-                            ))}
-                        </div>
-                    </>
-                ))}
-            </div> */}
         </StyledSkills>
     )
 }

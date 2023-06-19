@@ -1,0 +1,85 @@
+'use client'
+import { StyledSection } from '@/styles/styled-components/Loader.styled'
+import React, { useEffect, useRef, useState } from 'react'
+import { gsap } from 'gsap'
+export default function Loader() {
+    const [showLoader, setShowLoader] = useState(true)
+    const conatiner = useRef<HTMLDivElement>(null)
+    const tl = useRef<GSAPTimeline>()
+
+    useEffect(() => {
+        let paths = document.querySelectorAll<SVGPathElement>('.path')
+        let ctx = gsap.context(() => {
+            paths.forEach((path) => {
+                tl.current = gsap
+                    .timeline()
+                    .set(path, { strokeDasharray: path.getTotalLength() })
+                    .from(path, {
+                        duration: 2,
+                        strokeDashoffset: path.getTotalLength(),
+                        delay: 0,
+                        stroke: '#fff',
+                    })
+                    .to(path, {
+                        duration: 2,
+                        strokeDashoffset: 0,
+                        stroke: 'rgba(255, 255, 255, 0)',
+                        fill: '#ffffff',
+                        ease: 'Expo.easeOut',
+                        stagger: 0.2,
+                    })
+                    
+            })
+        }, conatiner)
+
+        return () => ctx.revert()
+    }, [])
+    useEffect(() => {
+        let timer: NodeJS.Timeout
+
+        timer = setTimeout(() => {
+            gsap.to('.loader', { yPercent: 100, delay: 2 })
+            
+        }, 800)
+
+        return () => clearTimeout(timer)
+    }, [])
+    useEffect(() => {
+        let timer: NodeJS.Timeout
+        timer = setTimeout(() => {
+            setShowLoader(false)
+        }, 5000)
+        return () => clearTimeout(timer)
+    }, [])
+    
+    if(showLoader) {
+        return (
+            <div ref={conatiner} className="loader-wrapper">
+                <StyledSection className="loader">
+                    <svg
+                        width="100"
+                        height="100"
+                        viewBox="0 0 73 52"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                    >
+                        <path
+                            d="M30.78 15.9812L34.9008 8.86453L32.6925 5.04133C32.0571 3.92896 31.1351 3.01912 30.0294 2.40529C28.9922 1.82885 27.8117 1.52661 26.6188 1.52661C25.4227 1.52661 24.2454 1.83197 23.2082 2.40529C22.1024 3.01912 21.1805 3.90403 20.5389 5.01329L2.32715 36.437H10.5624L26.6157 8.73678L30.78 15.9812Z"
+                            stroke="#250D36"
+                            strokeWidth="1"
+                            className="path"
+                        />
+                        <path
+                            d="M69.5861 30.1367L55.3145 5.05692L55.3051 5.03822C54.6666 3.92896 53.7416 3.01912 52.6358 2.40529C51.5986 1.82885 50.4182 1.52661 49.2252 1.52661C48.0292 1.52661 46.8518 1.83197 45.8146 2.40529C44.7089 3.01912 43.7869 3.92585 43.1453 5.03511L17.0752 50.0535H25.3105L49.2221 8.7586L63.3972 33.667L63.4065 33.6857C64.5309 35.6363 64.5309 37.9638 63.4065 39.9144C62.2821 41.8649 60.2638 43.0303 58.0149 43.0303C55.7973 43.0303 53.7291 41.8369 52.6203 39.9144L46.5341 29.364L42.4134 36.4838L46.4469 43.479C47.618 45.5074 49.3062 47.1994 51.3339 48.3709C53.3616 49.5425 55.6696 50.1626 58.0118 50.1626C60.4538 50.1626 62.8272 49.5113 64.8798 48.2775C66.8109 47.1152 68.4368 45.4576 69.5736 43.4852C70.7136 41.5129 71.3365 39.2756 71.377 37.0229C71.4206 34.6298 70.8008 32.2493 69.5861 30.1367Z"
+                            stroke="#250D36"
+                            strokeWidth="1"
+                            className="path"
+                        />
+                    </svg>
+                </StyledSection>
+            </div>
+        )
+    }
+    return <></>
+    
+}

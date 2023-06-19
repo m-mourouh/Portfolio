@@ -1,0 +1,44 @@
+{
+    "data": [
+        {
+            "title": "Front-end",
+            "on": true
+        },
+        {
+            "title": "Back-end",
+            "on": false
+        },
+        {
+            "title": "Databases",
+            "on": false
+        },
+        {
+            "title": "Programming",
+            "on": false
+        },
+        {
+            "title": "Testing",
+            "on": false
+        },
+        {
+            "title": "Tools",
+            "on": false
+        },
+        {
+            "title": "Desktop",
+            "on": false
+        },
+        {
+            "title": "CMS",
+            "on": false
+        },
+        {
+            "title": "UI & UX",
+            "on": false
+        },
+        {
+            "title": "Languages",
+            "on": false
+        }
+    ]
+}

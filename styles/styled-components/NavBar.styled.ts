@@ -1,5 +1,6 @@
 'use client'
 import styled from 'styled-components'
+
 import { device } from './Breakpoints'
 export const StyledNav = styled.nav`
     display: flex;
@@ -8,9 +9,9 @@ export const StyledNav = styled.nav`
     width: 100%;
 
     a {
-        text-decoration: none;
         font-family: var(--font-fira-code);
         font-size: 1rem;
+        cursor: pointer;
     }
     .overlay {
         content: '';
@@ -61,18 +62,23 @@ export const StyledNav = styled.nav`
             display: flex;
             align-items: center;
             list-style-type: none;
+            grid-gap: 30px;
+            margin-right: 40px;
             /* media queries */
             @media ${device.sm} {
                 flex-direction: column;
                 align-items: center;
+                margin-right: 0;
             }
             li {
                 a {
+                    text-decoration: none;
                     display: inline-block;
-                    padding-right: 30px;
+                    /* padding-right: 30px; */
                     text-transform: capitalize;
-                    color: ${({ theme }) => theme.dark.text};
-                    transition: 0.15s ease-in-out;
+                    color: var(--c1);
+                    transition: 0.25s ease-in-out;
+                    position: relative;
                     @media ${device.sm} {
                         margin: 15px 0;
                         padding: 12px 8px;
@@ -80,6 +86,24 @@ export const StyledNav = styled.nav`
                     &:hover {
                         color: var(--orchid);
                     }
+                    &:after {
+                        content: '';
+                        position: absolute;
+                        left: 50%;
+                        transform: translateX(-50%);
+                        top: -49px;
+                        width: 0.5px;
+                        height: 50px;
+                        background: #ffffff36;
+                        z-index: -55;
+                        display: none;
+                        @media ${device.sm} {
+                            display: block;
+                        }
+                    }
+                    /* &::first-letter {
+                        color: var(--orchid);
+                    } */
                 }
             }
         }

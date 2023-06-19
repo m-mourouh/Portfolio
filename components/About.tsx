@@ -1,10 +1,11 @@
 import { StyledAbout } from '@/styles/styled-components/About.styled'
-import data from '@/data/data.json'
+import data from '@/data/user.json'
 import Image from 'next/image'
-import Picture from '@/public/images/picture.png'
+import Picture from '@/public/images/pict.png'
+import OutlinedPicture from '@/public/images/giphy.webp'
 import { roboto_mono, roboto } from '@/fonts/fonts'
-
 import Logo from '@/public/images/logo.svg'
+
 export default function About() {
     function getDescription(): string {
         const name = data.user.name
@@ -27,9 +28,18 @@ export default function About() {
                 <p className={roboto_mono.variable}>{data.user.thank}</p>
             </div>
             <div className="about__right-col">
-                <Image src={Picture} alt={data.user.name} loading="lazy" />
-                <Image src={Logo} alt={data.user.name} className='icon' />
-
+                <Image
+                    src={OutlinedPicture}
+                    alt={data.user.name}
+                    loading="lazy"
+                />
+                <Image src={Logo} alt={data.user.name} className="icon" />
+                <Image
+                    src={Picture}
+                    alt={data.user.name}
+                    className="real-picture"
+                    loading="lazy"
+                />
             </div>
         </StyledAbout>
     )

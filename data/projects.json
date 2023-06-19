@@ -1,0 +1,125 @@
+{
+    "data": [
+        {
+            "name": "Channel",
+            "description": "In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used as a placeholder before final copy is available.",
+            "stack": ["JSTL", "SCSS", "JS", "React"],
+            "links": {
+                "github": "",
+                "website": "https://www.chanel.com/gr/fashion/collection/cruise-2023-24"
+            },
+            "image": "channel.jpg"
+        },
+        {
+            "name": "New Project",
+            "description": "In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used as a placeholder before final copy is available.",
+            "stack": ["JSTL", "SCSS", "JS", "React"],
+            "links": {
+                "github": "",
+                "website": ""
+            },
+            "image": ""
+        },
+        {
+            "name": "New Project",
+            "description": "In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used as a placeholder before final copy is available.",
+            "stack": ["JSTL", "SCSS", "JS", "React"],
+            "links": {
+                "github": "",
+                "website": ""
+            },
+            "image": ""
+        },
+        {
+            "name": "New Project",
+            "description": "In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used as a placeholder before final copy is available.",
+            "stack": ["JSTL", "SCSS", "JS", "React"],
+            "links": {
+                "github": "",
+                "website": ""
+            },
+            "image": ""
+        },
+        {
+            "name": "New Project",
+            "description": "In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used as a placeholder before final copy is available.",
+            "stack": ["JSTL", "SCSS", "JS", "React"],
+            "links": {
+                "github": "",
+                "website": ""
+            },
+            "image": ""
+        },
+        {
+            "name": "New Project",
+            "description": "In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used as a placeholder before final copy is available.",
+            "stack": ["JSTL", "SCSS", "JS", "React"],
+            "links": {
+                "github": "",
+                "website": ""
+            },
+            "image": ""
+        },
+       
+        {
+            "name": "COVID-19 DETECTION APP",
+            "description": "In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used as a placeholder before final copy is available.",
+            "stack": ["HTML", "SCSS", "JS", "Python", "Flask", "ML"],
+            "links": {
+                "github": "https://github.com/m-mourouh/Covid-19-Detection-Web-Application",
+                "website": "https://m-mourouh.github.io/Covid-19-Detection-Web-Application/templates/"
+            },
+            "image": "covid.jpg"
+        },
+        {
+            "name": "TOURISM RECOMMENDATION SYSTEM",
+            "description": "In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used as a placeholder before final copy is available.",
+            "stack": ["HTML", "SCSS", "JS", "Python", "Django", "ML"],
+            "links": {
+                "github": "https://github.com/m-mourouh/Tourism-Recommendation-System",
+                "website": ""
+            },
+            "image": ""
+        },
+        {
+            "name": "AR|EN TRANSLATION APP",
+            "description": "In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used as a placeholder before final copy is available.",
+            "stack": ["HTML", "SCSS", "JS", "Python", "Flask"],
+            "links": {
+                "github": "https://github.com/m-mourouh/trans_app",
+                "website": "https://www.legrandmenage33.fr"
+            },
+            "image": "trans_app.jpg"
+        },
+        {
+            "name": "School Website",
+            "description": "In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used as a placeholder before final copy is available.",
+            "stack": ["HTML", "CSS", "JS", "PHP", "MYSQL"],
+            "links": {
+                "github": "https://github.com/m-mourouh/LST-IRM-Website",
+                "website": ""
+            },
+            "image": ""
+        },
+        {
+            "name": "NPS",
+            "description": "In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used as a placeholder before final copy is available.",
+            "stack": ["HTML", "CSS", "JS", "PHP", "MYSQL"],
+            "links": {
+                "github": "",
+                "website": "https://www.imprimerienumerique92.fr"
+            },
+            "image": "nps.jpg"
+        },
+        {
+            "name": "LE GRAND MENAGE",
+            "description": "In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used as a placeholder before final copy is available.",
+            "stack": ["HTML", "CSS", "JS", "PHP", "MYSQL"],
+            "links": {
+                "github": "",
+                "website": "https://www.legrandmenage33.fr"
+            },
+            "image": "menage.jpg"
+        }
+    ]
+}

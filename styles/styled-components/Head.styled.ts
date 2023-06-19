@@ -2,8 +2,8 @@
 import styled, { css } from 'styled-components'
 import Img from '@/public/images/logo.svg'
 import { device } from './Breakpoints'
-import { padding, selection, titleFont } from './Helpers'
-import data from '@/data/data.json'
+import { padding, resposiveParagraph, selection, titleFont } from './Helpers'
+import data from '@/data/user.json'
 export const StyledSelection = styled.section`
     display: flex;
     align-items: center;
@@ -11,6 +11,9 @@ export const StyledSelection = styled.section`
     padding: 0px;
     position: relative;
     ${padding()}
+    @media ${device.sm} {
+        min-height: 100vh;
+    }
     .bg {
         width: 100vw;
         height: 100vh;
@@ -49,11 +52,13 @@ export const StyledSelection = styled.section`
             span:first-of-type {
                 ${selection()}/* color: var(--orchid); */
             }
-
+            @media ${device.sm} {
+                margin-bottom: 15px;
+            }
             span:last-of-type {
                 ${selection(false, '#fff')}
             }
-            &::after {
+            /* &::after {
                 content: '${data.user.name}';
                 position: absolute;
                 top: -15px;
@@ -63,14 +68,14 @@ export const StyledSelection = styled.section`
                 font-size: clamp(30px, 7vw, 80px);
                 color: transparent;
                 -webkit-text-stroke: 1px var(--white);
-                transform: scale(1) ;
+                transform: scale(1);
                 z-index: -5;
                 opacity: 0.15;
                 font-weight: 900;
                 @media (max-width: 350px) {
                     font-size: clamp(25px, 4vw, 40px);
                 }
-            }
+            } */
         }
         h5 {
             font-family: var(--font-roboto);
@@ -104,10 +109,12 @@ export const StyledSelection = styled.section`
             max-width: 880px;
             color: var(--c2);
             line-height: 2.5rem;
+            ${resposiveParagraph()}
         }
         a {
-            display: block;
-            margin-top: 40px;
+            margin-top: 30px;
         }
     }
+   
+   
 `

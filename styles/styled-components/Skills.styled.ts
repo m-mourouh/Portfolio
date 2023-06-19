@@ -3,11 +3,13 @@ import styled from 'styled-components'
 import { padding, selection, titleFont, titleLine } from './Helpers'
 import { device } from './Breakpoints'
 
- 
 export const StyledSkills = styled.section`
     ${padding()}
+    @media ${device.sm} {
+        margin-top: 100px;
+    }
     position: relative;
-    /* min-height: 100vh; */
+    min-height: 100vh;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -20,11 +22,12 @@ export const StyledSkills = styled.section`
         font-family: var(--font-roboto);
         margin-bottom: 55px;
         position: relative;
-        color: var(--white);
         /* features */
-        ${selection()}
+        color: transparent;
+        -webkit-text-stroke: 1px var(--white);
+        ${selection(true, '#fff')}
         ${titleFont(false)}
-        ${titleLine()}
+                ${titleLine(9)}
     }
     .inner-wrapper {
         display: flex;
@@ -38,7 +41,6 @@ export const StyledSkills = styled.section`
                 cursor: all-scroll;
             }
             .field {
-                
                 @media (max-width: 976px) {
                     min-width: max-content;
                     height: max-content;
@@ -76,36 +78,38 @@ export const StyledSkills = styled.section`
                 padding-right: 30px;
             }
             @media (max-width: 440px) {
-                padding: 0;
+                padding: 0px;
             }
             height: 400px;
             font-family: var(--font-roboto-mono);
             .swiper-slide {
                 display: grid;
-                grid-template-columns: repeat(3, 1fr);
+                grid-template-columns: repeat(4, 1fr);
                 @media (max-width: 650px) {
-                    grid-template-columns: repeat(2, 1fr);
+                    grid-template-columns: repeat(3, 1fr);
                 }
                 @media (max-width: 440px) {
-                    grid-template-columns: repeat(1, 1fr);
+                    grid-template-columns: repeat(2, 1fr);
                 }
                 grid-gap: 20px;
                 justify-content: center;
                 /* align-items: center; */
                 .skill {
+                    position: relative;
                     display: flex;
                     justify-content: center;
                     align-items: center;
                     /* height: max-content; */
                     padding: 25px 10px;
                     background-color: rgba(63, 24, 90, 0.5);
-                    
+
                     color: var(--white);
                     border-radius: 10px;
                     border: 1px solid var(--orchid);
                     /* font-weight: 900; */
                     font-size: 1rem;
                     p {
+                        text-align: center;
                         text-transform: uppercase;
                         .extension {
                             text-transform: lowercase;
@@ -113,6 +117,14 @@ export const StyledSkills = styled.section`
                             font-size: 1rem;
                             align-self: flex-end;
                         }
+                    }
+                    .icon {
+                        position: absolute;
+                        top: 10px;
+                        left: 10px;
+                        font-size: 1rem;
+                        color: var(--white);
+                        opacity: 0.5;
                     }
                 }
             }

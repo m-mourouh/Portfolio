@@ -3,8 +3,9 @@ import { useState } from 'react'
 import { StyledNav } from '@/styles/styled-components/NavBar.styled'
 import Image from 'next/image'
 import Logo from '@/public/images/logo.svg'
-import Link from 'next/link'
-import data from '@/data/data.json'
+import { Link } from 'react-scroll'
+import navData  from '@/data/navigation.json'
+import userData  from '@/data/user.json'
 import { fira_code } from '../fonts/fonts'
 import { StyledButton } from '@/styles/styled-components/Button.styled'
 export default function NavBar() {
@@ -19,16 +20,23 @@ export default function NavBar() {
                 className={toggle ? 'overlay active' : 'overlay '}
                 onClick={toggleMenu}
             ></div>
-            <Link href="/">
-                <Image src={Logo} alt={data.user.name} width={50} height={50} />
+            <Link to="/">
+                <Image
+                    src={Logo}
+                    alt={userData.user.name}
+                    width={50}
+                    height={50}
+                />
             </Link>
             <div className={toggle ? 'menu  active' : 'menu'}>
                 <ul>
-                    {data.nav.map((item, index) => (
+                    {navData.navigation.map((item, index) => (
                         <li key={index}>
                             <Link
+                                smooth={true}
+                                duration={500}
                                 className={fira_code.variable}
-                                href={`#${item.toLowerCase()}`}
+                                to={`${item.toLowerCase()}`}
                                 onClick={toggleMenu}
                             >
                                 {item.toLowerCase()}
@@ -40,9 +48,9 @@ export default function NavBar() {
                     className={`link ${fira_code.variable}`}
                     onClick={toggleMenu}
                     as="a"
-                    // width={120}
+                    href={`mailto:${userData.user.email}`}
                 >
-                    Get in touch
+                    Let&#39;s talk
                 </StyledButton>
             </div>
             <div

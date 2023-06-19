@@ -27,10 +27,11 @@ export const GlobalStyle = createGlobalStyle<Theme>`
     }
     html, body {
   scroll-behavior: smooth;
+    cursor: none;
     }
     /* Scrollbar */
 ::-webkit-scrollbar {
-  width: 12px;
+  width: 0px;
 }
 
 ::-webkit-scrollbar-track {
@@ -46,4 +47,5 @@ export const GlobalStyle = createGlobalStyle<Theme>`
         background: var(--thumb);
         color: var(--orchid);
 }
+
 `

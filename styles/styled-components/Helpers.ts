@@ -10,6 +10,7 @@ export function selection(fill: boolean = false, color?: string): FlattenSimpleI
         }
     `
     const emptySelection = css`
+        
         &::selection {
             color: transparent;
             -webkit-text-stroke: 1px ${color ? color : 'var(--orchid)'};
@@ -49,12 +50,12 @@ export function titleFont(primary: boolean = true): FlattenSimpleInterpolation {
         font-weight: 900;
     `
 }
-export function titleLine(): FlattenSimpleInterpolation {
+export function titleLine(n: number): FlattenSimpleInterpolation {
 
     return css`
         &::after {
             content: '';
-            width: calc(100% - 9ch);
+            width: calc(100% - ${n}ch);
             height: 0.5px;
             background-color: var(--c2);
             position: absolute;
@@ -62,6 +63,16 @@ export function titleLine(): FlattenSimpleInterpolation {
             transform: translateY(-50%);
             right: 0;
             opacity: 0.2;
+        }
+    `
+}
+export function resposiveParagraph(): FlattenSimpleInterpolation {
+
+    return css`
+        @media ${device.xs} {
+            font-size: 0.9rem;
+            line-height: 2rem;
+            
         }
     `
 }

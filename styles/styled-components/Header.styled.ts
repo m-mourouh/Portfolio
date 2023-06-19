@@ -1,16 +1,24 @@
-"use client"
-import styled from "styled-components"
-import { device } from "./Breakpoints"
+'use client'
+import styled from 'styled-components'
+import { device } from './Breakpoints'
 
 export const StyledHeader = styled.header`
     padding: 0 50px;
     width: 100%;
     height: var(--nav-height);
-    /* margin-top: 10px;
     position: sticky;
-    top: 0; */
-    @media ${device.sm} {
+    top: 0;
+    z-index: 99999999;
+    transition: all 0.5s ease-in-out;
+    &.scrolling {
+        background: ${({ theme }) => theme.dark.background};
         height: 80px;
+        @media ${device.sm} {
+            height: 60px;
+        }
+    }
+    @media ${device.sm} {
+        height: 60px;
     }
     display: flex;
     align-items: center;

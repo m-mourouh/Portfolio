@@ -1,7 +1,7 @@
 'use client'
 import styled from "styled-components";
 import { device } from "./Breakpoints";
-import { padding, selection, titleLine } from "./Helpers";
+import { padding, resposiveParagraph, selection, titleLine } from "./Helpers";
 import { titleFont } from './Helpers'
 
 export const StyledAbout = styled.section`
@@ -9,6 +9,9 @@ export const StyledAbout = styled.section`
         position: relative;
         min-height: 100vh;
         width: 100%;
+        @media ${device.sm} {
+            margin-top: 100px;
+        }
         display: flex;
         grid-gap: 50px;
         @media ${device.md} {
@@ -24,12 +27,14 @@ export const StyledAbout = styled.section`
             h1 {
                 text-transform: capitalize;
                 font-family: var(--font-roboto);
-                margin-bottom: 25px;
+                margin-bottom: 55px;
                 position: relative;
                 /* features */
-                ${selection()}
+                color: transparent;
+                -webkit-text-stroke: 1px var(--white);
+                ${selection(true, '#fff')}
                 ${titleFont(false)}
-                ${titleLine()}
+                ${titleLine(9)}
             }
             p {
                 font-family: var(--font-roboto-mono);
@@ -40,6 +45,7 @@ export const StyledAbout = styled.section`
                     color: var(--c2);
                     opacity: 0.3;
                 }
+                ${resposiveParagraph()}
             }
             &::after {
                 content: 'about me';
@@ -115,26 +121,46 @@ export const StyledAbout = styled.section`
                 max-width: 250px;
                 max-height: 250px;
             }
-            img:first-of-type {
-                user-select: none;
-                width: 100%;
-                height: 100%;
-                border: 4px solid var(--c2);
-                border-radius: 50%;
+            img {
+                transition: all 0.5s ease-in-out;
+
+                &:first-of-type,
+                &:last-of-type {
+                    position: absolute;
+                    inset: 0;
+                    background: var(--white);
+                    user-select: none;
+                    width: 100%;
+                    height: 100%;
+                    border: 4px solid var(--c2);
+                    border-radius: 50%;
+                }
+                &:first-of-type {
+                    background: none;
+                    opacity: 0;
+                }
+                &:nth-child(1) {
+                    border: none;
+                    border-radius: 0;
+                }
             }
 
             .icon {
                 position: absolute;
                 background: var(--c2);
+                z-index: 999;
                 mix-blend-mode: overlay;
-                bottom: 30px;
+                bottom: 13px;
                 left: 50%;
                 transform: translate(-50%, 0%);
                 opacity: 0.5;
-                width: 25px;
-                height: 25px;
+                width: 30px;
+                height: 30px;
+                border-radius: 50px;
+                padding: 5px;
+
                 @media ${device.xs} {
-                    bottom: 28px;
+                    bottom: 12px;
                 }
                 transition: all 0.25s ease-in-out;
             }
@@ -146,6 +172,14 @@ export const StyledAbout = styled.section`
                 &::before {
                     transform: translate(-50%, -50%) scale(1.05);
                     z-index: -1;
+                }
+                img {
+                    &:last-of-type {
+                        opacity: 0;
+                    }
+                    &:first-of-type {
+                        opacity: 1;
+                    }
                 }
             }
         }
