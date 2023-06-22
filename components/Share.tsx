@@ -7,6 +7,12 @@ import React, { useEffect, useRef, useState } from 'react'
 import { IoMdHeart } from 'react-icons/io'
 import { FaFacebook, FaLinkedinIn } from 'react-icons/fa'
 import { SlSocialTwitter } from 'react-icons/sl'
+import {
+    FacebookShareButton,
+    TwitterShareButton,
+    LinkedinShareButton,
+} from 'next-share'
+
 import { roboto_mono } from '@/fonts/fonts'
 import { gsap } from 'gsap'
 export default function Share({ orientation }: { orientation: string }) {
@@ -90,37 +96,48 @@ export default function Share({ orientation }: { orientation: string }) {
                 <div className="platforms">
                     <ul>
                         <li>
-                            <Link
-                                href={
-                                    process.env.NEXT_PUBLIC_LI_SHARE_LINK?.toString()!
+                            <LinkedinShareButton
+                                url={
+                                    process.env.NEXT_PUBLIC_APP_URL?.toString()!
                                 }
-                                className="icon share-icon"
-                                target="_blank"
+                                windowWidth={800}
+                                windowHeight={700}
                             >
-                                <FaLinkedinIn />
-                            </Link>
+                                <Link href={''} className="icon share-icon">
+                                    <FaLinkedinIn />
+                                </Link>
+                            </LinkedinShareButton>
                         </li>
                         <li>
-                            <Link
-                                href={
-                                    process.env.NEXT_PUBLIC_TW_SHARE_LINK?.toString()!
+                            <TwitterShareButton
+                                url={
+                                    process.env.NEXT_PUBLIC_APP_URL?.toString()!
                                 }
-                                className="icon share-icon"
-                                target="_blank"
+                                windowWidth={800}
+                                windowHeight={700}
+                                title={"Mohamed Mourouh's Portfolio: "}
+                                hashtags={['portfolio', 'Mohamed_Mourouh']}
                             >
-                                <SlSocialTwitter />
-                            </Link>
+                                <Link href={''} className="icon share-icon">
+                                    <SlSocialTwitter />
+                                </Link>
+                            </TwitterShareButton>
                         </li>
                         <li>
-                            <Link
-                                href={
-                                    process.env.NEXT_PUBLIC_FB_SHARE_LINK?.toString()!
+                            <FacebookShareButton
+                                url={
+                                    process.env.NEXT_PUBLIC_APP_URL?.toString()!
                                 }
-                                className="icon share-icon"
-                                target="_blank"
+                                quote={'Mohamed Mourouh portfolio'}
+                                windowWidth={800}
+                                windowHeight={700}
+                                title={"Mohamed Mourouh's Portfolio: "}
+                                hashtag={'#Portfolio'}
                             >
-                                <FaFacebook />
-                            </Link>
+                                <Link href={''} className="icon share-icon">
+                                    <FaFacebook />
+                                </Link>
+                            </FacebookShareButton>
                         </li>
                     </ul>
                 </div>
