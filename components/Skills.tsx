@@ -24,14 +24,14 @@ export default function Skills() {
     const isDesktop = useMediaQuery({ query: '(min-width: 650px)' })
     const isMobile = useMediaQuery({ query: '(max-width: 440px)' })
     useEffect(() => {
-        if (isTablet) {
-            setSlides(3)
-        }
         if (isDesktop) {
             setSlides(4)
         }
+        if (isTablet) {
+            setSlides(3)
+        }
         if (isMobile) {
-            setSlides(2)
+            setSlides(3)
         }
         setSkills(splitArray<string>(skillsData.data[selectedFieldID], slides))
     }, [isDesktop, isMobile, isTablet, selectedFieldID, slides])
@@ -101,6 +101,21 @@ export default function Skills() {
                 </div>
                 <Swiper
                     direction={'vertical'}
+                    breakpoints={{
+                        // when window width is >= 640px
+                        100: {
+                            direction: 'horizontal',
+                            slidesPerView: 2,
+                        },
+                        534: {
+                            direction: 'horizontal',
+                            slidesPerView: 3,
+                        },
+                        761: {
+                            direction: 'vertical',
+                            slidesPerView: 4,
+                        },
+                    }}
                     pagination={{
                         clickable: true,
                     }}

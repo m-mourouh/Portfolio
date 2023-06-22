@@ -28,11 +28,6 @@ export default function About() {
                 <p className={roboto_mono.variable}>{data.user.thank}</p>
             </div>
             <div className="about__right-col">
-                <Image
-                    src={OutlinedPicture}
-                    alt={data.user.name}
-                    loading="lazy"
-                />
                 <Image src={Logo} alt={data.user.name} className="icon" />
                 <Image
                     src={Picture}

@@ -34,7 +34,8 @@ export const StyledButton = styled.button<ButtonProps>`
                 color: var(--c1);
             }
         `}
-    transition: all 0.2s ease-in-out;
+
+    /* transition: all 0.15s ease-in-out; */
     &:not(:disabled):hover {
         background-color: rgba(63, 24, 90, 0.5);
         color: var(--white);

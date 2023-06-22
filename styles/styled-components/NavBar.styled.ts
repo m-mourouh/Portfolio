@@ -79,6 +79,7 @@ export const StyledNav = styled.nav`
                     color: var(--c1);
                     transition: 0.25s ease-in-out;
                     position: relative;
+                    display: inline-block;
                     @media ${device.sm} {
                         margin: 15px 0;
                         padding: 12px 8px;

@@ -8,7 +8,7 @@ import parse from 'html-react-parser'
 import { useEffect, useRef } from 'react'
 import { gsap } from 'gsap'
 export default function Head() {
-    const conatiner = useRef<HTMLDivElement>(null)
+    const container = useRef<HTMLDivElement>(null)
     const tl = useRef<GSAPTimeline>()
     useEffect(() => {
         const block = document.querySelectorAll('.animate')
@@ -21,19 +21,20 @@ export default function Head() {
                     opacity: 0,
                     stagger: 0.1,
                     y: 10,
+
                     delay: 3,
                 })
                 .to(block, {
                     y: 0,
                     opacity: 1,
                 })
-                
-        }, conatiner)
+    
+        }, container)
 
         return () => ctx.revert()
     }, [])
     return (
-        <StyledSelection ref={conatiner}>
+        <StyledSelection ref={container}>
             <div className="bg"></div>
             <div className="wrapper">
                 <p className={fira_code.variable + ' animate'}>

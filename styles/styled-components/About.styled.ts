@@ -1,7 +1,7 @@
 'use client'
-import styled from "styled-components";
-import { device } from "./Breakpoints";
-import { padding, resposiveParagraph, selection, titleLine } from "./Helpers";
+import styled from 'styled-components'
+import { device } from './Breakpoints'
+import { padding, resposiveParagraph, selection, titleLine } from './Helpers'
 import { titleFont } from './Helpers'
 
 export const StyledAbout = styled.section`
@@ -123,26 +123,12 @@ export const StyledAbout = styled.section`
             }
             img {
                 transition: all 0.5s ease-in-out;
-
-                &:first-of-type,
-                &:last-of-type {
-                    position: absolute;
-                    inset: 0;
-                    background: var(--white);
-                    user-select: none;
-                    width: 100%;
-                    height: 100%;
-                    border: 4px solid var(--c2);
-                    border-radius: 50%;
-                }
-                &:first-of-type {
-                    background: none;
-                    opacity: 0;
-                }
-                &:nth-child(1) {
-                    border: none;
-                    border-radius: 0;
-                }
+                background: var(--white);
+                user-select: none;
+                width: 100%;
+                height: 100%;
+                border: 4px solid var(--c2);
+                border-radius: 50%;
             }
 
             .icon {
@@ -173,15 +159,10 @@ export const StyledAbout = styled.section`
                     transform: translate(-50%, -50%) scale(1.05);
                     z-index: -1;
                 }
-                img {
-                    &:last-of-type {
-                        opacity: 0;
-                    }
-                    &:first-of-type {
-                        opacity: 1;
-                    }
-                }
             }
         }
     }
-` 
+    .about_animate {
+        opacity: 0;
+    }
+`

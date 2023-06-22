@@ -1,6 +1,6 @@
 const size = {
     xs: '400px', // for small screen mobile
-    sm: '750px', // for mobile screen
+    sm: '768px', // for mobile screen
     md: '900px', // for tablets
     lg: '1280px', // for laptops
     xl: '1440px', // for desktop / monitors

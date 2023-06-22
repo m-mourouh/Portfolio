@@ -27,6 +27,7 @@
                 "Django",
                 "Flask",
                 "PHP",
+                "Laravel",
                 "Rest API"
             ],
             ["MySQL", "PostgreSQL", "MongoDB", "FireBase"],
@@ -34,7 +35,8 @@
             [
                 "Testing Library",
                 "Jest",
-                "Cypress"
+                "Cypress",
+                "Manual Testing"
             ],
             [
                 "Git",
@@ -53,9 +55,8 @@
                 "WebStorm",
                 "IntelliJ IDEA"
             ],
-            ["Java Swing", "Electrons.js"],
             ["WordPress", "Drupal", "Sanity"],
-            ["Photoshop", "Illustrator", "Adobe XD", "Figma"],
+            ["Photoshop", "Illustrator", "Adobe XD", "Figma","Sketch"],
             ["French", "English", "Arabic", "Tamazight"]
         ]
 }

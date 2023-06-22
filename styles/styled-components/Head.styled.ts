@@ -1,5 +1,5 @@
 'use client'
-import styled, { css } from 'styled-components'
+import styled from 'styled-components'
 import Img from '@/public/images/logo.svg'
 import { device } from './Breakpoints'
 import { padding, resposiveParagraph, selection, titleFont } from './Helpers'

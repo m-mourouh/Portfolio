@@ -70,30 +70,35 @@ export const StyledSkills = styled.section`
             position: relative;
             width: 80%;
             padding-right: 100px;
+            height: 400px;
+            font-family: var(--font-roboto-mono);
             @media (max-width: 1176px) {
                 padding-right: 50px;
                 width: 100%;
             }
-            @media (max-width: 669px) {
-                padding-right: 30px;
+            @media (max-width: 760px) {
+                padding-right: 0;
             }
-            @media (max-width: 440px) {
-                padding: 0px;
+            @media (max-width: 649px) {
+                height: 300px;
             }
-            height: 400px;
-            font-family: var(--font-roboto-mono);
             .swiper-slide {
                 display: grid;
                 grid-template-columns: repeat(4, 1fr);
-                @media (max-width: 650px) {
-                    grid-template-columns: repeat(3, 1fr);
-                }
-                @media (max-width: 440px) {
-                    grid-template-columns: repeat(2, 1fr);
-                }
                 grid-gap: 20px;
                 justify-content: center;
                 /* align-items: center; */
+                /* @media (max-width: 650px) {
+                    grid-template-columns: repeat(3, 1fr);
+                }
+                @media (max-width: 533px) {
+                    grid-template-columns: repeat(2, 1fr);
+                } */
+                @media (max-width: 760px) {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-start;
+                }
                 .skill {
                     position: relative;
                     display: flex;
@@ -150,6 +155,10 @@ export const StyledSkills = styled.section`
                     @media (max-width: 440px) {
                         height: 20px;
                     }
+                    @media (max-width: 760px) {
+                        width: 50px;
+                        height: 4px;
+                    }
                     &:hover {
                         background: rgba(63, 24, 90, 0.8) !important;
                         border: 1px solid rgba(63, 24, 90, 1) !important;
@@ -157,8 +166,8 @@ export const StyledSkills = styled.section`
                     }
                 }
             }
-            @media (max-width: 440px) {
-                display: none;
+            @media (max-width: 760px) {
+                bottom: 0px !important;
             }
         }
     }

@@ -1,6 +1,7 @@
 'use client'
 import { Theme } from '@/types/Theme.types'
 import { createGlobalStyle } from 'styled-components'
+import { device } from './Breakpoints'
 export const GlobalStyle = createGlobalStyle<Theme>`
     * {
         margin: 0;
@@ -28,6 +29,9 @@ export const GlobalStyle = createGlobalStyle<Theme>`
     html, body {
   scroll-behavior: smooth;
     cursor: none;
+    @media ${device.sm} {
+        cursor: initial;
+    }
     }
     /* Scrollbar */
 ::-webkit-scrollbar {

@@ -1,5 +1,6 @@
-"use client"
+'use client'
 import styled from 'styled-components'
+import { device } from './Breakpoints'
 
 export const StyledDiv = styled.div`
     .cursor {
@@ -14,8 +15,9 @@ export const StyledDiv = styled.div`
         user-select: none;
         pointer-events: none;
         transform: scale(1);
-
-     
+        @media ${device.sm} {
+            display: none;
+        }
     }
     .cursor-follower {
         position: fixed;
@@ -29,6 +31,8 @@ export const StyledDiv = styled.div`
         user-select: none;
         pointer-events: none;
         transform: translate(5px, 5px);
-
+        @media ${device.sm} {
+            display: none;
+        }
     }
 `
