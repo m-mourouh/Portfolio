@@ -65,7 +65,7 @@ export default function NavBar() {
                 className={toggle ? 'overlay active' : 'overlay '}
                 onClick={toggleMenu}
             ></div>
-            <Link to="/">
+            <Link to="head" smooth={true} duration={500}>
                 <Image
                     src={Logo}
                     alt={userData.user.name}

@@ -26,7 +26,7 @@ export const StyledSelection = styled.section`
         right: 0;
         top: 50%;
         transform: translateY(-50%);
-        opacity: 0.1;
+        opacity: 0.05;
         background-color: gray;
         mix-blend-mode: overlay;
         z-index: -1;

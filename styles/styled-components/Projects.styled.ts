@@ -137,7 +137,7 @@ export const StyledProjects = styled.section`
                             transition: all 0.2s ease-in-out;
                             &:hover {
                                 opacity: 0.5;
-                                /* color: var(--orchid); */
+                                color: var(--orchid);
                             }
                             @media (max-width: 1421px) {
                                 grid-gap: 20px;
@@ -151,7 +151,7 @@ export const StyledProjects = styled.section`
                         object-fit: cover;
                         transition: all 0.3s ease-in-out;
                         /* border-radius: 10px; */
-                        filter: grayscale(1);
+                        /* filter: grayscale(1); */
                     }
                     &::after {
                         content: '';
@@ -162,7 +162,7 @@ export const StyledProjects = styled.section`
                         height: 100%;
                         background: linear-gradient(
                             360deg,
-                            rgba(92, 0, 156, 0.5) 44.58%,
+                            rgba(92, 0, 156, .3) 44.58%,
                             rgba(22, 8, 32, 0.5) 103.42%
                         );
 

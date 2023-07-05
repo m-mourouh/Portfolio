@@ -34,7 +34,7 @@ export default function Head() {
         return () => ctx.revert()
     }, [])
     return (
-        <StyledSelection ref={container}>
+        <StyledSelection ref={container} id='head'>
             <div className="bg"></div>
             <div className="wrapper">
                 <p className={fira_code.variable + ' animate'}>
