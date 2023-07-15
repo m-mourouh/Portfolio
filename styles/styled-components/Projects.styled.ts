@@ -149,7 +149,7 @@ export const StyledProjects = styled.section`
                         width: 100%;
                         height: 100%;
                         object-fit: cover;
-                        transition: all 0.3s ease-in-out;
+                        transition: all 0.4s ease-in-out;
                         /* border-radius: 10px; */
                         /* filter: grayscale(1); */
                     }
@@ -197,7 +197,7 @@ export const StyledProjects = styled.section`
                 }
                 &:hover {
                     img {
-                        transform: scale(1.02);
+                        transform: scale(1.1);
                         filter: none;
                     }
                     .line {

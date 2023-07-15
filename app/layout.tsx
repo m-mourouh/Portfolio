@@ -4,6 +4,7 @@ import { Provider } from './providers'
 import Header from '@/components/Header'
 import data from '@/data/user.json'
 import { roboto } from '@/fonts/fonts'
+import GoogleAnalytics from '@/components/GoogleAnalytics'
 export const metadata = {
     title: `${data.user.name} | Front-End Enginner | Portfolio`,
     description: `${data.user.name} website | `,
@@ -15,12 +16,13 @@ export default function RootLayout({
     children: React.ReactNode
 }) {
     return (
-        <html lang="en">
-            <body className={`${roboto.variable }`}>
+        <html lang="en" >
+            <GoogleAnalytics GA_MEASUREMENT_ID={process.env.GA_TRACKING_ID!} />
+            <body className={`${roboto.variable}`}>
                 <StyledComponentsRegistry>
                     <Provider>
                         <GlobalStyle />
-                        <Header/>
+                        <Header />
                         {children}
                     </Provider>
                 </StyledComponentsRegistry>

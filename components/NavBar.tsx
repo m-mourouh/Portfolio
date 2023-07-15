@@ -49,7 +49,6 @@ export default function NavBar() {
                 .to(navBtn, {
                     y: 0,
                     opacity: 1,
-                    navBtn,
                 })
         }, container)
 

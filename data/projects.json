@@ -1,24 +1,24 @@
 {
     "data": [
         {
-            "name": "Channel",
+            "name": "Chat GPT Clone V.1.1",
             "description": "",
-            "stack": ["JSTL", "SCSS", "JS", "React"],
+            "stack": ["Next", "TS", "Redux", "Tailwind CSS", "FireBase"],
             "links": {
                 "github": "",
-                "website": "https://www.chanel.com/gr/fashion/collection/cruise-2023-24"
+                "website": "https://chat-gpt-clone-v11.vercel.app/"
             },
-            "image": "channel.jpg"
+            "image": "v11.jpg"
         },
         {
-            "name": "Chat GPT Clone",
+            "name": "Chat GPT Clone V.1.0",
             "description": "",
-            "stack": ["JSTL", "SCSS", "JS", "React"],
+            "stack": ["Next", "TS", "Redux", "Tailwind CSS", "FireBase"],
             "links": {
                 "github": "",
-                "website": ""
+                "website": "https://chat-gpt-clone-v10.vercel.app/"
             },
-            "image": ""
+            "image": "V10.jpg"
         },
         {
             "name": "Translation APP",
@@ -28,8 +28,19 @@
                 "github": "https://github.com/m-mourouh/translation-app",
                 "website": "https://translation-app-omega.vercel.app"
             },
-            "image": "translation_app.jpg"
+            "image": "tt.jpg"
         },
+        {
+            "name": "Channel",
+            "description": "",
+            "stack": ["JSTL", "SCSS", "JS", "React"],
+            "links": {
+                "github": "",
+                "website": "https://www.chanel.com/gr/fashion/collection/cruise-2023-24"
+            },
+            "image": "channel.jpg"
+        },
+
         {
             "name": "AR | EN TRANSLATION APP",
             "description": "",
@@ -38,38 +49,28 @@
                 "github": "https://github.com/m-mourouh/trans_app",
                 "website": "https://groupe4.pythonanywhere.com/"
             },
-            "image": "trans_app.jpg"
+            "image": "tr.jpg"
         },
 
         {
-            "name": "New Project",
+            "name": "Snake Game",
             "description": "",
-            "stack": ["JSTL", "SCSS", "JS", "React"],
+            "stack": ["HTML", "CSS", "JS", "OOP"],
             "links": {
-                "github": "",
-                "website": ""
+                "github": "https://github.com/m-mourouh/Snake-Game-Using-Javascript-OOP",
+                "website": "https://m-mourouh.github.io/Snake-Game-Using-Javascript-OOP/Snake/"
             },
-            "image": ""
+            "image": "sn.jpg"
         },
         {
-            "name": "New Project",
+            "name": "Matrix Calculator",
             "description": "",
-            "stack": ["JSTL", "SCSS", "JS", "React"],
+            "stack": ["HTML", "CSS", "JS"],
             "links": {
-                "github": "",
-                "website": ""
+                "github": "https://github.com/m-mourouh/Matrix-App",
+                "website": "https://m-mourouh.github.io/Matrix-App/matrice.html"
             },
-            "image": ""
-        },
-        {
-            "name": "New Project",
-            "description": "",
-            "stack": ["JSTL", "SCSS", "JS", "React"],
-            "links": {
-                "github": "",
-                "website": ""
-            },
-            "image": ""
+            "image": "mat.jpg"
         },
 
         {
@@ -80,7 +81,17 @@
                 "github": "https://github.com/m-mourouh/Covid-19-Detection-Web-Application",
                 "website": ""
             },
-            "image": "covid.jpg"
+            "image": "c.jpg"
+        },
+        {
+            "name": "Tapestry-Website",
+            "description": "",
+            "stack": ["HTML", "SCSS", "JS", "PHP"],
+            "links": {
+                "github": "https://github.com/m-mourouh/Tapestry-Website",
+                "website": ""
+            },
+            "image": "tp.jpg"
         },
         {
             "name": "TOURISM RECOMMENDATION SYSTEM",
@@ -90,7 +101,7 @@
                 "github": "https://github.com/m-mourouh/Tourism-Recommendation-System",
                 "website": ""
             },
-            "image": ""
+            "image": "t.jpg"
         },
 
         {
@@ -101,18 +112,9 @@
                 "github": "https://github.com/m-mourouh/LST-IRM-Website",
                 "website": ""
             },
-            "image": ""
+            "image": "s.jpg"
         },
-        {
-            "name": "NPS",
-            "description": "",
-            "stack": ["HTML", "CSS", "JS", "PHP", "MYSQL"],
-            "links": {
-                "github": "",
-                "website": "https://www.imprimerienumerique92.fr"
-            },
-            "image": "nps.jpg"
-        },
+ 
         {
             "name": "LE GRAND MENAGE",
             "description": "",
