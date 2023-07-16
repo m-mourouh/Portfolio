@@ -51,17 +51,6 @@
             },
             "image": "tr.jpg"
         },
-
-        {
-            "name": "Snake Game",
-            "description": "",
-            "stack": ["HTML", "CSS", "JS", "OOP"],
-            "links": {
-                "github": "https://github.com/m-mourouh/Snake-Game-Using-Javascript-OOP",
-                "website": "https://m-mourouh.github.io/Snake-Game-Using-Javascript-OOP/Snake/"
-            },
-            "image": "sn.jpg"
-        },
         {
             "name": "Matrix Calculator",
             "description": "",
@@ -124,6 +113,16 @@
                 "website": "https://www.legrandmenage33.fr"
             },
             "image": "menage.jpg"
+        },
+        {
+            "name": "NPS",
+            "description": "",
+            "stack": ["HTML", "CSS", "JS", "PHP", "MYSQL"],
+            "links": {
+                "github": "",
+                "website": "https://www.imprimerienumerique92.fr"
+            },
+            "image": "nps.jpg"
         }
     ]
 }
