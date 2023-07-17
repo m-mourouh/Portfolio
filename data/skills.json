@@ -7,6 +7,8 @@
                 "Bootstrap",
                 "Tailwind CSS",
                 "Material UI",
+                "Styled Components",
+                "Emotion.js",
                 "JavaScript",
                 "JQuery",
                 "JSON",
@@ -27,7 +29,6 @@
                 "Django",
                 "Flask",
                 "PHP",
-                "Laravel",
                 "Rest API"
             ],
             ["MySQL", "PostgreSQL", "MongoDB", "FireBase"],
@@ -50,10 +51,12 @@
                 "YARN",
                 "ESLint",
                 "TSLint",
+                  "Prettier",
                 "Lighthouse",
                 "VS Code",
                 "WebStorm",
-                "IntelliJ IDEA"
+                "IntelliJ IDEA",
+                "Google analytics"
             ],
             ["WordPress", "Drupal", "Sanity"],
             ["Photoshop", "Illustrator", "Adobe XD", "Figma","Sketch"],
