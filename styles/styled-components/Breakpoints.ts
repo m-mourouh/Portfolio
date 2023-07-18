@@ -1,4 +1,4 @@
-const size = {
+export const size = {
     xs: '400px', // for small screen mobile
     sm: '768px', // for mobile screen
     md: '900px', // for tablets
