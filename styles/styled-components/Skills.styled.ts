@@ -1,7 +1,7 @@
 'use client'
 import styled from 'styled-components'
 import { padding, selection, titleFont, titleLine } from './Helpers'
-import { device } from './Breakpoints'
+import { device, size } from './Breakpoints'
 
 export const StyledSkills = styled.section`
     ${padding()}
@@ -144,6 +144,9 @@ export const StyledSkills = styled.section`
         }
 
         .swiper-pagination {
+            @media(max-width: ${size.xs}){
+                    display: none;
+            } 
             span {
                 &.swiper-pagination-bullet {
                     background: rgba(63, 24, 90, 0.8);
