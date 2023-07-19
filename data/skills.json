@@ -32,7 +32,6 @@
                 "Rest API"
             ],
             ["MySQL", "PostgreSQL", "MongoDB", "FireBase"],
-            ["C", "Java", "PHP", "Javascript", "Typescript", "Python"],
             [
                 "Testing Library",
                 "Jest",
