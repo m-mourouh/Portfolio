@@ -8,16 +8,13 @@
                 "Tailwind CSS",
                 "Material UI",
                 "Styled Comps",
-                "Emotion.js",
                 "JavaScript",
                 "JQuery",
                 "JSON",
                 "Typescript",
                 "React.js",
                 "Redux",
-                "Vue.js",
                 "Next.js",
-                "Nuxt.js",
                 "Webpack",
                 "Babel",
                 "Vite"
@@ -35,7 +32,6 @@
             [
                 "Testing Library",
                 "Jest",
-                "Cypress",
                 "Manual Testing"
             ],
             [
@@ -57,7 +53,7 @@
                 "IntelliJ IDEA",
                 "Google analytics"
             ],
-            ["WordPress", "Drupal", "Sanity"],
+            ["WordPress", "Sanity"],
             ["Photoshop", "Illustrator", "Adobe XD", "Figma","Sketch"]
         ]
 }
