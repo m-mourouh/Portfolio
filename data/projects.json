@@ -1,5 +1,36 @@
 {
     "data": [
+              {
+            "name": "Channel",
+            "description": "",
+            "stack": ["JSTL", "SCSS", "JS", "React"],
+            "links": {
+                "github": "",
+                "website": "https://www.chanel.com/gr/fashion/collection/cruise-2023-24"
+            },
+            "image": "channel.jpg"
+        },
+        
+        {
+            "name": "LE GRAND MENAGE",
+            "description": "",
+            "stack": ["HTML", "CSS", "JS", "PHP", "MYSQL"],
+            "links": {
+                "github": "",
+                "website": "https://www.legrandmenage33.fr"
+            },
+            "image": "menage.jpg"
+        },
+              {
+            "name": "NPS",
+            "description": "",
+            "stack": ["HTML", "CSS", "JS", "PHP", "MYSQL"],
+            "links": {
+                "github": "",
+                "website": "https://www.imprimerienumerique92.fr"
+            },
+            "image": "nps.jpg"
+        },
         {
             "name": "Chat GPT Clone V.1.1",
             "description": "",
@@ -29,16 +60,6 @@
                 "website": "https://translation-app-omega.vercel.app"
             },
             "image": "tt.jpg"
-        },
-        {
-            "name": "Channel",
-            "description": "",
-            "stack": ["JSTL", "SCSS", "JS", "React"],
-            "links": {
-                "github": "",
-                "website": "https://www.chanel.com/gr/fashion/collection/cruise-2023-24"
-            },
-            "image": "channel.jpg"
         },
 
         {
@@ -104,26 +125,7 @@
             "image": "s.jpg"
         },
  
-        {
-            "name": "LE GRAND MENAGE",
-            "description": "",
-            "stack": ["HTML", "CSS", "JS", "PHP", "MYSQL"],
-            "links": {
-                "github": "",
-                "website": "https://www.legrandmenage33.fr"
-            },
-            "image": "menage.jpg"
-        },
-        {
-            "name": "NPS",
-            "description": "",
-            "stack": ["HTML", "CSS", "JS", "PHP", "MYSQL"],
-            "links": {
-                "github": "",
-                "website": "https://www.imprimerienumerique92.fr"
-            },
-            "image": "nps.jpg"
-        }
+  
     ]
 }
 
