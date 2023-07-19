@@ -1,6 +1,6 @@
 {
     "data": [
-              {
+        {
             "name": "Channel",
             "description": "",
             "stack": ["JSTL", "SCSS", "JS", "React"],
@@ -10,7 +10,6 @@
             },
             "image": "channel.jpg"
         },
-        
         {
             "name": "LE GRAND MENAGE",
             "description": "",
@@ -21,7 +20,7 @@
             },
             "image": "menage.jpg"
         },
-              {
+         {
             "name": "NPS",
             "description": "",
             "stack": ["HTML", "CSS", "JS", "PHP", "MYSQL"],
@@ -123,9 +122,9 @@
                 "website": ""
             },
             "image": "s.jpg"
-        },
- 
-  
+        }
+
+       
     ]
 }
 
