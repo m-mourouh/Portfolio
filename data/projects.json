@@ -6,10 +6,134 @@
             "stack": ["JSTL", "SCSS", "JS", "React"],
             "links": {
                 "github": "",
-                "website": "https://www.chanel.com/gr/fashion/collection/cruise-2023-24"
+                "website": "https://www.chanel.com/us"
             },
             "image": "channel.jpg"
         },
+        {
+            "name": "Instant beauté",
+            "description": "",
+            "stack": ["HTML", "CSS", "JS", "PHP", "MYSQL"],
+            "links": {
+                "github": "",
+                "website": "https://www.instant-beaute-by-anastasia.fr"
+            },
+            "image": "b1.jpg"
+        },
+        {
+            "name": "Eden cosmetique",
+            "description": "",
+            "stack": ["HTML", "CSS", "JS", "PHP", "MYSQL"],
+            "links": {
+                "github": "",
+                "website": "https://www.edencosmetique.fr"
+            },
+            "image": "b2.jpg"
+        },
+        {
+            "name": "LE NEW GOA",
+            "description": "",
+            "stack": ["HTML", "CSS", "JS", "PHP", "MYSQL"],
+            "links": {
+                "github": "",
+                "website": "https://www.restaurantindien-toulouse.fr"
+            },
+            "image": "r1.jpg"
+        },
+        {
+            "name": "BOIS DÉTAIL",
+            "description": "",
+            "stack": ["HTML", "CSS", "JS", "PHP", "MYSQL"],
+            "links": {
+                "github": "",
+                "website": "https://www.bois-detail.fr"
+            },
+            "image": "m1.jpg"
+        },
+
+        {
+            "name": "Solene Delacroix",
+            "description": "",
+            "stack": ["HTML", "CSS", "JS", "PHP", "MYSQL"],
+            "links": {
+                "github": "",
+                "website": "https://www.s-delacroix-photographe.fr"
+            },
+            "image": "p3.jpg"
+        },
+        {
+            "name": "2MJ",
+            "description": "",
+            "stack": ["HTML", "CSS", "JS", "PHP", "MYSQL"],
+            "links": {
+                "github": "",
+                "website": "https://www.2mjagencement.fr"
+            },
+            "image": "p4.jpg"
+        },
+
+        {
+            "name": "Cars Lift",
+            "description": "",
+            "stack": ["HTML", "CSS", "JS", "PHP", "MYSQL"],
+            "links": {
+                "github": "",
+                "website": "https://www.carslift-35.fr"
+            },
+            "image": "c2.jpg"
+        },
+        {
+            "name": "Jungle Pizza",
+            "description": "",
+            "stack": ["HTML", "CSS", "JS", "PHP", "MYSQL"],
+            "links": {
+                "github": "",
+                "website": "https://www.junglepizzanice06.fr"
+            },
+            "image": "f1.jpg"
+        },
+        {
+            "name": "Boutin David",
+            "description": "",
+            "stack": ["HTML", "CSS", "JS", "PHP", "MYSQL"],
+            "links": {
+                "github": "",
+                "website": "https://www.boutin-peinture.fr"
+            },
+            "image": "p5.jpg"
+        },
+        {
+            "name": "GARAGE ONCINS",
+            "description": "",
+            "stack": ["HTML", "CSS", "JS", "PHP", "MYSQL"],
+            "links": {
+                "github": "",
+                "website": "https://www.garage-oncins.fr"
+            },
+            "image": "c1.jpg"
+        },
+        {
+            "name": "Gourvat",
+            "description": "",
+            "stack": ["HTML", "CSS", "JS", "PHP", "MYSQL"],
+            "links": {
+                "github": "",
+                "website": "https://www.gourvat-paysagiste.com"
+            },
+            "image": "p2.jpg"
+        },
+
+        {
+            "name": "AURELIE LEJEUNE",
+            "description": "",
+            "stack": ["HTML", "CSS", "JS", "PHP", "MYSQL"],
+            "links": {
+                "github": "",
+                "website": "https://www.aurelielejeune.fr"
+            },
+            "image": "p1.jpg"
+        },
+
         {
             "name": "LE GRAND MENAGE",
             "description": "",
@@ -20,7 +144,7 @@
             },
             "image": "menage.jpg"
         },
-         {
+        {
             "name": "NPS",
             "description": "",
             "stack": ["HTML", "CSS", "JS", "PHP", "MYSQL"],
@@ -30,7 +154,38 @@
             },
             "image": "nps.jpg"
         },
-           {
+        {
+            "name": "A L'EAU PISCINES",
+            "description": "",
+            "stack": ["HTML", "CSS", "JS", "PHP", "MYSQL"],
+            "links": {
+                "github": "",
+                "website": "https://www.aleau-piscines.fr"
+            },
+            "image": "p6.jpg"
+        },
+        {
+            "name": "JCB",
+            "description": "",
+            "stack": ["HTML", "CSS", "JS", "PHP", "MYSQL"],
+            "links": {
+                "github": "",
+                "website": "https://www.jcbrenovation-92.fr"
+            },
+            "image": "p7.jpg"
+        },
+        {
+            "name": "TAXIS BOUHIER",
+            "description": "",
+            "stack": ["HTML", "CSS", "JS", "PHP", "MYSQL"],
+            "links": {
+                "github": "",
+                "website": "https://www.ambulance-taxi-bouhier.fr"
+            },
+            "image": "a1.jpg"
+        },
+
+        {
             "name": "Tapestry-Website",
             "description": "",
             "stack": ["HTML", "SCSS", "JS", "PHP"],
@@ -70,28 +225,6 @@
             },
             "image": "tt.jpg"
         },
-
-        {
-            "name": "AR | EN TRANSLATION APP",
-            "description": "",
-            "stack": ["HTML", "SCSS", "JS", "Python", "Flask"],
-            "links": {
-                "github": "https://github.com/m-mourouh/trans_app",
-                "website": "https://groupe4.pythonanywhere.com/"
-            },
-            "image": "tr.jpg"
-        },
-        {
-            "name": "Matrix Calculator",
-            "description": "",
-            "stack": ["HTML", "CSS", "JS"],
-            "links": {
-                "github": "https://github.com/m-mourouh/Matrix-App",
-                "website": "https://m-mourouh.github.io/Matrix-App/matrice.html"
-            },
-            "image": "mat.jpg"
-        },
-
         {
             "name": "COVID-19 DETECTION APP",
             "description": "",
@@ -102,7 +235,7 @@
             },
             "image": "c.jpg"
         },
-     
+
         {
             "name": "TOURISM RECOMMENDATION SYSTEM",
             "description": "",
@@ -112,20 +245,7 @@
                 "website": ""
             },
             "image": "t.jpg"
-        },
-
-        {
-            "name": "School Website",
-            "description": "",
-            "stack": ["HTML", "CSS", "JS", "PHP", "MYSQL"],
-            "links": {
-                "github": "https://github.com/m-mourouh/LST-IRM-Website",
-                "website": ""
-            },
-            "image": "s.jpg"
         }
-
-       
     ]
 }
 
