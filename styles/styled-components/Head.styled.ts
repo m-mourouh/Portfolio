@@ -58,7 +58,7 @@ export const StyledSelection = styled.section`
             span:last-of-type {
                 ${selection(false, '#fff')}
             }
-            /* &::after {
+            &::after {
                 content: '${data.user.name}';
                 position: absolute;
                 top: -15px;
@@ -75,17 +75,29 @@ export const StyledSelection = styled.section`
                 @media (max-width: 350px) {
                     font-size: clamp(25px, 4vw, 40px);
                 }
-            } */
+            }
         }
         h5 {
             font-family: var(--font-roboto);
-            color: transparent;
-            -webkit-text-stroke: 1px var(--orchid);
+            color: var(--orchid);
+            /* -webkit-text-stroke: 1px var(--orchid); */
             font-size: clamp(18px, 3vw, 80px);
             font-weight: 800;
+            background: -webkit-linear-gradient(
+                0turn,
+                var(--orchid),
+                #00fff5,
+                #00ff45
+            );
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
             span {
+                background: none;
+                -webkit-background-clip: initial;
+                -webkit-text-fill-color: initial;
                 color: var(--white);
                 -webkit-text-stroke: transparent;
+
                 ${selection(false, '#fff')}
             }
             margin-bottom: 30px;
@@ -95,7 +107,7 @@ export const StyledSelection = styled.section`
                 -webkit-text-stroke: transparent; */
                 font-size: clamp(25px, 5vw, 80px);
             }
-            ${selection(true)}
+            ${selection(false)}
         }
         p:first-of-type {
             font-size: 1rem;
@@ -115,6 +127,4 @@ export const StyledSelection = styled.section`
             margin-top: 30px;
         }
     }
-   
-   
 `
