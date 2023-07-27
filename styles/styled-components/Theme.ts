@@ -3,7 +3,7 @@ import { Theme } from '@/types/Theme.types'
 export const theme = {
     dark: {
         background: '#1a1a1a',
-        lightBackground: '#160820b8',
+        lightBackground: '#1a1a1ad4',
         text: '#FFFFFF',
         primary: '#160820',
         secondary: '#160820',
