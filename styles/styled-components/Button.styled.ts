@@ -10,7 +10,7 @@ type ButtonProps = {
 export const StyledButton = styled.button<ButtonProps>`
     outline: none;
     background-color: #2f2f2f;
-    /* border: 1px solid var(--white); */
+    border: none;
     color: var(--white);
     cursor: pointer;
     border-radius: ${({ radius = 8 }) => `${radius}px`};
