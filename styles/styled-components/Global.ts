@@ -10,15 +10,18 @@ export const GlobalStyle = createGlobalStyle<Theme>`
     }
     :root {
         /* colors varibales */
-        --orchid: #9400FF;
+        --orchid: #00be57;
         --white: #FFFFFF;
+        --black: #000;
         --gray: #D3D3D3;
         --subtitle: #6a6174;
         --thumb: #41354a;
         --c1: #878787;
-        --c2: #897c8d;
+        --c2: #ebebeb99;
         --nav-height: 100px;
         --fz-heading: 32px;
+      --color-1: #00fff5;
+    --color-2: #00ff45;
     }
 
     body {
@@ -43,13 +46,14 @@ export const GlobalStyle = createGlobalStyle<Theme>`
 }
 
 ::-webkit-scrollbar-thumb {
-    background-color: var(--thumb);
+    background-color: var(--black);
     border: 3px solid ${({ theme }) => theme.dark.background};
     border-radius: 10px;
 }
 ::selection {
-        background: var(--thumb);
-        color: var(--orchid);
+        background: #2e2e2e;
+        color: var(--white);
+        border-radius: 50%;
 }
 
 `

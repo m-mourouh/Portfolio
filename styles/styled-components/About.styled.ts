@@ -43,7 +43,7 @@ export const StyledAbout = styled.section`
                 &:last-child {
                     margin-top: 20px;
                     color: var(--c2);
-                    opacity: 0.3;
+                    /* opacity: 0.3; */
                 }
                 ${resposiveParagraph()}
             }
@@ -87,14 +87,14 @@ export const StyledAbout = styled.section`
                 top: 50%;
                 left: 50%;
                 transform: translate(-50%, -50%);
-                border: 2px solid var(--orchid);
-                background: var(--orchid);
+                border: 2px solid var(--white);
+                background: var(--white);
                 object-fit: cover;
                 z-index: -1;
                 border-radius: 50%;
                 padding: 10px;
                 opacity: 0.1;
-                border: 4px solid var(--c2);
+                border: 4px solid var(--white);
                 transition: all 0.4s ease-in-out;
                 transform-origin: 50% 50%;
             }
@@ -106,16 +106,17 @@ export const StyledAbout = styled.section`
                 top: 50%;
                 left: 50%;
                 transform: translate(-50%, -50%);
-                border: 2px solid var(--orchid);
-                background: var(--orchid);
+                border: 2px solid var(--white);
+                background: var(--white);
                 object-fit: cover;
 
                 border-radius: 50%;
                 padding: 10px;
                 opacity: 0.1;
-                border: 4px solid var(--c2);
+                border: 4px solid var(--white);
                 transition: all 0.2s ease-in-out;
                 transform-origin: 50% 50%;
+                z-index: -1;
             }
             @media ${device.xs} {
                 max-width: 250px;
@@ -127,7 +128,7 @@ export const StyledAbout = styled.section`
                 user-select: none;
                 width: 100%;
                 height: 100%;
-                border: 4px solid var(--c2);
+                border: 4px solid var(--white);
                 border-radius: 50%;
             }
 

@@ -46,18 +46,19 @@ export const StyledSkills = styled.section`
                     height: max-content;
                 }
                 padding: 12px 20px;
+                line-height: 25px;
                 color: var(--white);
                 background: transparent;
-                border: 1px solid var(--orchid);
+                /* border: 1px solid var(--orchid); */
                 text-align: center;
                 font-family: var(--font-roboto-mono);
                 cursor: pointer;
-                border-radius: 50px;
+                border-radius: 8px;
                 opacity: 0.2;
                 transition: all 0.2s ease-in-out;
                 &.active,
                 &:hover {
-                    background-color: rgba(63, 24, 90, 0.5);
+                    background-color: #2f2f2f;
                     color: var(--white);
                     opacity: 1;
                 }
@@ -106,11 +107,11 @@ export const StyledSkills = styled.section`
                     align-items: center;
                     /* height: max-content; */
                     padding: 25px 10px;
-                    background-color: rgba(63, 24, 90, 0.5);
+                    background-color: #2f2f2f;
 
                     color: var(--white);
                     border-radius: 10px;
-                    border: 1px solid var(--orchid);
+                    /* border: 1px solid var(--orchid); */
                     /* font-weight: 900; */
                     font-size: 1rem;
                     p {
@@ -144,13 +145,13 @@ export const StyledSkills = styled.section`
         }
 
         .swiper-pagination {
-            @media(max-width: ${size.xs}){
-                    display: none;
-            } 
+            @media (max-width: ${size.xs}) {
+                display: none;
+            }
             span {
                 &.swiper-pagination-bullet {
-                    background: rgba(63, 24, 90, 0.8);
-                    border: 1px solid rgba(63, 24, 90, 1);
+                    background: #2f2f2f;
+                    border: 1px solid #2f2f2f;
                     width: 4px;
                     height: 50px;
                     border-radius: 10px;
@@ -163,8 +164,8 @@ export const StyledSkills = styled.section`
                         height: 4px;
                     }
                     &:hover {
-                        background: rgba(63, 24, 90, 0.8) !important;
-                        border: 1px solid rgba(63, 24, 90, 1) !important;
+                        background: #2f2f2f !important;
+                        border: 1px solid #2f2f2f !important;
                         opacity: 1;
                     }
                 }

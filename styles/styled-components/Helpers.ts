@@ -5,15 +5,14 @@ export function selection(fill: boolean = false, color?: string): FlattenSimpleI
     
     const filledSelection = css`
         &::selection {
-            color: ${color ? color : 'var(--orchid)'};
+            color: ${color ? color : 'var(--white)'};
             -webkit-text-stroke: transparent;
         }
     `
     const emptySelection = css`
-        
         &::selection {
             color: transparent;
-            -webkit-text-stroke: 1px ${color ? color : 'var(--orchid)'};
+            -webkit-text-stroke: 1px ${color ? color : 'var(--color-2)'};
         }
     `
 

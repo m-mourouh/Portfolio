@@ -55,7 +55,7 @@ export default function Head() {
                     as="a"
                     href={profilesData.data.linkedin}
                     target="_blank"
-                    width={180}
+                    width={120}
                 >
                     Hire me
                 </StyledButton>

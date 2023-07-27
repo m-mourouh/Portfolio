@@ -94,8 +94,8 @@ export const StyledProjects = styled.section`
                         flex: 2;
                         background: linear-gradient(
                             270deg,
-                            #160820 0%,
-                            #9400ff 67.99%,
+                            #00ff4500 0%,
+                            #00ff4582 67.99%,
                             #160820 100%
                         );
                     }
@@ -160,12 +160,7 @@ export const StyledProjects = styled.section`
                         top: 0;
                         width: 100%;
                         height: 100%;
-                        background: linear-gradient(
-                            360deg,
-                            rgba(92, 0, 156, .3) 44.58%,
-                            rgba(22, 8, 32, 0.5) 103.42%
-                        );
-
+                        background: linear-gradient( 360deg, #0000002b 44.58%, #1a1a1a1f 103.42% );
                         z-index: 99;
                         opacity: 0.6;
                     }
@@ -179,8 +174,8 @@ export const StyledProjects = styled.section`
                         flex: 2;
                         background: linear-gradient(
                             270deg,
-                            #160820 0%,
-                            #9400ff 67.99%,
+                            #00ff4500 0%,
+                            #00ff4582 67.99%,
                             #160820 100%
                         );
                         transition: all 0.4s ease-in-out;

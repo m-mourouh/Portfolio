@@ -51,7 +51,7 @@ export const StyledSection = styled.section`
             width: 100%;
             background: none !important;
             outline: none;
-            border: 1px solid var(--orchid);
+            border: 1px solid var(--c2);
             opacity: 0.5;
             color: var(--c1);
             border-radius: 50px;
@@ -61,16 +61,16 @@ export const StyledSection = styled.section`
             transition: all 0.2s ease-in-out;
             &:focus {
                 opacity: 1;
-                border: 1px solid var(--orchid);
-                color: var(--orchid);
+                border: 1px solid var(--c1);
+                color: var(--c1);
                 &::placeholder {
-                    color: var(--orchid);
+                    color: var(--c1);
                 }
             }
             &:-webkit-autofill,
             &:-webkit-autofill:hover,
             &:-webkit-autofill:focus {
-                -webkit-text-fill-color: var(--orchid);
+                -webkit-text-fill-color: var(--c1);
                 -webkit-box-shadow: 0 0 0px 1000px
                     ${({ theme }) => theme.dark.background} inset;
                 transition: background-color 5000s ease-in-out 0s;
@@ -78,17 +78,17 @@ export const StyledSection = styled.section`
 
             &:valid {
                 opacity: 1;
-                color: var(--orchid);
-                border-color: var(--orchid);
+                color: var(--c1);
+                border-color: var(--c1);
             }
         }
         textarea {
             width: 100%;
             background: transparent;
             outline: none;
-            border: 1px solid var(--orchid);
+            border: 1px solid var(--c2);
 
-            color: var(--c1);
+            color: var(--c2);
             border-radius: 10px;
             padding: 12px 20px;
             font-family: var(--font-roboto-mono);
@@ -97,18 +97,18 @@ export const StyledSection = styled.section`
             resize: none;
             opacity: 0.5;
             &:focus {
-                border: 1px solid var(--orchid);
+                border: 1px solid var(--c1);
                 opacity: 1;
                 &::placeholder {
-                    color: var(--orchid);
+                    color: var(--c1);
                 }
-                color: var(--orchid);
+                color: var(--c1);
                 background: none;
             }
             &:valid {
                 opacity: 1;
-                color: var(--orchid);
-                border-color: var(--orchid);
+                color: var(--c1);
+                border-color: var(--c1);
             }
             &:-webkit-autofill,
             &:-webkit-autofill:hover,

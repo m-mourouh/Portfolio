@@ -9,11 +9,11 @@ type ButtonProps = {
 }
 export const StyledButton = styled.button<ButtonProps>`
     outline: none;
-    background: none;
-    border: 1px solid var(--orchid);
-    color: var(--orchid);
+    background-color: #2f2f2f;
+    /* border: 1px solid var(--white); */
+    color: var(--white);
     cursor: pointer;
-    border-radius: ${({ radius = 50 }) => `${radius}px`};
+    border-radius: ${({ radius = 8 }) => `${radius}px`};
     font-family: var(--font-fira-code);
     padding: 8px 16px;
     text-align: center;
@@ -37,7 +37,7 @@ export const StyledButton = styled.button<ButtonProps>`
 
     /* transition: all 0.15s ease-in-out; */
     &:not(:disabled):hover {
-        background-color: rgba(63, 24, 90, 0.5);
+        background-color: #2b2a2a;
         color: var(--white);
         opacity: 1;
     }
