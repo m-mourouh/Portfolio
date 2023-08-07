@@ -144,7 +144,7 @@ export const StyledAbout = styled.section`
                 height: 30px;
                 border-radius: 50px;
                 padding: 5px;
-
+                display: none;
                 @media ${device.xs} {
                     bottom: 12px;
                 }
