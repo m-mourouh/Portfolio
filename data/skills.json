@@ -6,7 +6,6 @@
                 "SASS",
                 "Bootstrap",
                 "Tailwind CSS",
-                  "Vuetify",
                 "Material UI",
                 "Styled Comps",
                 "JavaScript",
@@ -15,11 +14,11 @@
                 "Typescript",
                 "React.js",
                 "Redux",
-                  "Vue.js",
                 "Next.js",
                 "Webpack",
                 "Babel",
-                "Vite"
+                  "Vue.js",
+                "Vite",
             ],
             [
                 "Node.js",
