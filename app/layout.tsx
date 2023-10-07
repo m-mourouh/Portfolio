@@ -6,7 +6,7 @@ import data from '@/data/user.json'
 import { roboto } from '@/fonts/fonts'
 import GoogleAnalytics from '@/components/GoogleAnalytics'
 export const metadata = {
-    title: `${data.user.name} | Software Enginner | Portfolio`,
+    title: `${data.user.name} | Software Engineer | Portfolio`,
     description: `${data.user.name} website | `,
 }
 
