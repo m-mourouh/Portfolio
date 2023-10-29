@@ -8,9 +8,9 @@
         "address": "Casablanca, Morocco",
         "website": "",
         "title": "Frontend Engineer",
-        "description": "I'm a passionate software developer based in Morocco. I build creative web apps that are both visually stunning and user-friendly. I'm committed to delivering high-quality solutions that exceed expectations. With a focus on innovation and problem-solving, I'm dedicated to helping businesses and individuals achieve their digital goals.",
+        "description": "I'm a passionate software engineer based in Morocco. I build creative web apps that are both visually stunning and user-friendly. I'm committed to delivering high-quality solutions that exceed expectations. With a focus on innovation and problem-solving, I'm dedicated to helping businesses and individuals achieve their digital goals.",
         "intro-text": "Hi 👋, my name is",
-        "introduction": "Hello, my name is $name. I am $age years old and my passion for web development started in $year. Since then, I have been dedicated to learning and mastering various web development technologies such as HTML, CSS, JavaScript, React and Next.js. I have experience working on both front-end and back-end development projects, and I enjoy the challenge of creating creative dynamic web applications that provide a great user experience.",
+        "introduction": "Hello, my name is $name. I am $age years old and my passion for web development started in $year. Since then, I have been dedicated to learning and mastering various web development technologies such as JavaScript, React.js, Vue.js, Angular, Python, Java and more. I have experience working on both front-end and back-end development projects, and I enjoy the challenge of crafting dynamic web applications that deliver an outstanding user experience, whether it's on the front-end or back-end.",
         "subtitle": "I turn <span>ideas</span> into a stunning digital <span>reality.<span>",
         "thank": "Thank you for taking the time to learn more about me and my work."
        

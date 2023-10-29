@@ -4,8 +4,9 @@
                 "HTML",
                 "CSS",
                 "SASS",
-                "Bootstrap",
                 "Tailwind CSS",
+                "Vuetify",
+                "Bootstrap",
                 "Material UI",
                 "Styled Comps",
                 "JavaScript",
@@ -17,19 +18,24 @@
                 "Next.js",
                 "Webpack",
                 "Babel",
-                  "Vue.js",
-                "Vite"
+                "Vue.js",
+                "Vuex ORM",
+                "Angular"
             ],
             [
+                "Java",
+                "Spring Framework",
+                "Hibernate",
                 "Node.js",
                 "Express.js",
                 "Python",
                 "Django",
                 "Flask",
                 "PHP",
-                "Rest API"
+                "Rest API",
+                "GRPC"
             ],
-            ["MySQL", "PostgreSQL", "MongoDB", "FireBase"],
+            ["MySQL", "PostgreSQL", "MongoDB", "FireBase", "XML"],
             [
                 "Testing Library",
                 "Jest",
@@ -38,6 +44,7 @@
             [
                 "Git",
                 "GitHub",
+                "Docker",
                 "Azure DevOps",
                 "GitLab",
                 "Gulp.js",
@@ -47,7 +54,7 @@
                 "YARN",
                 "ESLint",
                 "TSLint",
-                  "Prettier",
+                "Prettier",
                 "Lighthouse",
                 "VS Code",
                 "WebStorm",

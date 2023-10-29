@@ -133,6 +133,7 @@ export const StyledAbout = styled.section`
             }
 
             .icon {
+                display: none;
                 position: absolute;
                 background: var(--c2);
                 z-index: 999;
