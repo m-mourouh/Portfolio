@@ -11,6 +11,16 @@
             "image": "channel.jpg"
         },
         {
+            "name": "Chat GPT Clone V.1.0",
+            "description": "",
+            "stack": ["Next", "TS", "Redux", "Tailwind CSS", "FireBase"],
+            "links": {
+                "github": "",
+                "website": "https://chat-gpt-clone-v10.vercel.app/"
+            },
+            "image": "V10.jpg"
+        },
+        {
             "name": "Instant beauté",
             "description": "",
             "stack": ["HTML", "CSS", "JS", "PHP", "MYSQL"],
@@ -204,16 +214,6 @@
                 "website": "https://chat-gpt-clone-v11.vercel.app/"
             },
             "image": "v11.jpg"
-        },
-        {
-            "name": "Chat GPT Clone V.1.0",
-            "description": "",
-            "stack": ["Next", "TS", "Redux", "Tailwind CSS", "FireBase"],
-            "links": {
-                "github": "",
-                "website": "https://chat-gpt-clone-v10.vercel.app/"
-            },
-            "image": "V10.jpg"
         },
         {
             "name": "Translation APP",

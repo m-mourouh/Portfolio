@@ -9,12 +9,12 @@ import Logo from '@/public/images/logo.svg'
 export default function About() {
     function getDescription(): string {
         const name = data.user.name
-        const age = new Date().getFullYear() - +data.user.birth
+        // const age = new Date().getFullYear() - +data.user.birth
         const startedAt = data.user.startedAt
 
         const description = data.user.introduction
             .replace('$name.', name)
-            .replace('$age', age.toString())
+            // .replace('$age', age.toString())
             .replace('$year', startedAt.toString())
 
         return description
