@@ -1,7 +1,7 @@
 import { StyledAbout } from '@/styles/styled-components/About.styled'
 import data from '@/data/user.json'
 import Image from 'next/image'
-import Picture from '@/public/images/pict.png'
+import Picture from '@/public/images/pic.png'
 import OutlinedPicture from '@/public/images/giphy.webp'
 import { roboto_mono, roboto } from '@/fonts/fonts'
 import Logo from '@/public/images/logo.svg'
