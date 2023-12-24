@@ -1,4 +1,5 @@
-![next](https://img.shields.io/badge/next-javascript-blue?logo=javascript)
+![Static Badge](https://img.shields.io/badge/build-yarn-green)
+
 <a href="https://www.mmourouh.site" target="_blank"><img src="https://github.com/m-mourouh/Portfolio/assets/60442896/40ec43ec-51b5-40e9-99dd-c0cff4ee9a85" /></a>
 
 
