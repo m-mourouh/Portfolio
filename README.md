@@ -1,7 +1,6 @@
 
 ![www mmourouh site_ (2)](https://github.com/m-mourouh/Portfolio/assets/60442896/e2364511-fe5e-46bc-9138-9929b3fd1431)
 
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
 
