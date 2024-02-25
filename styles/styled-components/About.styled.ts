@@ -130,7 +130,7 @@ export const StyledAbout = styled.section`
                 height: 100%;
                 border: 4px solid var(--white);
                 border-radius: 50%;
-                background: repeating-linear-gradient(45deg, #7eee14, #1a1a1a 100px);
+    
             }
 
             .icon {
