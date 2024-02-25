@@ -130,6 +130,10 @@ export const StyledAbout = styled.section`
                 height: 100%;
                 border: 4px solid var(--white);
                 border-radius: 50%;
+                filter: grayscale(0.7);
+                &:hover {
+                    filter: grayscale(0);
+                }
             }
 
             .icon {
