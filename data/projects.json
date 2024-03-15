@@ -8,7 +8,8 @@
                 "github": "",
                 "website": "https://www.chanel.com/us"
             },
-            "image": "channel.jpg"
+            "image": "channel.jpg",
+            "hidden": false
         },
         {
             "name": "Chat GPT Clone V.1.0",
@@ -18,7 +19,8 @@
                 "github": "",
                 "website": "https://chat-gpt-clone-v10.vercel.app/"
             },
-            "image": "V10.jpg"
+            "image": "V10.jpg",
+            "hidden": false
         },
         {
             "name": "Instant beauté",
@@ -28,7 +30,8 @@
                 "github": "",
                 "website": "https://www.instant-beaute-by-anastasia.fr"
             },
-            "image": "b1.jpg"
+            "image": "b1.jpg",
+            "hidden": false
         },
         {
             "name": "Eden cosmetique",
@@ -38,7 +41,8 @@
                 "github": "",
                 "website": "https://www.edencosmetique.fr"
             },
-            "image": "b2.jpg"
+            "image": "b2.jpg",
+            "hidden": true
         },
         {
             "name": "LE NEW GOA",
@@ -48,7 +52,8 @@
                 "github": "",
                 "website": "https://www.restaurantindien-toulouse.fr"
             },
-            "image": "r1.jpg"
+            "image": "r1.jpg",
+            "hidden": false
         },
         {
             "name": "BOIS DÉTAIL",
@@ -58,7 +63,8 @@
                 "github": "",
                 "website": "https://www.bois-detail.fr"
             },
-            "image": "m1.jpg"
+            "image": "m1.jpg",
+            "hidden": false
         },
 
         {
@@ -69,7 +75,8 @@
                 "github": "",
                 "website": "https://www.s-delacroix-photographe.fr"
             },
-            "image": "p3.jpg"
+            "image": "p3.jpg",
+            "hidden": false
         },
         {
             "name": "2MJ",
@@ -79,7 +86,8 @@
                 "github": "",
                 "website": "https://www.2mjagencement.fr"
             },
-            "image": "p4.jpg"
+            "image": "p4.jpg",
+            "hidden": false
         },
 
         {
@@ -90,7 +98,8 @@
                 "github": "",
                 "website": "https://www.carslift-35.fr"
             },
-            "image": "c2.jpg"
+            "image": "c2.jpg",
+            "hidden": true
         },
         {
             "name": "Jungle Pizza",
@@ -100,7 +109,8 @@
                 "github": "",
                 "website": "https://www.junglepizzanice06.fr"
             },
-            "image": "f1.jpg"
+            "image": "f1.jpg",
+            "hidden": true
         },
         {
             "name": "Boutin David",
@@ -110,7 +120,8 @@
                 "github": "",
                 "website": "https://www.boutin-peinture.fr"
             },
-            "image": "p5.jpg"
+            "image": "p5.jpg",
+            "hidden": false
         },
         {
             "name": "GARAGE ONCINS",
@@ -120,7 +131,8 @@
                 "github": "",
                 "website": "https://www.garage-oncins.fr"
             },
-            "image": "c1.jpg"
+            "image": "c1.jpg",
+            "hidden": false
         },
         {
             "name": "Gourvat",
@@ -130,7 +142,8 @@
                 "github": "",
                 "website": "https://www.gourvat-paysagiste.com"
             },
-            "image": "p2.jpg"
+            "image": "p2.jpg",
+            "hidden": false
         },
 
         {
@@ -141,7 +154,8 @@
                 "github": "",
                 "website": "https://www.aurelielejeune.fr"
             },
-            "image": "p1.jpg"
+            "image": "p1.jpg",
+            "hidden": false
         },
 
         {
@@ -152,7 +166,8 @@
                 "github": "",
                 "website": "https://www.legrandmenage33.fr"
             },
-            "image": "menage.jpg"
+            "image": "menage.jpg",
+            "hidden": false
         },
         {
             "name": "NPS",
@@ -162,7 +177,8 @@
                 "github": "",
                 "website": "https://www.imprimerienumerique92.fr"
             },
-            "image": "nps.jpg"
+            "image": "nps.jpg",
+            "hidden": true
         },
         {
             "name": "A L'EAU PISCINES",
@@ -172,7 +188,8 @@
                 "github": "",
                 "website": "https://www.aleau-piscines.fr"
             },
-            "image": "p6.jpg"
+            "image": "p6.jpg",
+            "hidden": false
         },
         {
             "name": "JCB",
@@ -182,7 +199,8 @@
                 "github": "",
                 "website": "https://www.jcbrenovation-92.fr"
             },
-            "image": "p7.jpg"
+            "image": "p7.jpg",
+            "hidden": false
         },
         {
             "name": "TAXIS BOUHIER",
@@ -192,7 +210,8 @@
                 "github": "",
                 "website": "https://www.ambulance-taxi-bouhier.fr"
             },
-            "image": "a1.jpg"
+            "image": "a1.jpg",
+            "hidden": false
         },
 
         {
@@ -203,7 +222,8 @@
                 "github": "https://github.com/m-mourouh/Tapestry-Website",
                 "website": "https://tapessry.000webhostapp.com/"
             },
-            "image": "tp.jpg"
+            "image": "tp.jpg",
+            "hidden": false
         },
         {
             "name": "Chat GPT Clone V.1.1",
@@ -213,7 +233,8 @@
                 "github": "",
                 "website": "https://chat-gpt-clone-v11.vercel.app/"
             },
-            "image": "v11.jpg"
+            "image": "v11.jpg",
+            "hidden": false
         },
         {
             "name": "Translation APP",
@@ -223,7 +244,8 @@
                 "github": "https://github.com/m-mourouh/translation-app",
                 "website": "https://translation-app-omega.vercel.app"
             },
-            "image": "tt.jpg"
+            "image": "tt.jpg",
+            "hidden": false
         },
         {
             "name": "COVID-19 DETECTION APP",
@@ -233,7 +255,8 @@
                 "github": "https://github.com/m-mourouh/Covid-19-Detection-Web-Application",
                 "website": ""
             },
-            "image": "c.jpg"
+            "image": "c.jpg",
+            "hidden": false
         },
 
         {
@@ -244,8 +267,8 @@
                 "github": "https://github.com/m-mourouh/Tourism-Recommendation-System",
                 "website": ""
             },
-            "image": "t.jpg"
+            "image": "t.jpg",
+            "hidden": false
         }
     ]
 }
-

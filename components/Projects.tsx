@@ -12,7 +12,8 @@ export default function Projects({
 }: {
     numberOfProjects: number
 }) {
-    const [projects, setProjects] = useState(projectData.data)
+    const activeProjects = projectData.data.filter((project) => !project.hidden)
+    const [projects, setProjects] = useState(activeProjects)
     const [list, setList] = useState(projects.slice(0, numberOfProjects))
     const [toggle, setToggle] = useState(true)
 
@@ -21,7 +22,7 @@ export default function Projects({
         let l = []
 
         for (i; i < list.length + numberOfProjects / 2 ; i++) {
-        // for (i; i < list.length + numberOfProjects ; i++) {
+            // for (i; i < list.length + numberOfProjects ; i++) {
             if (i < projects.length) {
                 l.push(projects[i])
             }
@@ -34,7 +35,7 @@ export default function Projects({
     const showLessProjects = () => {
         let l = []
         if (list.length > numberOfProjects) {
-              l = list.slice(0, list.length - numberOfProjects / 2)
+            l = list.slice(0, list.length - numberOfProjects / 2)
             // l = list.slice(0, list.length - numberOfProjects )
             setList(l)
         }
