@@ -23,6 +23,17 @@
             "hidden": false
         },
         {
+            "name": "Translation APP",
+            "description": "",
+            "stack": ["React", "Redux", "Next", "Tailwind CSS"],
+            "links": {
+                "github": "https://github.com/m-mourouh/translation-app",
+                "website": "https://translation-app-omega.vercel.app"
+            },
+            "image": "tt.jpg",
+            "hidden": false
+        },
+        {
             "name": "Instant beauté",
             "description": "",
             "stack": ["HTML", "CSS", "JS", "PHP", "MYSQL"],
@@ -236,17 +247,7 @@
             "image": "v11.jpg",
             "hidden": false
         },
-        {
-            "name": "Translation APP",
-            "description": "",
-            "stack": ["React", "Redux", "Next", "Tailwind CSS"],
-            "links": {
-                "github": "https://github.com/m-mourouh/translation-app",
-                "website": "https://translation-app-omega.vercel.app"
-            },
-            "image": "tt.jpg",
-            "hidden": false
-        },
+  
         {
             "name": "COVID-19 DETECTION APP",
             "description": "",
