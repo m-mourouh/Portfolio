@@ -56,6 +56,17 @@
             "hidden": false
         },
         {
+            "name": "Socotec",
+            "description": "",
+            "stack": ["Vue.JS", "Python", "Django"],
+            "links": {
+                "github": "",
+                "website": "https://amos.socotec.com"
+            },
+            "image": "amos.jpg",
+            "hidden": false
+        },
+        {
             "name": "COVID-19 DETECTION APP",
             "description": "",
             "stack": ["HTML", "SCSS", "JS", "Python", "Flask", "ML"],
@@ -277,17 +288,6 @@
             "links": {
                 "github": "https://github.com/m-mourouh/Tapestry-Website",
                 "website": "https://tapessry.000webhostapp.com/"
-            },
-            "image": "tp.jpg",
-            "hidden": false
-        },
-        {
-            "name": "Amos - Socotec",
-            "description": "",
-            "stack": ["Vue.JS", "SCSS", "JS", "Python", "Django"],
-            "links": {
-                "github": "",
-                "website": "https://amos.socotec.com"
             },
             "image": "tp.jpg",
             "hidden": false
