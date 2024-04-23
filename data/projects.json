@@ -6,7 +6,7 @@
             "stack": ["JSTL", "SCSS", "JS", "React"],
             "links": {
                 "github": "",
-                "website": "https://www.chanel.com/us"
+                "website": "https://www.chanel.com/us/high-jewelry"
             },
             "image": "channel.jpg",
             "hidden": false
@@ -23,6 +23,17 @@
             "hidden": false
         },
         {
+            "name": "Chat GPT Clone V.1.1",
+            "description": "",
+            "stack": ["Next", "TS", "Redux", "Tailwind CSS", "FireBase"],
+            "links": {
+                "github": "",
+                "website": "https://chat-gpt-clone-v11.vercel.app/"
+            },
+            "image": "v11.jpg",
+            "hidden": false
+        },
+        {
             "name": "Translation APP",
             "description": "",
             "stack": ["React", "Redux", "Next", "Tailwind CSS"],
@@ -31,6 +42,40 @@
                 "website": "https://translation-app-omega.vercel.app"
             },
             "image": "tt.jpg",
+            "hidden": false
+        },
+        {
+            "name": "Hospital Management System",
+            "description": "",
+            "stack": ["Java", "Spring Boot", "JPA", "Hibernate", "MySQL"],
+            "links": {
+                "github": "https://github.com/m-mourouh/hospital_app",
+                "website": ""
+            },
+            "image": "hospital.jpg",
+            "hidden": false
+        },
+        {
+            "name": "COVID-19 DETECTION APP",
+            "description": "",
+            "stack": ["HTML", "SCSS", "JS", "Python", "Flask", "ML"],
+            "links": {
+                "github": "https://github.com/m-mourouh/Covid-19-Detection-Web-Application",
+                "website": ""
+            },
+            "image": "c.jpg",
+            "hidden": false
+        },
+
+        {
+            "name": "TOURISM RECOMMENDATION SYSTEM",
+            "description": "",
+            "stack": ["HTML", "SCSS", "JS", "Python", "Django", "ML"],
+            "links": {
+                "github": "https://github.com/m-mourouh/Tourism-Recommendation-System",
+                "website": ""
+            },
+            "image": "t.jpg",
             "hidden": false
         },
         {
@@ -237,38 +282,14 @@
             "hidden": false
         },
         {
-            "name": "Chat GPT Clone V.1.1",
+            "name": "Amos - Socotec",
             "description": "",
-            "stack": ["Next", "TS", "Redux", "Tailwind CSS", "FireBase"],
+            "stack": ["Vue.JS", "SCSS", "JS", "Python", "Django"],
             "links": {
                 "github": "",
-                "website": "https://chat-gpt-clone-v11.vercel.app/"
+                "website": "https://amos.socotec.com"
             },
-            "image": "v11.jpg",
-            "hidden": false
-        },
-  
-        {
-            "name": "COVID-19 DETECTION APP",
-            "description": "",
-            "stack": ["HTML", "SCSS", "JS", "Python", "Flask", "ML"],
-            "links": {
-                "github": "https://github.com/m-mourouh/Covid-19-Detection-Web-Application",
-                "website": ""
-            },
-            "image": "c.jpg",
-            "hidden": false
-        },
-
-        {
-            "name": "TOURISM RECOMMENDATION SYSTEM",
-            "description": "",
-            "stack": ["HTML", "SCSS", "JS", "Python", "Django", "ML"],
-            "links": {
-                "github": "https://github.com/m-mourouh/Tourism-Recommendation-System",
-                "website": ""
-            },
-            "image": "t.jpg",
+            "image": "tp.jpg",
             "hidden": false
         }
     ]
