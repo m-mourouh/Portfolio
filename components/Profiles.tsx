@@ -5,7 +5,7 @@ import Link from 'next/link'
 import { TbBrandGithub } from 'react-icons/tb'
 import { FaLinkedinIn, FaDev, FaFacebook } from 'react-icons/fa'
 import { BsInstagram } from 'react-icons/bs'
-import { SlSocialTwitter } from 'react-icons/sl'
+import { RiTwitterXLine } from "react-icons/ri";
 import { AiOutlineYoutube } from 'react-icons/ai'
 import { roboto_mono } from '@/fonts/fonts'
 import { useEffect, useRef } from 'react'
@@ -60,11 +60,11 @@ export default function SocialMedia({ option }: { option: boolean }) {
                         <BsInstagram />
                     </Link>
                     <Link
-                        href={profilesData.data.twitter}
+                        href={profilesData.data.x}
                         className="icon"
                         target="_blank"
                     >
-                        <SlSocialTwitter />
+                        <RiTwitterXLine />
                     </Link>
                     <Link
                         href={profilesData.data.facebook}
@@ -108,12 +108,12 @@ export default function SocialMedia({ option }: { option: boolean }) {
                         <span className="tooltiptext">Instagram</span>
                     </Link>
                     <Link
-                        href={profilesData.data.twitter}
+                        href={profilesData.data.x}
                         className="icon media"
                         target="_blank"
                     >
-                        TW
-                        <span className="tooltiptext">Twitter</span>
+                        X
+                        <span className="tooltiptext">X</span>
                     </Link>
                     <Link
                         href={profilesData.data.facebook}

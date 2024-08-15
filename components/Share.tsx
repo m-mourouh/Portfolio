@@ -6,7 +6,7 @@ import Link from 'next/link'
 import React, { useEffect, useRef, useState } from 'react'
 import { IoMdHeart } from 'react-icons/io'
 import { FaFacebook, FaLinkedinIn } from 'react-icons/fa'
-import { SlSocialTwitter } from 'react-icons/sl'
+import { RiTwitterXLine } from "react-icons/ri";
 import {
     FacebookShareButton,
     TwitterShareButton,
@@ -119,7 +119,7 @@ export default function Share({ orientation }: { orientation: string }) {
                                 hashtags={['portfolio', 'Mohamed_Mourouh']}
                             >
                                 <Link href={''} className="icon share-icon">
-                                    <SlSocialTwitter />
+                                    <RiTwitterXLine  />
                                 </Link>
                             </TwitterShareButton>
                         </li>
