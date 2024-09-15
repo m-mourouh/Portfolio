@@ -12,6 +12,39 @@
             "hidden": false
         },
         {
+            "name": "Visilab",
+            "description": "",
+            "stack": ["Vue", "SCSS", "JS", "TS"],
+            "links": {
+                "github": "",
+                "website": "https://www.visilab.ch/en"
+            },
+            "image": "visilab.jpg",
+            "hidden": false
+        },
+        {
+            "name": "Mcoptic",
+            "description": "",
+            "stack": ["Vue", "SCSS", "JS", "TS"],
+            "links": {
+                "github": "",
+                "website": "https://www.mcoptic.ch/fr"
+            },
+            "image": "mcoptic.jpg",
+            "hidden": false
+        },
+        {
+            "name": "Linsenmax",
+            "description": "",
+            "stack": ["Vue", "SCSS", "JS", "TS"],
+            "links": {
+                "github": "",
+                "website": "https://www.linsenmax.ch/en"
+            },
+            "image": "linsenmax.jpg",
+            "hidden": false
+        },
+        {
             "name": "Chat GPT Clone V.1.0",
             "description": "",
             "stack": ["Next", "TS", "Redux", "Tailwind CSS", "FireBase"],
@@ -58,7 +91,7 @@
         {
             "name": "Socotec",
             "description": "",
-            "stack": ["Vue.JS", "Python", "Django"],
+            "stack": ["Vue", "Python", "Django"],
             "links": {
                 "github": "",
                 "website": "https://amos.socotec.com"
@@ -75,18 +108,6 @@
                 "website": ""
             },
             "image": "c.jpg",
-            "hidden": false
-        },
-
-        {
-            "name": "TOURISM RECOMMENDATION SYSTEM",
-            "description": "",
-            "stack": ["HTML", "SCSS", "JS", "Python", "Django", "ML"],
-            "links": {
-                "github": "https://github.com/m-mourouh/Tourism-Recommendation-System",
-                "website": ""
-            },
-            "image": "t.jpg",
             "hidden": false
         },
         {
@@ -156,18 +177,6 @@
             "image": "p4.jpg",
             "hidden": false
         },
-
-        {
-            "name": "Cars Lift",
-            "description": "",
-            "stack": ["HTML", "CSS", "JS", "PHP", "MYSQL"],
-            "links": {
-                "github": "",
-                "website": "https://www.carslift-35.fr"
-            },
-            "image": "c2.jpg",
-            "hidden": true
-        },
         {
             "name": "Jungle Pizza",
             "description": "",
@@ -234,62 +243,6 @@
                 "website": "https://www.legrandmenage33.fr"
             },
             "image": "menage.jpg",
-            "hidden": false
-        },
-        {
-            "name": "NPS",
-            "description": "",
-            "stack": ["HTML", "CSS", "JS", "PHP", "MYSQL"],
-            "links": {
-                "github": "",
-                "website": "https://www.imprimerienumerique92.fr"
-            },
-            "image": "nps.jpg",
-            "hidden": true
-        },
-        {
-            "name": "A L'EAU PISCINES",
-            "description": "",
-            "stack": ["HTML", "CSS", "JS", "PHP", "MYSQL"],
-            "links": {
-                "github": "",
-                "website": "https://www.aleau-piscines.fr"
-            },
-            "image": "p6.jpg",
-            "hidden": false
-        },
-        {
-            "name": "JCB",
-            "description": "",
-            "stack": ["HTML", "CSS", "JS", "PHP", "MYSQL"],
-            "links": {
-                "github": "",
-                "website": "https://www.jcbrenovation-92.fr"
-            },
-            "image": "p7.jpg",
-            "hidden": false
-        },
-        {
-            "name": "TAXIS BOUHIER",
-            "description": "",
-            "stack": ["HTML", "CSS", "JS", "PHP", "MYSQL"],
-            "links": {
-                "github": "",
-                "website": "https://www.ambulance-taxi-bouhier.fr"
-            },
-            "image": "a1.jpg",
-            "hidden": false
-        },
-
-        {
-            "name": "Tapestry-Website",
-            "description": "",
-            "stack": ["HTML", "SCSS", "JS", "PHP"],
-            "links": {
-                "github": "https://github.com/m-mourouh/Tapestry-Website",
-                "website": "https://tapessry.000webhostapp.com/"
-            },
-            "image": "tp.jpg",
             "hidden": false
         }
     ]

@@ -1,67 +1,21 @@
 {
-      "data": [
-            [
-                "HTML",
-                "CSS",
-                "SASS",
-                "Tailwind CSS",
-                "Vuetify",
-                "Bootstrap",
-                "Material UI",
-                "Styled Comps",
-                "JavaScript",
-                "JQuery",
-                "JSON",
-                "Typescript",
-                "React.js",
-                "Redux",
-                "Next.js",
-                "Webpack",
-                "Babel",
-                "Vue.js",
-                "Vuex ORM",
-                "Angular"
-            ],
-            [
-                "Java",
-                "Spring Framework",
-                "Hibernate",
-                "Node.js",
-                "Express.js",
-                "Python",
-                "Django",
-                "Flask",
-                "PHP",
-                "Rest API",
-                "GRPC"
-            ],
-            ["MySQL", "PostgreSQL", "MongoDB", "FireBase", "XML"],
-            [
-                "Testing Library",
-                "Jest",
-                "Manual Testing"
-            ],
-            [
-                "Git",
-                "GitHub",
-                "Docker",
-                "Azure DevOps",
-                "GitLab",
-                "Gulp.js",
-                "Pug.js",
-                "Grunt.js",
-                "NPM",
-                "YARN",
-                "ESLint",
-                "TSLint",
-                "Prettier",
-                "Lighthouse",
-                "VS Code",
-                "WebStorm",
-                "IntelliJ IDEA",
-                "Google analytics"
-            ],
-            ["WordPress", "Sanity"],
-            ["Photoshop", "Illustrator", "Adobe XD", "Figma","Sketch"]
-        ]
+    "data": [
+        [
+            "HTML",
+            "CSS",
+            "SASS",
+            "Tailwind CSS",
+            "Bootstrap",
+            "Material UI",
+            "JavaScript",
+            "TypeScript",
+            "React.js",
+            "Next.js",
+            "Vue.js",
+            "Angular"
+        ],
+        ["Java", "Spring Framework", "Node.js", "Python"],
+        ["MySQL", "PostgreSQL", "MongoDB", "FireBase"],
+        ["Git", "GitHub", "GitLab", "Docker", "Jenkins", "Grafana", "CircleCI"]
+    ]
 }

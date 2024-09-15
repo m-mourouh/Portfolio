@@ -107,7 +107,7 @@ export const StyledProjects = styled.section`
                 }
 
                 .project-image {
-                    max-height: 400px;
+                    height: 200px;
                     position: relative;
                     display: flex;
                     justify-content: center;

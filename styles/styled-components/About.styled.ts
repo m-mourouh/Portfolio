@@ -88,13 +88,13 @@ export const StyledAbout = styled.section`
                 left: 50%;
                 transform: translate(-50%, -50%);
                 border: 2px solid var(--white);
-                background: var(--white);
+                /* background: var(--white); */
                 object-fit: cover;
                 z-index: -1;
                 border-radius: 50%;
-                padding: 10px;
+                padding: 1px;
                 opacity: 0.1;
-                border: 4px solid var(--white);
+                border: 3px solid var(--white);
                 transition: all 0.4s ease-in-out;
                 transform-origin: 50% 50%;
             }
@@ -128,7 +128,7 @@ export const StyledAbout = styled.section`
                 user-select: none;
                 width: 100%;
                 height: 100%;
-                border: 4px solid var(--white);
+                /* border: 4px solid var(--white); */
                 border-radius: 50%;
     
             }
