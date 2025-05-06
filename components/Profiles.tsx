@@ -108,7 +108,7 @@ export default function SocialMedia({ option }: { option: boolean }) {
                         <span className="tooltiptext">Instagram</span>
                     </Link>
                     <Link
-                        href={profilesData.data.twitter}
+                        href={profilesData.data.x}
                         className="icon media"
                         target="_blank"
                     >
