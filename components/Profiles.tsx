@@ -60,7 +60,7 @@ export default function SocialMedia({ option }: { option: boolean }) {
                         <BsInstagram />
                     </Link>
                     <Link
-                        href={profilesData.data.twitter}
+                        href={profilesData.data.x}
                         className="icon"
                         target="_blank"
                     >
