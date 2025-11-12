@@ -7,6 +7,7 @@ import { fira_code, roboto, roboto_mono } from '@/fonts/fonts'
 import parse from 'html-react-parser'
 import { useEffect, useRef } from 'react'
 import { gsap } from 'gsap'
+import GalaxyEffect from './GalaxyEffect'
 export default function Head() {
     const container = useRef<HTMLDivElement>(null)
     const tl = useRef<GSAPTimeline>()
@@ -35,7 +36,7 @@ export default function Head() {
     }, [])
     return (
         <StyledSelection ref={container} id='head'>
-            <div className="bg"></div>
+            <GalaxyEffect />
             <div className="wrapper">
                 <p className={fira_code.variable + ' animate'}>
                     {data.user['intro-text']}

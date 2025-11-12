@@ -1,6 +1,17 @@
 {
     "data": [
         {
+            "name": "Carrefour",
+            "description": "A comprehensive e-commerce platform for Carrefour, featuring product browsing, shopping cart, and order management.",
+            "stack": ["Angular 20", "Java", "Spring boot"],
+            "links": {
+                "github": "",
+                "website": ""
+            },
+            "image": "carrefour.jpg",
+            "hidden": false
+        },
+        {
             "name": "Channel",
             "description": "",
             "stack": ["JSTL", "SCSS", "JS", "React"],
