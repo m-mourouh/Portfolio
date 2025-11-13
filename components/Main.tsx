@@ -9,20 +9,23 @@ import Footer from './Footer'
 import Share from './Share'
 import Loader from './Loader'
 import Cursor from './Cursor'
+import GridBackground from './GridBackground'
+import BackgroundMusic from './BackgroundMusic'
 export default function Main() {
     return (
         <StyledMain>
-            
+            <GridBackground />
             <Head />
             <About />
             <Skills />
-            <Projects numberOfProjects={8} />
+            <Projects />
             <Profiles option={false} />
             <Share orientation='vertical'/>
             <Contact />
             <Footer />
             <Loader/>
             <Cursor/>
+            <BackgroundMusic />
         </StyledMain>
     )
 }

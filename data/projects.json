@@ -6,25 +6,25 @@
             "stack": ["Angular 20", "Java", "Spring boot"],
             "links": {
                 "github": "",
-                "website": ""
+                "website": "https://www.carrefour.com/en"
             },
-            "image": "carrefour.jpg",
+            "image": "carrefour.png",
             "hidden": false
         },
         {
             "name": "Channel",
-            "description": "",
+            "description": "Luxury high jewelry showcase for Chanel featuring elegant product displays, interactive catalogs, and premium shopping experience.",
             "stack": ["JSTL", "SCSS", "JS", "React"],
             "links": {
                 "github": "",
                 "website": "https://www.chanel.com/us/high-jewelry"
             },
-            "image": "channel.jpg",
+            "image": "chanel.jpg",
             "hidden": false
         },
         {
             "name": "Visilab",
-            "description": "",
+            "description": "Modern e-commerce platform for optical products, offering eyeglasses, sunglasses, and eye care services with online booking.",
             "stack": ["Vue", "SCSS", "JS", "TS"],
             "links": {
                 "github": "",
@@ -35,7 +35,7 @@
         },
         {
             "name": "Mcoptic",
-            "description": "",
+            "description": "Swiss optical retail website featuring designer eyewear collections, vision testing services, and appointment scheduling.",
             "stack": ["Vue", "SCSS", "JS", "TS"],
             "links": {
                 "github": "",
@@ -46,7 +46,7 @@
         },
         {
             "name": "Linsenmax",
-            "description": "",
+            "description": "Online store for contact lenses and eye care products with advanced product filtering and prescription management.",
             "stack": ["Vue", "SCSS", "JS", "TS"],
             "links": {
                 "github": "",
@@ -57,7 +57,7 @@
         },
         {
             "name": "Chat GPT Clone V.1.0",
-            "description": "",
+            "description": "AI-powered chatbot application with real-time conversations, Firebase authentication, and chat history management.",
             "stack": ["Next", "TS", "Redux", "Tailwind CSS", "FireBase"],
             "links": {
                 "github": "",
@@ -68,7 +68,7 @@
         },
         {
             "name": "Chat GPT Clone V.1.1",
-            "description": "",
+            "description": "Enhanced AI chatbot with improved UI/UX, persistent conversations, and advanced state management using Redux.",
             "stack": ["Next", "TS", "Redux", "Tailwind CSS", "FireBase"],
             "links": {
                 "github": "",
@@ -79,7 +79,7 @@
         },
         {
             "name": "Translation APP",
-            "description": "",
+            "description": "Multi-language translation application with real-time text translation, language detection, and translation history.",
             "stack": ["React", "Redux", "Next", "Tailwind CSS"],
             "links": {
                 "github": "https://github.com/m-mourouh/translation-app",
@@ -90,7 +90,7 @@
         },
         {
             "name": "Hospital Management System",
-            "description": "",
+            "description": "Complete hospital management solution with patient records, appointment scheduling, doctor management, and medical inventory.",
             "stack": ["Java", "Spring Boot", "JPA", "Hibernate", "MySQL"],
             "links": {
                 "github": "https://github.com/m-mourouh/hospital_app",
@@ -101,7 +101,7 @@
         },
         {
             "name": "Socotec",
-            "description": "",
+            "description": "Construction inspection and monitoring platform for technical control, compliance verification, and project management.",
             "stack": ["Vue", "Python", "Django"],
             "links": {
                 "github": "",
@@ -112,7 +112,7 @@
         },
         {
             "name": "COVID-19 DETECTION APP",
-            "description": "",
+            "description": "Machine learning web application for COVID-19 detection from chest X-ray images using deep learning algorithms.",
             "stack": ["HTML", "SCSS", "JS", "Python", "Flask", "ML"],
             "links": {
                 "github": "https://github.com/m-mourouh/Covid-19-Detection-Web-Application",
@@ -123,7 +123,7 @@
         },
         {
             "name": "Instant beauté",
-            "description": "",
+            "description": "Beauty salon website with online booking system, service catalog, gallery, and customer appointment management.",
             "stack": ["HTML", "CSS", "JS", "PHP", "MYSQL"],
             "links": {
                 "github": "",
@@ -134,7 +134,7 @@
         },
         {
             "name": "Eden cosmetique",
-            "description": "",
+            "description": "Cosmetics and beauty products e-commerce platform with product catalog, shopping cart, and secure payment integration.",
             "stack": ["HTML", "CSS", "JS", "PHP", "MYSQL"],
             "links": {
                 "github": "",
@@ -145,7 +145,7 @@
         },
         {
             "name": "LE NEW GOA",
-            "description": "",
+            "description": "Indian restaurant website featuring online menu, table reservations, food ordering system, and delivery tracking.",
             "stack": ["HTML", "CSS", "JS", "PHP", "MYSQL"],
             "links": {
                 "github": "",
@@ -156,7 +156,7 @@
         },
         {
             "name": "BOIS DÉTAIL",
-            "description": "",
+            "description": "Woodworking and carpentry business website showcasing custom furniture, renovation projects, and service portfolio.",
             "stack": ["HTML", "CSS", "JS", "PHP", "MYSQL"],
             "links": {
                 "github": "",
@@ -168,7 +168,7 @@
 
         {
             "name": "Solene Delacroix",
-            "description": "",
+            "description": "Professional photographer portfolio featuring wedding, portrait, and event photography with gallery and booking system.",
             "stack": ["HTML", "CSS", "JS", "PHP", "MYSQL"],
             "links": {
                 "github": "",
@@ -179,7 +179,7 @@
         },
         {
             "name": "2MJ",
-            "description": "",
+            "description": "Interior design and home fitting company website with project showcase, service descriptions, and quote request system.",
             "stack": ["HTML", "CSS", "JS", "PHP", "MYSQL"],
             "links": {
                 "github": "",
@@ -190,7 +190,7 @@
         },
         {
             "name": "Jungle Pizza",
-            "description": "",
+            "description": "Pizzeria website with online ordering, menu display, delivery zone coverage, and real-time order tracking.",
             "stack": ["HTML", "CSS", "JS", "PHP", "MYSQL"],
             "links": {
                 "github": "",
@@ -201,7 +201,7 @@
         },
         {
             "name": "Boutin David",
-            "description": "",
+            "description": "Professional painting services website featuring project gallery, service offerings, and customer quote management system.",
             "stack": ["HTML", "CSS", "JS", "PHP", "MYSQL"],
             "links": {
                 "github": "",
@@ -212,7 +212,7 @@
         },
         {
             "name": "GARAGE ONCINS",
-            "description": "",
+            "description": "Auto repair garage website with service booking, vehicle diagnostics, maintenance packages, and customer portal.",
             "stack": ["HTML", "CSS", "JS", "PHP", "MYSQL"],
             "links": {
                 "github": "",
@@ -223,7 +223,7 @@
         },
         {
             "name": "Gourvat",
-            "description": "",
+            "description": "Landscaping and gardening services website showcasing outdoor projects, maintenance plans, and online consultation booking.",
             "stack": ["HTML", "CSS", "JS", "PHP", "MYSQL"],
             "links": {
                 "github": "",
@@ -235,7 +235,7 @@
 
         {
             "name": "AURELIE LEJEUNE",
-            "description": "",
+            "description": "Artist and photographer portfolio website featuring creative works, exhibition calendar, and artwork purchase system.",
             "stack": ["HTML", "CSS", "JS", "PHP", "MYSQL"],
             "links": {
                 "github": "",
@@ -247,7 +247,7 @@
 
         {
             "name": "LE GRAND MENAGE",
-            "description": "",
+            "description": "Professional cleaning services platform with online booking, service packages, recurring appointments, and customer management.",
             "stack": ["HTML", "CSS", "JS", "PHP", "MYSQL"],
             "links": {
                 "github": "",

@@ -28,11 +28,10 @@ export default function RootLayout({
                 />
                 <noscript>
                     <iframe
-                        src={`https://www.googletagmanager.com/ns.html?id=${process
-                            .env.GA_TRACKING_ID!}`}
+                        src={`https://www.googletagmanager.com/ns.html?id=${process.env.GA_TRACKING_ID!}`}
                         height="0"
                         width="0"
-                        style={{ display: 'none', visibility: 'hidden' }}
+                        className="gtm-iframe"
                     ></iframe>
                 </noscript>
                 <script

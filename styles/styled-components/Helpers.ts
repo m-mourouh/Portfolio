@@ -11,8 +11,9 @@ export function selection(fill: boolean = false, color?: string): FlattenSimpleI
     `
     const emptySelection = css`
         &::selection {
-            color: transparent;
-            -webkit-text-stroke: 1px ${color ? color : 'var(--color-2)'};
+            /* color: transparent; */
+            -webkit-text-stroke: 1px ${color ? color : 'var(--color-1)'};
+           /* text-stroke: 1px ${color ? color : 'var(--color-2)'}; */
         }
     `
 

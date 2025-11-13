@@ -10,7 +10,7 @@ export const GlobalStyle = createGlobalStyle<Theme>`
     }
     :root {
         /* colors varibales */
-        --orchid: #00be57;
+        --orchid: #c4ff00;
         --white: #FFFFFF;
         --black: #000;
         --gray: #D3D3D3;
@@ -20,16 +20,24 @@ export const GlobalStyle = createGlobalStyle<Theme>`
         --c2: #ebebeb99;
         --nav-height: 100px;
         --fz-heading: 32px;
-      --color-1: #00fff5;
-    --color-2: #00ff45;
+        --color-1: #00fff5;
+        --color-2: #00ff45;
+
+        /* Font families - using system fonts as fallback */
+        --font-general-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+        --font-roboto: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+        --font-roboto-mono: "SF Mono", Monaco, "Cascadia Code", "Roboto Mono", Consolas, "Courier New", monospace;
+        --font-fira-code: "SF Mono", Monaco, "Cascadia Code", "Roboto Mono", Consolas, "Courier New", monospace;
+        --font-dancing-script: "Brush Script MT", cursive;
     }
 
     body {
-        font-family: var(--font-roboto);
+        font-family: var(--font-general-sans);
         background-color: ${({ theme }) => theme.dark.background};
         overflow-x: hidden;
     }
     html, body {
+      overflow-x: hidden;
   scroll-behavior: smooth;
     cursor: none;
     @media ${device.sm} {
@@ -54,6 +62,11 @@ export const GlobalStyle = createGlobalStyle<Theme>`
         background: #2e2e2e;
         color: var(--white);
         border-radius: 50%;
+}
+
+.gtm-iframe {
+    display: none !important;
+    visibility: hidden !important;
 }
 
 `

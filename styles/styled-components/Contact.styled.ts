@@ -5,131 +5,204 @@ import { padding, selection, titleFont, titleLine } from './Helpers'
 
 export const StyledSection = styled.section`
     ${padding()}
-    @media ${device.sm} {
-        margin-top: 100px;
-    }
+    padding-top: 120px;
+    padding-bottom: 100px;
     position: relative;
     min-height: 100vh;
     width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    h1 {
-        text-transform: capitalize;
-        font-family: var(--font-roboto);
-        margin-bottom: 55px;
-        position: relative;
-        /* features */
-        color: transparent;
-        -webkit-text-stroke: 1px var(--white);
-        ${selection(true, '#fff')}
-        ${titleFont(false)}
-                ${titleLine(10)}
+
+    @media ${device.sm} {
+        padding-top: 80px;
+        padding-bottom: 80px;
+    }
+
+    .contact-header {
+        text-align: center;
+        margin-bottom: 60px;
+
+        @media ${device.sm} {
+            margin-bottom: 40px;
+        }
+
+        h1 {
+            font-family: var(--font-general-sans);
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-weight: 400;
+            line-height: 1.2;
+            color: var(--white);
+            margin: 0 0 20px 0;
+            ${selection(true, '#fff')}
+
+            .secondary-text {
+                color: #888;
+                font-weight: 300;
+            }
+        }
+
+        .subtitle {
+            font-family: var(--font-general-sans);
+            font-size: clamp(1rem, 2vw, 1.25rem);
+            color: #888;
+            font-weight: 300;
+            line-height: 1.6;
+            max-width: 600px;
+            margin: 0 auto;
+        }
     }
     form {
-        max-width: 800px;
+        max-width: 700px;
         width: 100%;
         display: flex;
         flex-direction: column;
         align-self: center;
-        grid-gap: 20px;
-        margin: 100px auto;
+        gap: 24px;
+        margin: 0 auto;
+        background-color: rgb(28, 28, 28);
+        border: 1px solid rgb(41, 41, 41);
+        border-radius: 24px;
+        padding: 48px;
+
+        @media ${device.sm} {
+            padding: 32px 24px;
+            gap: 20px;
+        }
+
         .error {
             padding-left: 10px;
-            color: var(--orchid);
-            margin-top: 5px;
+            color: #ff6b6b;
+            margin-top: 8px;
             transition: all 0.25s ease-in-out;
-            font-family: var(--font-roboto-mono);
+            font-family: var(--font-general-sans);
+            font-size: 0.875rem;
+
             small {
                 display: flex;
                 align-items: center;
-                grid-gap: 5px;
+                gap: 6px;
             }
         }
+
         input {
-            transition: all 0.25s ease-in-out;
             width: 100%;
-            background: none !important;
+            background-color: rgb(20, 20, 20);
             outline: none;
-            border: 1px solid var(--c2);
-            opacity: 0.5;
-            color: var(--c1);
-            border-radius: 50px;
-            padding: 12px 20px;
-            font-family: var(--font-roboto-mono);
+            border: 1px solid rgb(41, 41, 41);
+            color: var(--white);
+            border-radius: 12px;
+            padding: 16px 20px;
+            font-family: var(--font-general-sans);
             font-size: 1rem;
-            transition: all 0.2s ease-in-out;
+            transition: all 0.3s ease;
+
+            &::placeholder {
+                color: #888;
+            }
+
             &:focus {
-                opacity: 1;
-                border: 1px solid var(--c1);
-                color: var(--c1);
+                border-color: #c4ff00;
+                background-color: rgb(28, 28, 28);
+
                 &::placeholder {
-                    color: var(--c1);
+                    color: #aaa;
                 }
             }
+
             &:-webkit-autofill,
             &:-webkit-autofill:hover,
             &:-webkit-autofill:focus {
-                -webkit-text-fill-color: var(--c1);
-                -webkit-box-shadow: 0 0 0px 1000px
-                    ${({ theme }) => theme.dark.background} inset;
+                -webkit-text-fill-color: var(--white);
+                -webkit-box-shadow: 0 0 0px 1000px rgb(20, 20, 20) inset;
                 transition: background-color 5000s ease-in-out 0s;
             }
 
-            &:valid {
-                opacity: 1;
-                color: var(--c1);
-                border-color: var(--c1);
+            @media ${device.sm} {
+                padding: 14px 18px;
+                font-size: 0.95rem;
             }
         }
+
         textarea {
             width: 100%;
-            background: transparent;
+            background-color: rgb(20, 20, 20);
             outline: none;
-            border: 1px solid var(--c2);
-
-            color: var(--c2);
-            border-radius: 10px;
-            padding: 12px 20px;
-            font-family: var(--font-roboto-mono);
+            border: 1px solid rgb(41, 41, 41);
+            color: var(--white);
+            border-radius: 12px;
+            padding: 16px 20px;
+            font-family: var(--font-general-sans);
             font-size: 1rem;
-            transition: all 0.2s ease-in-out;
-            resize: none;
-            opacity: 0.5;
+            transition: all 0.3s ease;
+            resize: vertical;
+            min-height: 160px;
+
+            &::placeholder {
+                color: #888;
+            }
+
             &:focus {
-                border: 1px solid var(--c1);
-                opacity: 1;
+                border-color: #c4ff00;
+                background-color: rgb(28, 28, 28);
+
                 &::placeholder {
-                    color: var(--c1);
+                    color: #aaa;
                 }
-                color: var(--c1);
-                background: none;
             }
-            &:valid {
-                opacity: 1;
-                color: var(--c1);
-                border-color: var(--c1);
-            }
+
             &:-webkit-autofill,
             &:-webkit-autofill:hover,
             &:-webkit-autofill:focus {
-                -webkit-text-fill-color: var(--orchid);
-                -webkit-box-shadow: 0 0 0px 1000px
-                    ${({ theme }) => theme.dark.background} inset;
+                -webkit-text-fill-color: var(--white);
+                -webkit-box-shadow: 0 0 0px 1000px rgb(20, 20, 20) inset;
                 transition: background-color 5000s ease-in-out 0s;
             }
+
+            @media ${device.sm} {
+                padding: 14px 18px;
+                font-size: 0.95rem;
+                min-height: 140px;
+            }
         }
+
         button {
             display: flex;
             align-items: center;
             justify-content: center;
-            grid-gap: 20px;
-            &:not(:disabled):hover {
-                opacity: 1;
+            gap: 12px;
+            margin-top: 8px;
+            padding: 16px 32px;
+            font-size: 1rem;
+            font-weight: 500;
+            border: none;
+            border-radius: 12px;
+            background-color: #c4ff00;
+            color: #000;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-family: var(--font-general-sans);
+
+            .icon {
+                font-size: 1.2rem;
             }
-        }
-        @media (max-width: 1078px) {
-            margin: 0 auto;
+
+            &:hover:not(:disabled) {
+                background-color: #b3e600;
+                transform: translateY(-2px);
+            }
+
+            &:disabled {
+                opacity: 0.5;
+                cursor: not-allowed;
+                background-color: rgb(57, 57, 57);
+                color: #888;
+            }
+
+            @media ${device.sm} {
+                padding: 14px 28px;
+                font-size: 0.95rem;
+            }
         }
     }
 `

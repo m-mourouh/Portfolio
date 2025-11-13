@@ -1,10 +1,9 @@
 'use client'
-import { fira_code, roboto, roboto_mono } from '@/fonts/fonts'
-import { StyledButton } from '@/styles/styled-components/Button.styled'
+import { roboto } from '@/fonts/fonts'
 import { StyledSection } from '@/styles/styled-components/Contact.styled'
 import React, { ChangeEvent, useRef, useState, useEffect } from 'react'
 import { useFormik } from 'formik'
-import * as Yup from 'yup' // Great form validation library
+import * as Yup from 'yup'
 import { BiErrorAlt } from 'react-icons/bi'
 import { AiOutlineSend } from 'react-icons/ai'
 import { sendContactForm } from '@/lib/api'
@@ -74,9 +73,16 @@ export default function Contact() {
         <StyledSection id="contact">
             {MessageIsSent ? <Notification message="Your Message has been received" /> : null}
 
-            <h1 className={roboto.variable}>Contact me.</h1>
+            <div className="contact-header">
+                <h1 className={roboto.variable}>
+                    Get In <span className="secondary-text">Touch</span>
+                </h1>
+                <p className="subtitle">
+                    Have a project in mind? Let&apos;s work together to create something amazing.
+                </p>
+            </div>
+
             <form
-                className={roboto_mono.variable}
                 onSubmit={formik.handleSubmit}
                 autoComplete="off"
                 spellCheck="false"
@@ -160,16 +166,13 @@ export default function Contact() {
                         </p>
                     )}
                 </span>
-                <StyledButton
-                    className={fira_code.variable + ' showBtn'}
-                    width={150}
+                <button
                     type="submit"
                     disabled={!isValid}
-                    contact={true}
                 >
-                    Send
+                    Send Message
                     <AiOutlineSend className='icon'/>
-                </StyledButton>
+                </button>
             </form>
         </StyledSection>
     )

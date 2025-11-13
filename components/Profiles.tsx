@@ -99,30 +99,30 @@ export default function SocialMedia({ option }: { option: boolean }) {
                         Li
                         <span className="tooltiptext">LinkedIn</span>
                     </Link>
-                    <Link
+                    {/* <Link
                         href={profilesData.data.instagram}
                         className="icon media"
                         target="_blank"
                     >
                         In
                         <span className="tooltiptext">Instagram</span>
-                    </Link>
-                    <Link
+                    </Link> */}
+                    {/* <Link
                         href={profilesData.data.x}
                         className="icon media"
                         target="_blank"
                     >
                         X
                         <span className="tooltiptext">X</span>
-                    </Link>
-                    <Link
+                    </Link> */}
+                    {/* <Link
                         href={profilesData.data.facebook}
                         className="icon media"
                         target="_blank"
                     >
                         FB
                         <span className="tooltiptext">Facebook</span>
-                    </Link>
+                    </Link> */}
                     <Link
                         href={profilesData.data.github}
                         className="icon media"

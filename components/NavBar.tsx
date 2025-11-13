@@ -1,14 +1,14 @@
 'use client'
 import { useEffect, useRef, useState } from 'react'
 import { StyledNav } from '@/styles/styled-components/NavBar.styled'
-import Image from 'next/image'
-import Logo from '@/public/images/logo.svg'
 import { Link } from 'react-scroll'
 import navData from '@/data/navigation.json'
 import userData from '@/data/user.json'
 import { fira_code } from '../fonts/fonts'
 import { StyledButton } from '@/styles/styled-components/Button.styled'
 import { gsap } from 'gsap'
+import Image from 'next/image'
+import Logo from '@/public/images/logo.svg'
 export default function NavBar() {
     const [toggle, setToggle] = useState(false)
     const container = useRef<HTMLDivElement>(null)
@@ -75,27 +75,41 @@ export default function NavBar() {
             </Link>
             <div className={toggle ? 'menu  active' : 'menu'}>
                 <ul>
-                    {navData.navigation.map((item, index) => (
-                        <li key={index}>
-                            <Link
-                                smooth={true}
-                                duration={500}
-                                className={fira_code.variable + ' nav-link'}
-                                to={`${item.toLowerCase()}`}
-                                onClick={toggleMenu}
-                            >
-                                {item.toLowerCase()}
-                            </Link>
-                        </li>
-                    ))}
+                    {navData.navigation.map((item, index) => {
+                        const target = item.toLowerCase() === 'home' ? 'head' : item.toLowerCase() === 'work' ? 'projects' : item.toLowerCase()
+                        return (
+                            <li key={index}>
+                                <Link
+                                    smooth={true}
+                                    duration={500}
+                                    className={fira_code.variable + ' nav-link'}
+                                    to={target}
+                                    onClick={toggleMenu}
+                                >
+                                    {item}
+                                </Link>
+                            </li>
+                        )
+                    })}
                 </ul>
                 <StyledButton
-                    className={`link ${fira_code.variable} nav-btn`}
+                    className={`link mobile-btn ${fira_code.variable} nav-btn`}
                     onClick={toggleMenu}
                     as="a"
                     href={`mailto:${userData.user.email}`}
+                    outline
                 >
-                    Let&#39;s talk
+                    Contact Me
+                </StyledButton>
+            </div>
+            <div className="nav-button-wrapper">
+                <StyledButton
+                    className={`link ${fira_code.variable} nav-btn`}
+                    as="a"
+                    href={`mailto:${userData.user.email}`}
+                    outline
+                >
+                    Contact Me
                 </StyledButton>
             </div>
             <div

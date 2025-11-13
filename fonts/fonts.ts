@@ -1,30 +1,22 @@
-import { Fira_Code, Roboto, Roboto_Mono ,Montserrat } from 'next/font/google'
+// Using system fonts as fallback due to Google Fonts API timeout issues during build
+// These will use the CSS variable names but fallback to system fonts
 
-export const fira_code = Fira_Code({
-    weight: ['300', '400', '500', '600', '700'],
-    subsets: ['latin'],
+export const fira_code = {
     variable: '--font-fira-code',
-    display: 'swap',
-})
+    style: { fontFamily: 'monospace' }
+}
 
-export const roboto = Roboto({
-    weight: ['400', '700', '900'],
-    style: ['normal', 'italic'],
-    subsets: ['latin'],
+export const roboto = {
     variable: '--font-roboto',
-    display: 'swap',
-})
-export const roboto_mono = Roboto_Mono({
-    weight: ['400', '500', '700'],
-    style: ['normal', 'italic'],
-    subsets: ['latin'],
+    style: { fontFamily: 'system-ui, -apple-system, sans-serif' }
+}
+
+export const roboto_mono = {
     variable: '--font-roboto-mono',
-    display: 'swap',
-})
-export const montserrat = Montserrat({
-    weight: ['400', '700', '900'],
-    style: ['normal', 'italic'],
-    subsets: ['latin'],
-    variable: '--font-montserrat',
-    display:'swap',
-})
+    style: { fontFamily: 'monospace' }
+}
+
+export const dancing_script = {
+    variable: '--font-dancing-script',
+    style: { fontFamily: 'cursive' }
+}

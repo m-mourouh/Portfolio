@@ -3,10 +3,41 @@ import styled from 'styled-components'
 
 import { device } from './Breakpoints'
 export const StyledNav = styled.nav`
-    display: flex;
-    justify-content: space-between;
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
     align-items: center;
-    width: 100%;
+    width: calc(100% - 300px);
+    max-width: 1400px;
+    padding: 20px 60px;
+    background-color: rgba(28, 28, 28, 0.95);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgb(41, 41, 41);
+    border-radius: 100px;
+    z-index: 1000;
+    transition: all 0.3s ease;
+
+    @media (max-width: 1400px) {
+        width: calc(100% - 200px);
+    }
+
+    @media (max-width: 1061px) {
+        width: calc(100% - 160px);
+        padding: 20px 40px;
+    }
+
+  
+    .nav-logo {
+        cursor: pointer;
+        transition: opacity 0.3s ease;
+        justify-self: start;
+        &:hover {
+            opacity: 0.8;
+        }
+    }
 
     a {
         font-family: var(--font-fira-code);
@@ -34,8 +65,9 @@ export const StyledNav = styled.nav`
     .menu {
         display: flex;
         align-items: center;
-        justify-content: space-between;
+        justify-content: center;
         transition: 0.25s ease-in-out;
+        grid-column: 2;
         /* media queries */
         @media ${device.sm} {
             visibility: hidden;
@@ -51,6 +83,7 @@ export const StyledNav = styled.nav`
             justify-content: center;
             background: ${({ theme }) => theme.dark.background};
             box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+            grid-column: unset;
         }
         &.active {
             @media ${device.sm} {
@@ -62,8 +95,8 @@ export const StyledNav = styled.nav`
             display: flex;
             align-items: center;
             list-style-type: none;
-            grid-gap: 30px;
-            margin-right: 40px;
+            grid-gap: 40px;
+            margin-right: 0;
             /* media queries */
             @media ${device.sm} {
                 flex-direction: column;
@@ -75,11 +108,12 @@ export const StyledNav = styled.nav`
                     text-decoration: none;
                     display: inline-block;
                     /* padding-right: 30px; */
-                    text-transform: capitalize;
-                    color: var(--c1);
+                    text-transform: none;
+                    color: var(--white);
                     transition: 0.25s ease-in-out;
                     position: relative;
                     display: inline-block;
+                    font-weight: 400;
                     @media ${device.sm} {
                         margin: 15px 0;
                         padding: 12px 8px;
@@ -108,13 +142,29 @@ export const StyledNav = styled.nav`
                 }
             }
         }
-        .link {
-            display: inline-block;
-            margin-left: 20px;
+
+        .mobile-btn {
+            display: none;
             @media ${device.sm} {
+                display: inline-block;
                 margin: 0;
                 margin-top: 60px;
             }
+        }
+    }
+
+    .nav-button-wrapper {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        grid-column: 3;
+
+        @media ${device.sm} {
+            display: none;
+        }
+
+        .link {
+            display: inline-block;
         }
     }
 
@@ -124,7 +174,7 @@ export const StyledNav = styled.nav`
         width: 50px;
         height: 50px;
         cursor: pointer;
-        z-index: 9999;
+        z-index: 10001;
         /* media queries */
         @media ${device.sm} {
             display: initial;
@@ -173,4 +223,28 @@ export const StyledNav = styled.nav`
             }
         }
     }
+
+    @media ${device.sm} {
+        display: flex;
+        justify-content: space-between;
+        top: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        transform: none;
+        padding: 16px 20px;
+        background-color: rgba(10, 10, 10, 0.98);
+        backdrop-filter: blur(20px);
+        border-radius: 0 !important;
+        border: none;
+        border-bottom: 1px solid rgba(196, 255, 0, 0.2);
+        /* box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5); */
+        z-index: 10000 !important;
+    }
+
+    @media (max-width: 450px) {
+        padding: 14px 20px;
+        border-radius: 0 !important;
+    }
+
 `
