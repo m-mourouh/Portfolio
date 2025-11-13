@@ -3,14 +3,19 @@ import { StyledSelection } from '@/styles/styled-components/Head.styled'
 import data from '@/data/user.json'
 import profilesData from '@/data/profiles.json'
 import { StyledButton } from '@/styles/styled-components/Button.styled'
-import { fira_code, roboto, roboto_mono } from '@/fonts/fonts'
-import parse from 'html-react-parser'
 import { useEffect, useRef } from 'react'
 import { gsap } from 'gsap'
 import GalaxyEffect from './GalaxyEffect'
+import { Link } from 'react-scroll'
+import Image from 'next/image'
+import ProfilePic from '@/public/images/mohamed_mourouh.png'
+import { useLanguage } from '@/contexts/LanguageContext'
+
 export default function Head() {
+    const { t } = useLanguage()
     const container = useRef<HTMLDivElement>(null)
-    const tl = useRef<GSAPTimeline>()
+    const tl = useRef<GSAPTimeline | null>(null)
+
     useEffect(() => {
         const block = document.querySelectorAll('.animate')
         let ctx = gsap.context(() => {
@@ -22,44 +27,62 @@ export default function Head() {
                     opacity: 0,
                     stagger: 0.1,
                     y: 10,
-
                     delay: 3,
                 })
                 .to(block, {
                     y: 0,
                     opacity: 1,
                 })
-    
         }, container)
 
         return () => ctx.revert()
     }, [])
+
+    const scrollDown = () => {
+        const aboutSection = document.getElementById('about')
+        if (aboutSection) {
+            aboutSection.scrollIntoView({ behavior: 'smooth' })
+        }
+    }
+
     return (
         <StyledSelection ref={container} id='head'>
             <GalaxyEffect />
             <div className="wrapper">
-                <p className={fira_code.variable + ' animate'}>
-                    {data.user['intro-text']}
-                </p>
-                <h1 className={roboto.variable + ' animate'}>
-                    <span>{data.user.name.split(' ')[0]} </span>
-                    <span>{data.user.name.split(' ')[1]}</span>.
-                </h1>
-                <h5 className={roboto.variable + ' animate'}>
-                    {parse(data.user.subtitle)}
-                </h5>
-                <p className={roboto_mono.variable + ' animate'}>
-                    {parse(data.user.description)}
-                </p>
-                <StyledButton
-                    className={fira_code.variable + ' animate'}
-                    as="a"
-                    href={profilesData.data.linkedin}
-                    target="_blank"
-                    width={120}
-                >
-                    Hire me
-                </StyledButton>
+                <div className="status animate">
+                    <div className="status-image">
+                        <Image
+                            src={ProfilePic}
+                            alt={data.user.name}
+                            width={60}
+                            height={60}
+                            className="profile-pic"
+                        />
+                    </div>
+                    <div className="status-text">
+                        <span className="status-dot"></span>
+                        {t('hero.available').toUpperCase()}
+                    </div>
+                </div>
+                <h1 className="animate" dangerouslySetInnerHTML={{ __html: t('hero.subtitle') }} />
+                <div className="buttons-wrapper animate">
+                    <StyledButton
+                        as="a"
+                        href={profilesData.data.linkedin}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        $primary
+                    >
+                        {t('hero.viewWork')}
+                    </StyledButton>
+                    <StyledButton
+                        as="button"
+                        onClick={scrollDown}
+                        $outline
+                    >
+                        {t('hero.contactMe')}
+                    </StyledButton>
+                </div>
             </div>
         </StyledSelection>
     )

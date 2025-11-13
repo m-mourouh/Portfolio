@@ -1,8 +1,7 @@
 'use client'
-import { Theme } from '@/types/Theme.types'
 import { createGlobalStyle } from 'styled-components'
 import { device } from './Breakpoints'
-export const GlobalStyle = createGlobalStyle<Theme>`
+export const GlobalStyle = createGlobalStyle`
     * {
         margin: 0;
         padding: 0;
@@ -10,7 +9,7 @@ export const GlobalStyle = createGlobalStyle<Theme>`
     }
     :root {
         /* colors varibales */
-        --orchid: #00be57;
+        --orchid: #c4ff00;
         --white: #FFFFFF;
         --black: #000;
         --gray: #D3D3D3;
@@ -20,21 +19,41 @@ export const GlobalStyle = createGlobalStyle<Theme>`
         --c2: #ebebeb99;
         --nav-height: 100px;
         --fz-heading: 32px;
-      --color-1: #00fff5;
-    --color-2: #00ff45;
+        --color-1: #00fff5;
+        --color-2: #00ff45;
+
+        /* Font families - using system fonts as fallback */
+        --font-general-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+        --font-roboto: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+        --font-roboto-mono: "SF Mono", Monaco, "Cascadia Code", "Roboto Mono", Consolas, "Courier New", monospace;
+        --font-dancing-script: "Brush Script MT", cursive;
     }
 
     body {
-        font-family: var(--font-roboto);
+        font-family: var(--font-space-grotesk), var(--font-general-sans);
         background-color: ${({ theme }) => theme.dark.background};
         overflow-x: hidden;
     }
+
     html, body {
-  scroll-behavior: smooth;
-    cursor: none;
-    @media ${device.sm} {
-        cursor: initial;
+      overflow-x: hidden;
+      scroll-behavior: smooth;
+      cursor: none;
+      @media ${device.sm} {
+          cursor: initial;
+      }
     }
+
+    /* Apply Tajawal font for Arabic (RTL) - must come after body rules */
+    html[dir="rtl"] body,
+    html[dir="rtl"] * {
+        font-family: var(--font-tajawal), var(--font-general-sans) !important;
+    }
+
+    /* Apply Space Grotesk for LTR languages (English, French) */
+    html[dir="ltr"] body,
+    html[dir="ltr"] * {
+        font-family: var(--font-space-grotesk), var(--font-general-sans) !important;
     }
     /* Scrollbar */
 ::-webkit-scrollbar {
@@ -54,6 +73,11 @@ export const GlobalStyle = createGlobalStyle<Theme>`
         background: #2e2e2e;
         color: var(--white);
         border-radius: 50%;
+}
+
+.gtm-iframe {
+    display: none !important;
+    visibility: hidden !important;
 }
 
 `

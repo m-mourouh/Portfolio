@@ -1,7 +1,7 @@
-import { FlattenSimpleInterpolation, css } from 'styled-components'
+import { css, RuleSet } from 'styled-components'
 import { device } from './Breakpoints'
 // this allows to reset selection
-export function selection(fill: boolean = false, color?: string): FlattenSimpleInterpolation {
+export function selection(fill: boolean = false, color?: string): RuleSet {
     
     const filledSelection = css`
         &::selection {
@@ -11,14 +11,15 @@ export function selection(fill: boolean = false, color?: string): FlattenSimpleI
     `
     const emptySelection = css`
         &::selection {
-            color: transparent;
-            -webkit-text-stroke: 1px ${color ? color : 'var(--color-2)'};
+            /* color: transparent; */
+            -webkit-text-stroke: 1px ${color ? color : 'var(--color-1)'};
+           /* text-stroke: 1px ${color ? color : 'var(--color-2)'}; */
         }
     `
 
     return fill? filledSelection : emptySelection
 }
-export function padding(): FlattenSimpleInterpolation {
+export function padding(): RuleSet {
 
     return css`
         padding: 0 150px;
@@ -33,7 +34,7 @@ export function padding(): FlattenSimpleInterpolation {
         }
     `
 }
-export function titleFont(primary: boolean = true): FlattenSimpleInterpolation {
+export function titleFont(primary: boolean = true): RuleSet {
 
     return css`
         ${primary
@@ -49,7 +50,7 @@ export function titleFont(primary: boolean = true): FlattenSimpleInterpolation {
         font-weight: 900;
     `
 }
-export function titleLine(n: number): FlattenSimpleInterpolation {
+export function titleLine(n: number): RuleSet {
 
     return css`
         &::after {
@@ -65,7 +66,7 @@ export function titleLine(n: number): FlattenSimpleInterpolation {
         }
     `
 }
-export function resposiveParagraph(): FlattenSimpleInterpolation {
+export function resposiveParagraph(): RuleSet {
 
     return css`
         @media ${device.xs} {

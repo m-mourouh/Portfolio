@@ -5,7 +5,7 @@ import { gsap } from 'gsap'
 export default function Loader() {
     const [showLoader, setShowLoader] = useState(true)
     const conatiner = useRef<HTMLDivElement>(null)
-    const tl = useRef<GSAPTimeline>()
+    const tl = useRef<GSAPTimeline | null>(null)
 
     useEffect(() => {
         let paths = document.querySelectorAll<SVGPathElement>('.path')

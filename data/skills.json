@@ -16,6 +16,6 @@
         ],
         ["Java", "Spring Framework", "Node.js", "Python"],
         ["MySQL", "PostgreSQL", "MongoDB", "FireBase"],
-        ["Git", "GitHub", "GitLab", "Docker", "Jenkins", "Grafana", "CircleCI"]
+        ["Git", "GitHub", "GitLab", "Docker", "Jenkins", "Grafana", "CircleCI", "Figma", "Asana", "Obsidian", "Claude", "N8N", "VS Code", "IntelliJ IDEA"]
     ]
 }

@@ -1,30 +1,37 @@
-import { Fira_Code, Roboto, Roboto_Mono ,Montserrat } from 'next/font/google'
+// Using system fonts as fallback due to Google Fonts API timeout issues during build
+// These will use the CSS variable names but fallback to system fonts
 
-export const fira_code = Fira_Code({
+import { Tajawal, Space_Grotesk } from 'next/font/google'
+
+export const roboto = {
+    variable: '--font-roboto',
+    style: { fontFamily: 'system-ui, -apple-system, sans-serif' }
+}
+
+export const roboto_mono = {
+    variable: '--font-roboto-mono',
+    style: { fontFamily: 'monospace' }
+}
+
+export const dancing_script = {
+    variable: '--font-dancing-script',
+    style: { fontFamily: 'cursive' }
+}
+
+// Space Grotesk font for English and French text
+export const space_grotesk = Space_Grotesk({
     weight: ['300', '400', '500', '600', '700'],
     subsets: ['latin'],
-    variable: '--font-fira-code',
+    variable: '--font-space-grotesk',
     display: 'swap',
+    fallback: ['system-ui', 'Arial', 'sans-serif'],
 })
 
-export const roboto = Roboto({
-    weight: ['400', '700', '900'],
-    style: ['normal', 'italic'],
-    subsets: ['latin'],
-    variable: '--font-roboto',
+// Tajawal font for Arabic text
+export const tajawal = Tajawal({
+    weight: ['300', '400', '500', '700'],
+    subsets: ['arabic'],
+    variable: '--font-tajawal',
     display: 'swap',
-})
-export const roboto_mono = Roboto_Mono({
-    weight: ['400', '500', '700'],
-    style: ['normal', 'italic'],
-    subsets: ['latin'],
-    variable: '--font-roboto-mono',
-    display: 'swap',
-})
-export const montserrat = Montserrat({
-    weight: ['400', '700', '900'],
-    style: ['normal', 'italic'],
-    subsets: ['latin'],
-    variable: '--font-montserrat',
-    display:'swap',
+    fallback: ['Tahoma', 'Arial', 'sans-serif'],
 })

@@ -50,7 +50,7 @@ export const StyledDiv = styled.div`
                 .tooltiptext {
                     visibility: visible;
                     opacity: 1;
-                    right: calc(-10% - 7ch);
+                    right: calc(-10% - 5ch);
                 }
             }
             &::after {

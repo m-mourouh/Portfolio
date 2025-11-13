@@ -1,0 +1,125 @@
+{
+  "nav": {
+    "home": "Home",
+    "skills": "Skills",
+    "work": "Work",
+    "about": "About",
+    "contact": "Contact",
+    "contactMe": "Contact Me"
+  },
+  "hero": {
+    "greeting": "Hi 👋, my name is",
+    "subtitle": "Mohamed Mourouh Is An Experienced Software Engineer Who <span>Creates High-Performing & Beautiful Websites.</span>",
+    "viewWork": "Hire Me",
+    "contactMe": "Scroll Down ↓",
+    "available": "Available for work"
+  },
+  "about": {
+    "title": "About Me",
+    "introduction": "I'm a passionate software engineer based in <span class=\"morocco\">Morocco <img src=\"/images/morocco.png\" alt=\"Morocco Flag\" class=\"flag\" /></span> I build creative web apps that are both visually stunning and user-friendly. I'm committed to delivering high-quality solutions that exceed expectations. <span class=\"secondary-text\">With a focus on innovation and problem-solving, I'm dedicated to helping businesses and individuals achieve their digital goals.</span>",
+    "thankYou": "Thank you for taking the time to learn more about me and my work.",
+    "yearsExperience": "Years of Experience",
+    "projectsCompleted": "Projects Completed",
+    "clientSatisfaction": "Client Satisfaction"
+  },
+  "skills": {
+    "title": "Technical <span class=\"secondary-text\">Expertise</span>",
+    "subtitle": "A comprehensive overview of my development skills",
+    "proficiency": "Proficiency",
+    "proficiencyDesc": "Overall skill proficiency across all categories",
+    "frontend": "Front-end",
+    "frontendDesc": "Building beautiful, responsive user interfaces",
+    "backend": "Back-end",
+    "backendDesc": "Server-side development and APIs",
+    "databases": "Databases",
+    "databasesDesc": "Data management and storage",
+    "tools": "Tools",
+    "toolsDesc": "Development tools and workflows",
+    "certifications": "Certifications",
+    "certificationsDesc": "Professional credentials & achievements"
+  },
+  "certifications": {
+    "advancedReact": "Advanced React",
+    "javaMicroservices": "Java Microservices",
+    "dataStructuresBackend": "Data Structures & Backend",
+    "springMvcBoot": "Spring MVC & Boot",
+    "vueStorefront": "Vue Storefront",
+    "responsiveWebsite": "Responsive Website",
+    "introductionIot": "Introduction to IoT",
+    "pythonDataScience": "Python for Data Science",
+    "javaProgramming": "Java Programming",
+    "jquery": "jQuery",
+    "jsProgramming": "JavaScript Programming"
+  },
+  "projects": {
+    "title": "My Featured <span class=\"secondary-text\">Projects</span>",
+    "viewAll": "View All Projects",
+    "liveDemo": "Live Demo",
+    "sourceCode": "Source Code",
+    "descriptions": {
+      "carrefour": "A comprehensive e-commerce platform for Carrefour, featuring product browsing, shopping cart, and order management.",
+      "channel": "Luxury high jewelry showcase for Chanel featuring elegant product displays, interactive catalogs, and premium shopping experience.",
+      "visilab": "Modern e-commerce platform for optical products, offering eyeglasses, sunglasses, and eye care services with online booking.",
+      "mcoptic": "Swiss optical retail website featuring designer eyewear collections, vision testing services, and appointment scheduling.",
+      "linsenmax": "Online store for contact lenses and eye care products with advanced product filtering and prescription management.",
+      "chatGptV10": "AI-powered chatbot application with real-time conversations, Firebase authentication, and chat history management.",
+      "chatGptV11": "Enhanced AI chatbot with improved UI/UX, persistent conversations, and advanced state management using Redux.",
+      "translationApp": "Multi-language translation application with real-time text translation, language detection, and translation history.",
+      "hospitalManagement": "Complete hospital management solution with patient records, appointment scheduling, doctor management, and medical inventory.",
+      "socotec": "Construction inspection and monitoring platform for technical control, compliance verification, and project management.",
+      "covidDetection": "Machine learning web application for COVID-19 detection from chest X-ray images using deep learning algorithms.",
+      "instantBeaute": "Beauty salon website with online booking system, service catalog, gallery, and customer appointment management.",
+      "edenCosmetique": "Cosmetics and beauty products e-commerce platform with product catalog, shopping cart, and secure payment integration.",
+      "leNewGoa": "Indian restaurant website featuring online menu, table reservations, food ordering system, and delivery tracking.",
+      "boisDetail": "Woodworking and carpentry business website showcasing custom furniture, renovation projects, and service portfolio.",
+      "soleneDelacroix": "Professional photographer portfolio featuring wedding, portrait, and event photography with gallery and booking system.",
+      "2mj": "Interior design and home fitting company website with project showcase, service descriptions, and quote request system.",
+      "junglePizza": "Pizzeria website with online ordering, menu display, delivery zone coverage, and real-time order tracking.",
+      "boutinDavid": "Professional painting services website featuring project gallery, service offerings, and customer quote management system.",
+      "garageOncins": "Auto repair garage website with service booking, vehicle diagnostics, maintenance packages, and customer portal.",
+      "gourvat": "Landscaping and gardening services website showcasing outdoor projects, maintenance plans, and online consultation booking.",
+      "aurelieLejeune": "Artist and photographer portfolio website featuring creative works, exhibition calendar, and artwork purchase system.",
+      "leGrandMenage": "Professional cleaning services platform with online booking, service packages, recurring appointments, and customer management."
+    }
+  },
+  "contact": {
+    "title": "Get In <span class=\"secondary-text\">Touch</span>",
+    "subtitle": "Have a project in mind? Let's work together to create something amazing.",
+    "name": "Your Name",
+    "lastName": "Last Name",
+    "email": "Your Email",
+    "message": "Your Message",
+    "send": "Send Message",
+    "sending": "Sending...",
+    "errors": {
+      "firstNameMin": "First name must be at least 3 characters",
+      "firstNameMax": "First name must be at most 20 characters",
+      "firstNameRequired": "First name is required",
+      "lastNameMin": "Last name must be at least 3 characters",
+      "lastNameMax": "Last name must be at most 20 characters",
+      "lastNameRequired": "Last name is required",
+      "emailInvalid": "Invalid Email address",
+      "emailRequired": "Email is required",
+      "messageMin": "Message must be at least 5 characters",
+      "messageRequired": "Message is required"
+    }
+  },
+  "share": {
+    "shareWith": "Share with "
+  },
+  "social": {
+    "linkedin": "LinkedIn",
+    "github": "Github",
+    "devto": "DevTo",
+    "youtube": "Youtube",
+    "linkedinShort": "Li",
+    "githubShort": "Gi",
+    "devtoShort": "De",
+    "youtubeShort": "Yo"
+  },
+  "footer": {
+    "madeWith": "Made with",
+    "by": "by",
+    "name": "Mohamed Mourouh"
+  }
+}

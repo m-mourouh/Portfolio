@@ -1,18 +1,20 @@
 'use client'
 import { useEffect, useRef, useState } from 'react'
 import { StyledNav } from '@/styles/styled-components/NavBar.styled'
-import Image from 'next/image'
-import Logo from '@/public/images/logo.svg'
 import { Link } from 'react-scroll'
 import navData from '@/data/navigation.json'
 import userData from '@/data/user.json'
-import { fira_code } from '../fonts/fonts'
 import { StyledButton } from '@/styles/styled-components/Button.styled'
 import { gsap } from 'gsap'
+import Image from 'next/image'
+import Logo from '@/public/images/logo.svg'
+import LanguageSwitcher from './LanguageSwitcher'
+import { useLanguage } from '@/contexts/LanguageContext'
 export default function NavBar() {
+    const { t } = useLanguage()
     const [toggle, setToggle] = useState(false)
     const container = useRef<HTMLDivElement>(null)
-    const tl = useRef<GSAPTimeline>()
+    const tl = useRef<GSAPTimeline | null>(null)
     useEffect(() => {
         const navLogo = document.querySelector('.nav-logo')
         const navLink = document.querySelectorAll('.nav-link')
@@ -75,27 +77,46 @@ export default function NavBar() {
             </Link>
             <div className={toggle ? 'menu  active' : 'menu'}>
                 <ul>
-                    {navData.navigation.map((item, index) => (
-                        <li key={index}>
-                            <Link
-                                smooth={true}
-                                duration={500}
-                                className={fira_code.variable + ' nav-link'}
-                                to={`${item.toLowerCase()}`}
-                                onClick={toggleMenu}
-                            >
-                                {item.toLowerCase()}
-                            </Link>
-                        </li>
-                    ))}
+                    {navData.navigation.map((item, index) => {
+                        const target = item.toLowerCase() === 'home' ? 'head' : item.toLowerCase() === 'work' ? 'projects' : item.toLowerCase()
+                        const translationKey = `nav.${item.toLowerCase()}`
+                        return (
+                            <li key={index}>
+                                <Link
+                                    smooth={true}
+                                    duration={500}
+                                    className="nav-link"
+                                    to={target}
+                                    onClick={toggleMenu}
+                                >
+                                    {t(translationKey)}
+                                </Link>
+                            </li>
+                        )
+                    })}
                 </ul>
+                <div className="mobile-language-switcher">
+                    <LanguageSwitcher isMobile={true} />
+                </div>
                 <StyledButton
-                    className={`link ${fira_code.variable} nav-btn`}
+                    className="link mobile-btn nav-btn"
                     onClick={toggleMenu}
                     as="a"
                     href={`mailto:${userData.user.email}`}
+                    $outline
                 >
-                    Let&#39;s talk
+                    {t('nav.contactMe')}
+                </StyledButton>
+            </div>
+            <div className="nav-button-wrapper">
+                <LanguageSwitcher />
+                <StyledButton
+                    className="link nav-btn"
+                    as="a"
+                    href={`mailto:${userData.user.email}`}
+                    $outline
+                >
+                    {t('nav.contactMe')}
                 </StyledButton>
             </div>
             <div

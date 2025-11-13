@@ -10,10 +10,12 @@ import { AiOutlineYoutube } from 'react-icons/ai'
 import { roboto_mono } from '@/fonts/fonts'
 import { useEffect, useRef } from 'react'
 import { gsap } from 'gsap'
+import { useLanguage } from '@/contexts/LanguageContext'
 export default function SocialMedia({ option }: { option: boolean }) {
     // hooks
+    const { t } = useLanguage()
     const conatiner = useRef<HTMLDivElement>(null)
-    const tl = useRef<GSAPTimeline>()
+    const tl = useRef<GSAPTimeline | null>(null)
     useEffect(() => {
         const mediaIcons = document.querySelectorAll('.media')
         let ctx = gsap.context(() => {
@@ -96,56 +98,56 @@ export default function SocialMedia({ option }: { option: boolean }) {
                         className="icon media"
                         target="_blank"
                     >
-                        Li
-                        <span className="tooltiptext">LinkedIn</span>
+                        {t('social.linkedinShort')}
+                        <span className="tooltiptext">{t('social.linkedin')}</span>
                     </Link>
-                    <Link
+                    {/* <Link
                         href={profilesData.data.instagram}
                         className="icon media"
                         target="_blank"
                     >
                         In
                         <span className="tooltiptext">Instagram</span>
-                    </Link>
-                    <Link
+                    </Link> */}
+                    {/* <Link
                         href={profilesData.data.x}
                         className="icon media"
                         target="_blank"
                     >
                         X
                         <span className="tooltiptext">X</span>
-                    </Link>
-                    <Link
+                    </Link> */}
+                    {/* <Link
                         href={profilesData.data.facebook}
                         className="icon media"
                         target="_blank"
                     >
                         FB
                         <span className="tooltiptext">Facebook</span>
-                    </Link>
+                    </Link> */}
                     <Link
                         href={profilesData.data.github}
                         className="icon media"
                         target="_blank"
                     >
-                        Gi
-                        <span className="tooltiptext">Github</span>
+                        {t('social.githubShort')}
+                        <span className="tooltiptext">{t('social.github')}</span>
                     </Link>
                     <Link
                         href={profilesData.data.devto}
                         className="icon media"
                         target="_blank"
                     >
-                        De
-                        <span className="tooltiptext">DevTo</span>
+                        {t('social.devtoShort')}
+                        <span className="tooltiptext">{t('social.devto')}</span>
                     </Link>
                     <Link
                         href={profilesData.data.youtube}
                         className="icon media"
                         target="_blank"
                     >
-                        Yo
-                        <span className="tooltiptext">Youtube</span>
+                        {t('social.youtubeShort')}
+                        <span className="tooltiptext">{t('social.youtube')}</span>
                     </Link>
                 </div>
             )}

@@ -15,10 +15,13 @@ import {
 
 import { roboto_mono } from '@/fonts/fonts'
 import { gsap } from 'gsap'
+import { useLanguage } from '@/contexts/LanguageContext'
+
 export default function Share({ orientation }: { orientation: string }) {
+    const { t } = useLanguage()
     const [toggle, setToggle] = useState(false)
     const conatiner = useRef<HTMLDivElement>(null)
-    const tl = useRef<GSAPTimeline>()
+    const tl = useRef<GSAPTimeline | null>(null)
     useEffect(() => {
         let ctx = gsap.context(() => {
             if (toggle) {
@@ -90,7 +93,7 @@ export default function Share({ orientation }: { orientation: string }) {
                     onClick={(e) => handleClick(e)}
                     onBlur={(e) => handleBlur(e)}
                 >
-                    <p>{data.shareButtonText}</p>
+                    <p>{t('share.shareWith')}</p>
                     <IoMdHeart className="icon" />
                 </Link>
                 <div className="platforms">

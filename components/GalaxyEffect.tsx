@@ -50,8 +50,8 @@ const GalaxyEffect = () => {
                 (Math.random() - 0.5) * 200,
                 -100 - Math.random() * 100
             )
-            scene.add(star)
-            shootingStars.push(star)
+            // scene.add(star)
+            // shootingStars.push(star)
         }
 
         const ambientLight = new THREE.AmbientLight(0x404040, 2)

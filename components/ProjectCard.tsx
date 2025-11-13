@@ -2,7 +2,8 @@ import Image from 'next/image'
 import { HiOutlineExternalLink } from 'react-icons/hi'
 import { VscGithubAlt } from 'react-icons/vsc'
 import Link from 'next/link'
-import { fira_code } from '@/fonts/fonts'
+import { useLanguage } from '@/contexts/LanguageContext'
+
 type ProjectType = {
     project: {
         name: string
@@ -15,66 +16,88 @@ type ProjectType = {
         image: string
     }
 }
+
+// Helper function to map project names to translation keys
+const getProjectKey = (projectName: string): string => {
+    const keyMap: { [key: string]: string } = {
+        'Carrefour': 'carrefour',
+        'Channel': 'channel',
+        'Visilab': 'visilab',
+        'Mcoptic': 'mcoptic',
+        'Linsenmax': 'linsenmax',
+        'Chat GPT Clone V.1.0': 'chatGptV10',
+        'Chat GPT Clone V.1.1': 'chatGptV11',
+        'Translation APP': 'translationApp',
+        'Hospital Management System': 'hospitalManagement',
+        'Socotec': 'socotec',
+        'COVID-19 DETECTION APP': 'covidDetection',
+        'Instant beauté': 'instantBeaute',
+        'Eden cosmetique': 'edenCosmetique',
+        'LE NEW GOA': 'leNewGoa',
+        'BOIS DÉTAIL': 'boisDetail',
+        'Solene Delacroix': 'soleneDelacroix',
+        '2MJ': '2mj',
+        'Jungle Pizza': 'junglePizza',
+        'Boutin David': 'boutinDavid',
+        'GARAGE ONCINS': 'garageOncins',
+        'Gourvat': 'gourvat',
+        'AURELIE LEJEUNE': 'aurelieLejeune',
+        'LE GRAND MENAGE': 'leGrandMenage'
+    }
+    return keyMap[projectName] || projectName.toLowerCase().replace(/\s+/g, '')
+}
+
 export default function ProjectCard({ project }: ProjectType) {
+    const { t } = useLanguage()
     return (
         <div className="project-card">
-            <div className="left-col">
-                <div className="top-card">
-                    <h5 className="title">{project.name.toLowerCase()}</h5>
-                    <div className="line"></div>
-                </div>
-                <div className="project-image">
-                    <Image
-                        src={require(`../public/images/${
-                            project.image || 'default-image.jpg'
-                        }`)}
-                        alt=""
-                        loading="lazy"
-                    />
-                    <div className="links">
+            <div className="project-image">
+                <Image
+                    src={require(`../public/images/${
+                        project.image || 'default-image.jpg'
+                    }`)}
+                    alt={project.name}
+                    loading="lazy"
+                />
+                <div className="image-overlay">
+                    <div className="card-links">
                         {project.links.github && (
-                            <Link
+                            <a
                                 href={project.links.github}
-                                className="link"
+                                className="link-icon"
                                 target="_blank"
+                                rel="noopener noreferrer"
+                                onClick={(e) => e.stopPropagation()}
                             >
                                 <VscGithubAlt />
-                            </Link>
+                            </a>
                         )}
                         {project.links.website && (
-                            <Link
+                            <a
                                 href={project.links.website}
-                                className="link"
+                                className="link-icon"
                                 target="_blank"
+                                rel="noopener noreferrer"
+                                onClick={(e) => e.stopPropagation()}
                             >
                                 <HiOutlineExternalLink />
-                            </Link>
+                            </a>
                         )}
                     </div>
                 </div>
-                <div className="bottom-card">
-                    <div className="line"></div>
-                    <div className="list">
-                        {project.stack.map((technology, idx) => (
-                            <small className={fira_code.variable} key={idx}>
-                                {technology.toLowerCase()}
-                            </small>
-                        ))}
-                    </div>
-                </div>
-
-                <Link
-                    href={
-                        project.links.website != ''
-                            ? project.links.website
-                            : project.links.github
-                    }
-                    target="_blank"
-                    className="project-link"
-                ></Link>
             </div>
-            <div className="right-col">
-                <p>{project.description}</p>
+            <div className="card-info">
+                <h3 className="project-title">{project.name}</h3>
+                <p className="project-description">
+                    {t(`projects.descriptions.${getProjectKey(project.name)}`)}
+                </p>
+                <div className="tech-stack">
+                    {project.stack.map((tech, idx) => (
+                        <span key={idx} className="tech-tag">
+                            {tech}
+                        </span>
+                    ))}
+                </div>
             </div>
         </div>
     )

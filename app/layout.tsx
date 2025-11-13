@@ -1,7 +1,7 @@
 import GoogleAnalytics from '@/components/GoogleAnalytics'
 import Header from '@/components/Header'
 import data from '@/data/user.json'
-import { roboto } from '@/fonts/fonts'
+import { roboto, tajawal, space_grotesk } from '@/fonts/fonts'
 import { GlobalStyle } from '@/styles/styled-components/Global'
 import StyledComponentsRegistry from '../lib/registry'
 import { Provider } from './providers'
@@ -20,7 +20,7 @@ export default function RootLayout({
                 <GoogleAnalytics
                     GA_MEASUREMENT_ID={process.env.GA_TRACKING_ID!}
                 />
-            <body className={`${roboto.variable}`}>
+            <body className={`${roboto.variable} ${tajawal.variable} ${space_grotesk.variable}`}>
                 <script
                     dangerouslySetInnerHTML={{
                         __html: `<!-- Google Tag Manager (noscript) -->`,
@@ -28,11 +28,10 @@ export default function RootLayout({
                 />
                 <noscript>
                     <iframe
-                        src={`https://www.googletagmanager.com/ns.html?id=${process
-                            .env.GA_TRACKING_ID!}`}
+                        src={`https://www.googletagmanager.com/ns.html?id=${process.env.GA_TRACKING_ID!}`}
                         height="0"
                         width="0"
-                        style={{ display: 'none', visibility: 'hidden' }}
+                        className="gtm-iframe"
                     ></iframe>
                 </noscript>
                 <script

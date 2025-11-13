@@ -1,0 +1,125 @@
+{
+  "nav": {
+    "home": "Accueil",
+    "skills": "Compétences",
+    "work": "Projets",
+    "about": "À propos",
+    "contact": "Contact",
+    "contactMe": "Contactez-Moi"
+  },
+  "hero": {
+    "greeting": "Salut 👋, je m'appelle",
+    "subtitle": "Mohamed Mourouh Est Un Ingénieur Logiciel Expérimenté Qui <span>Crée Des Sites Web Performants Et Magnifiques.</span>",
+    "viewWork": "Engagez-Moi",
+    "contactMe": "Défiler Vers Le Bas ↓",
+    "available": "Disponible pour travailler"
+  },
+  "about": {
+    "title": "À Propos de Moi",
+    "introduction": "Je suis un ingénieur logiciel passionné basé au <span class=\"morocco\">Maroc <img src=\"/images/morocco.png\" alt=\"Drapeau du Maroc\" class=\"flag\" /></span> Je crée des applications web créatives qui sont à la fois visuellement époustouflantes et conviviales. Je m'engage à fournir des solutions de haute qualité qui dépassent les attentes. <span class=\"secondary-text\">En mettant l'accent sur l'innovation et la résolution de problèmes, je me consacre à aider les entreprises et les particuliers à atteindre leurs objectifs numériques.</span>",
+    "thankYou": "Merci d'avoir pris le temps d'en savoir plus sur moi et mon travail.",
+    "yearsExperience": "Années d'Expérience",
+    "projectsCompleted": "Projets Réalisés",
+    "clientSatisfaction": "Satisfaction Client"
+  },
+  "skills": {
+    "title": "Expertise <span class=\"secondary-text\">Technique</span>",
+    "subtitle": "Un aperçu complet de mes compétences en développement",
+    "proficiency": "Compétence",
+    "proficiencyDesc": "Compétence globale dans toutes les catégories",
+    "frontend": "Front-end",
+    "frontendDesc": "Créer des interfaces utilisateur belles et réactives",
+    "backend": "Back-end",
+    "backendDesc": "Développement côté serveur et API",
+    "databases": "Bases de Données",
+    "databasesDesc": "Gestion et stockage de données",
+    "tools": "Outils",
+    "toolsDesc": "Outils de développement et flux de travail",
+    "certifications": "Certifications",
+    "certificationsDesc": "Accréditations et réalisations professionnelles"
+  },
+  "certifications": {
+    "advancedReact": "React Avancé",
+    "javaMicroservices": "Microservices Java",
+    "dataStructuresBackend": "Structures de Données & Backend",
+    "springMvcBoot": "Spring MVC & Boot",
+    "vueStorefront": "Vue Storefront",
+    "responsiveWebsite": "Site Web Réactif",
+    "introductionIot": "Introduction à l'IoT",
+    "pythonDataScience": "Python pour la Science des Données",
+    "javaProgramming": "Programmation Java",
+    "jquery": "jQuery",
+    "jsProgramming": "Programmation JavaScript"
+  },
+  "projects": {
+    "title": "Mes <span class=\"secondary-text\">Projets</span> Phares",
+    "viewAll": "Voir Tous les Projets",
+    "liveDemo": "Démo en Direct",
+    "sourceCode": "Code Source",
+    "descriptions": {
+      "carrefour": "Une plateforme e-commerce complète pour Carrefour, avec navigation de produits, panier d'achat et gestion des commandes.",
+      "channel": "Vitrine de haute joaillerie de luxe pour Chanel avec des présentations élégantes, catalogues interactifs et expérience d'achat premium.",
+      "visilab": "Plateforme e-commerce moderne pour produits optiques, proposant lunettes de vue, lunettes de soleil et services de soins oculaires avec réservation en ligne.",
+      "mcoptic": "Site web de vente optique suisse proposant des collections de lunettes design, services de tests visuels et prise de rendez-vous.",
+      "linsenmax": "Boutique en ligne pour lentilles de contact et produits de soins oculaires avec filtrage avancé et gestion des prescriptions.",
+      "chatGptV10": "Application chatbot IA avec conversations en temps réel, authentification Firebase et gestion de l'historique des discussions.",
+      "chatGptV11": "Chatbot IA amélioré avec UI/UX optimisée, conversations persistantes et gestion d'état avancée avec Redux.",
+      "translationApp": "Application de traduction multilingue avec traduction de texte en temps réel, détection de langue et historique de traduction.",
+      "hospitalManagement": "Solution complète de gestion hospitalière avec dossiers patients, planification de rendez-vous, gestion des médecins et inventaire médical.",
+      "socotec": "Plateforme d'inspection et de suivi de construction pour contrôle technique, vérification de conformité et gestion de projets.",
+      "covidDetection": "Application web d'apprentissage automatique pour la détection du COVID-19 à partir d'images radiographiques thoraciques utilisant des algorithmes d'apprentissage profond.",
+      "instantBeaute": "Site web de salon de beauté avec système de réservation en ligne, catalogue de services, galerie et gestion des rendez-vous clients.",
+      "edenCosmetique": "Plateforme e-commerce de cosmétiques et produits de beauté avec catalogue de produits, panier d'achat et intégration de paiement sécurisé.",
+      "leNewGoa": "Site web de restaurant indien proposant menu en ligne, réservations de tables, système de commande de nourriture et suivi de livraison.",
+      "boisDetail": "Site web d'entreprise de menuiserie et ébénisterie présentant meubles sur mesure, projets de rénovation et portfolio de services.",
+      "soleneDelacroix": "Portfolio de photographe professionnelle présentant photographie de mariage, portraits et événements avec galerie et système de réservation.",
+      "2mj": "Site web d'entreprise de design d'intérieur et d'agencement avec présentation de projets, descriptions de services et système de demande de devis.",
+      "junglePizza": "Site web de pizzeria avec commande en ligne, affichage du menu, couverture de zone de livraison et suivi de commande en temps réel.",
+      "boutinDavid": "Site web de services de peinture professionnels présentant galerie de projets, offres de services et système de gestion de devis clients.",
+      "garageOncins": "Site web de garage de réparation automobile avec réservation de services, diagnostics véhicules, forfaits d'entretien et portail client.",
+      "gourvat": "Site web de services d'aménagement paysager et de jardinage présentant projets extérieurs, plans d'entretien et réservation de consultation en ligne.",
+      "aurelieLejeune": "Site web portfolio d'artiste et photographe présentant œuvres créatives, calendrier d'expositions et système d'achat d'œuvres d'art.",
+      "leGrandMenage": "Plateforme de services de nettoyage professionnels avec réservation en ligne, forfaits de services, rendez-vous récurrents et gestion client."
+    }
+  },
+  "contact": {
+    "title": "Prenons <span class=\"secondary-text\">Contact</span>",
+    "subtitle": "Vous avez un projet en tête ? Travaillons ensemble pour créer quelque chose d'incroyable.",
+    "name": "Votre Nom",
+    "lastName": "Votre Nom de Famille",
+    "email": "Votre Email",
+    "message": "Votre Message",
+    "send": "Envoyer le Message",
+    "sending": "Envoi en cours...",
+    "errors": {
+      "firstNameMin": "Le prénom doit contenir au moins 3 caractères",
+      "firstNameMax": "Le prénom doit contenir au maximum 20 caractères",
+      "firstNameRequired": "Le prénom est requis",
+      "lastNameMin": "Le nom de famille doit contenir au moins 3 caractères",
+      "lastNameMax": "Le nom de famille doit contenir au maximum 20 caractères",
+      "lastNameRequired": "Le nom de famille est requis",
+      "emailInvalid": "Adresse email invalide",
+      "emailRequired": "L'email est requis",
+      "messageMin": "Le message doit contenir au moins 5 caractères",
+      "messageRequired": "Le message est requis"
+    }
+  },
+  "share": {
+    "shareWith": "Partager avec "
+  },
+  "social": {
+    "linkedin": "LinkedIn",
+    "github": "Github",
+    "devto": "DevTo",
+    "youtube": "Youtube",
+    "linkedinShort": "Li",
+    "githubShort": "Gi",
+    "devtoShort": "De",
+    "youtubeShort": "Yo"
+  },
+  "footer": {
+    "madeWith": "Fait avec",
+    "by": "par",
+    "name": "Mohamed Mourouh"
+  }
+}

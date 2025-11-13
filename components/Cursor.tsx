@@ -4,7 +4,7 @@ import { useEffect, useRef } from 'react'
 import { gsap } from 'gsap'
 export default function Cursor() {
     const conatiner = useRef<HTMLDivElement>(null)
-    const tl = useRef<GSAPTimeline>()
+    const tl = useRef<GSAPTimeline | null>(null)
 
     useEffect(() => {
         let cursor = document.querySelector('.cursor')
