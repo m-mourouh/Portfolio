@@ -11,6 +11,8 @@ export const StyledFooter = styled.footer`
 
     p {
         font-size: 0.9rem;
+        color: var(--text-primary);
+        transition: color 0.3s ease;
         &:last-of-type {
             margin-top: 20px;
             opacity: 0.5;

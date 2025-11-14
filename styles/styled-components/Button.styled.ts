@@ -12,16 +12,16 @@ type ButtonProps = {
 export const StyledButton = styled.button<ButtonProps>`
     outline: none;
     background-color: ${({ outline, primary }) =>
-        outline ? 'rgb(44, 44, 44)' :
+        outline ? 'var(--bg-secondary)' :
         primary ? '#c4ff00' :
-        'rgb(44, 44, 44)'
+        'var(--bg-secondary)'
     };
     border: 1px solid ${({ outline, primary }) =>
-        outline ? 'rgb(57, 57, 57)' :
+        outline ? 'var(--border-color)' :
         primary ? '#c4ff00' :
-        'rgb(57, 57, 57)'
+        'var(--border-color)'
     };
-    color: ${({ primary }) => primary ? '#000' : 'var(--white)'};
+    color: ${({ primary }) => primary ? '#000' : 'var(--text-primary)'};
     cursor: pointer;
     border-radius: 12px;
     font-family: var(--font-general-sans);
@@ -49,16 +49,16 @@ export const StyledButton = styled.button<ButtonProps>`
     transition: all 0.25s ease-in-out;
     &:not(:disabled):hover {
         background-color: ${({ outline, primary }) =>
-            outline ? 'rgb(57, 57, 57)' :
+            outline ? 'var(--card-bg-hover, var(--bg-tertiary))' :
             primary ? '#a8d600' :
-            'rgb(57, 57, 57)'
+            'var(--card-bg-hover, var(--bg-tertiary))'
         };
         border-color: ${({ outline, primary }) =>
-            outline ? 'rgb(80, 80, 80)' :
+            outline ? '#c4ff00' :
             primary ? '#a8d600' :
-            'rgb(80, 80, 80)'
+            '#c4ff00'
         };
-        color: ${({ primary }) => primary ? '#000' : 'var(--white)'};
+        color: ${({ primary }) => primary ? '#000' : 'var(--text-primary)'};
         opacity: 1;
     }
     &:disabled {

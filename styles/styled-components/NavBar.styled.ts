@@ -13,12 +13,22 @@ export const StyledNav = styled.nav`
     width: calc(100% - 300px);
     max-width: 1400px;
     padding: 20px 60px;
-    background-color: rgba(28, 28, 28, 0.95);
+    background-color: var(--nav-bg);
     backdrop-filter: blur(10px);
-    border: 1px solid rgb(41, 41, 41);
+    border: 1px solid var(--border-color);
     border-radius: 100px;
     z-index: 1000;
-    transition: all 0.3s ease;
+    transition: all 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
+
+    [data-theme="light"] & {
+        background-color: rgba(255, 255, 255, 0.95);
+        border-color: rgba(0, 0, 0, 0.08);
+    }
+
+    [data-theme="dark"] & {
+        background-color: rgba(28, 28, 28, 0.95);
+        border-color: rgb(41, 41, 41);
+    }
 
     @media (max-width: 1400px) {
         width: calc(100% - 200px);
@@ -32,8 +42,14 @@ export const StyledNav = styled.nav`
   
     .nav-logo {
         cursor: pointer;
-        transition: opacity 0.3s ease;
+        transition: opacity 0.3s ease, filter 0.3s ease;
         justify-self: start;
+        filter: brightness(0) invert(1);
+
+        [data-theme="light"] & {
+            filter: brightness(0) invert(0);
+        }
+
         &:hover {
             opacity: 0.8;
         }
@@ -51,7 +67,7 @@ export const StyledNav = styled.nav`
         width: 100%;
         height: 100vh;
         transition: all 0.15s ease-in-out;
-        background: ${({ theme }) => theme.dark.background};
+        background: var(--bg-primary);
         z-index: 9;
         opacity: 0.7;
         filter: blur(8px);
@@ -81,7 +97,7 @@ export const StyledNav = styled.nav`
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            background: ${({ theme }) => theme.dark.background};
+            background: var(--bg-primary);
             box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
             grid-column: unset;
         }
@@ -109,7 +125,7 @@ export const StyledNav = styled.nav`
                     display: inline-block;
                     /* padding-right: 30px; */
                     text-transform: none;
-                    color: var(--white);
+                    color: var(--text-primary);
                     transition: 0.25s ease-in-out;
                     position: relative;
                     display: inline-block;
@@ -158,6 +174,7 @@ export const StyledNav = styled.nav`
         justify-content: flex-end;
         align-items: center;
         grid-column: 3;
+        gap: 20px;
 
         @media ${device.sm} {
             display: none;
@@ -194,7 +211,7 @@ export const StyledNav = styled.nav`
             display: block;
             width: 100%;
             height: 2px;
-            background-color: ${({ theme }) => theme.light.background};
+            background-color: var(--text-primary);
             border-radius: 1px;
             transition: all 0.2s cubic-bezier(0.1, 0.82, 0.76, 0.965);
 
@@ -233,13 +250,21 @@ export const StyledNav = styled.nav`
         width: 100%;
         transform: none;
         padding: 16px 20px;
-        background-color: rgba(10, 10, 10, 0.98);
+        background-color: var(--nav-bg);
         backdrop-filter: blur(20px);
         border-radius: 0 !important;
         border: none;
         border-bottom: 1px solid rgba(196, 255, 0, 0.2);
         /* box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5); */
         z-index: 10000 !important;
+
+        [data-theme="light"] & {
+            background-color: rgba(255, 255, 255, 0.98);
+        }
+
+        [data-theme="dark"] & {
+            background-color: rgba(10, 10, 10, 0.98);
+        }
     }
 
     @media (max-width: 450px) {

@@ -24,7 +24,8 @@ export const StyledSelection = styled.section`
         flex-direction: column;
         justify-content: center;
         width: 100%;
-        color: var(--white);
+        color: var(--text-primary);
+        transition: color 0.3s ease;
 
         .status {
             display: inline-flex;
@@ -67,9 +68,10 @@ export const StyledSelection = styled.section`
                 font-family: var(--font-general-sans);
                 font-size: 0.875rem;
                 font-weight: 500;
-                color: var(--white);
+                color: var(--text-primary);
                 text-transform: uppercase;
                 letter-spacing: 1px;
+                transition: color 0.3s ease;
 
                 @media ${device.sm} {
                     font-size: 0.75rem;
@@ -104,8 +106,9 @@ export const StyledSelection = styled.section`
             font-size: clamp(2rem, 5vw, 4.5rem);
             font-weight: 400;
             line-height: 1.2;
-            color: var(--white);
+            color: var(--text-primary);
             margin-bottom: 60px;
+            transition: color 0.3s ease;
 
             @media ${device.sm} {
                 font-size: clamp(1.5rem, 6vw, 2.5rem);
@@ -113,8 +116,9 @@ export const StyledSelection = styled.section`
             }
 
             .secondary-text {
-                color: #888;
+                color: var(--text-secondary);
                 font-weight: 300;
+                transition: color 0.3s ease;
             }
         }
 

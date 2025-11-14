@@ -31,20 +31,23 @@ export const StyledSkills = styled.section`
             font-family: var(--font-general-sans);
             font-size: clamp(2.5rem, 5vw, 4rem);
             font-weight: 400;
-            color: var(--white);
+            color: var(--text-primary);
             margin-bottom: 20px;
+            transition: color 0.3s ease;
 
             .secondary-text {
-                color: #888;
+                color: var(--text-secondary);
                 font-weight: 300;
+                transition: color 0.3s ease;
             }
         }
 
         .subtitle {
             font-family: var(--font-general-sans);
             font-size: clamp(1rem, 2vw, 1.25rem);
-            color: #888;
+            color: var(--text-secondary);
             font-weight: 300;
+            transition: color 0.3s ease;
         }
     }
 
@@ -61,10 +64,11 @@ export const StyledSkills = styled.section`
             .card-header {
                 position: sticky;
                 top: 0;
-                background-color: rgb(28, 28, 28);
+                background-color: var(--card-bg);
                 z-index: 10;
                 padding-bottom: 16px;
                 margin-bottom: 16px !important;
+                transition: background-color 0.3s ease;
             }
         }
         gap: 20px;
@@ -83,8 +87,8 @@ export const StyledSkills = styled.section`
 
         .skill-card {
             position: relative;
-            background-color: rgb(28, 28, 28);
-            border: 1px solid rgb(41, 41, 41);
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
             border-radius: 24px;
             padding: 32px;
             display: flex;
@@ -184,8 +188,9 @@ export const StyledSkills = styled.section`
                     font-family: var(--font-general-sans);
                     font-size: clamp(1.5rem, 2.5vw, 2rem);
                     font-weight: 600;
-                    color: var(--white);
+                    color: var(--text-primary);
                     margin: 0 0 16px 0;
+                    transition: color 0.3s ease;
 
                     @media ${device.sm} {
                         font-size: 1.5rem;
@@ -195,9 +200,10 @@ export const StyledSkills = styled.section`
                 .card-description {
                     font-family: var(--font-general-sans);
                     font-size: 0.95rem;
-                    color: #888;
+                    color: var(--text-secondary);
                     font-weight: 300;
                     line-height: 1.6;
+                    transition: color 0.3s ease;
 
                     @media ${device.sm} {
                         font-size: 0.875rem;
@@ -218,12 +224,12 @@ export const StyledSkills = styled.section`
 
                 .skill-tag {
                     padding: 12px 20px;
-                    background-color: rgb(44, 44, 44);
-                    border: 1px solid rgb(57, 57, 57);
+                    background-color: var(--bg-secondary);
+                    border: 1px solid var(--border-color);
                     border-radius: 10px;
                     font-family: var(--font-general-sans);
                     font-size: 0.95rem;
-                    color: var(--white);
+                    color: var(--text-primary);
                     font-weight: 400;
                     transition: all 0.3s ease;
                     white-space: nowrap;
@@ -293,7 +299,7 @@ export const CertContainer = styled.div`
     }
 
     &::-webkit-scrollbar-track {
-        background: rgb(44, 44, 44);
+        background: var(--bg-secondary);
         border-radius: 4px;
     }
 
@@ -311,8 +317,8 @@ export const CertContainer = styled.div`
         align-items: center;
         gap: 12px;
         padding: 12px;
-        background-color: rgb(44, 44, 44);
-        border: 1px solid rgb(57, 57, 57);
+        background-color: var(--bg-secondary);
+        border: 1px solid var(--border-color);
         border-radius: 10px;
         opacity: 0;
         transition: all 0.3s ease;
@@ -396,8 +402,9 @@ export const CertContainer = styled.div`
                 font-family: var(--font-general-sans);
                 font-size: 0.9rem;
                 font-weight: 600;
-                color: var(--white);
+                color: var(--text-primary);
                 line-height: 1.3;
+                transition: color 0.3s ease;
 
                 @media ${device.sm} {
                     font-size: 0.8rem;
@@ -407,8 +414,9 @@ export const CertContainer = styled.div`
             .cert-issuer {
                 font-family: var(--font-general-sans);
                 font-size: 0.75rem;
-                color: #888;
+                color: var(--text-secondary);
                 font-weight: 400;
+                transition: color 0.3s ease;
 
                 @media ${device.sm} {
                     font-size: 0.7rem;

@@ -14,11 +14,12 @@ export const StyledProjects = styled.section`
     padding-top: 120px;
     padding-bottom: 100px;
     font-family: var(--font-roboto-mono);
-    color: var(--white);
+    color: var(--text-primary);
     min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    transition: color 0.3s ease;
 
     @media ${device.sm} {
         padding-top: 80px;
@@ -44,12 +45,14 @@ export const StyledProjects = styled.section`
             font-size: clamp(2.5rem, 5vw, 4rem);
             font-weight: 400;
             line-height: 1.2;
-            color: var(--white);
+            color: var(--text-primary);
+            transition: color 0.3s ease;
             ${selection(true, '#fff')}
 
             .secondary-text {
-                color: #888;
+                color: var(--text-secondary);
                 font-weight: 300;
+                transition: color 0.3s ease;
             }
         }
 
@@ -92,10 +95,11 @@ export const StyledProjects = styled.section`
         .project-card {
             display: flex;
             flex-direction: column;
-            background-color: rgb(28, 28, 28);
-            border: 1px solid rgb(41, 41, 41);
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
             border-radius: 16px;
             overflow: hidden;
+            transition: background-color 0.3s ease, border-color 0.3s ease;
 
             .card-link {
                 display: block;
@@ -107,7 +111,8 @@ export const StyledProjects = styled.section`
                 width: 100%;
                 height: 280px;
                 overflow: hidden;
-                background-color: rgb(20, 20, 20);
+                background-color: var(--bg-tertiary);
+                transition: background-color 0.3s ease;
 
                 @media ${device.sm} {
                     height: 240px;
@@ -214,8 +219,9 @@ export const StyledProjects = styled.section`
                     font-family: var(--font-general-sans);
                     font-size: 1.5rem;
                     font-weight: 600;
-                    color: var(--white);
+                    color: var(--text-primary);
                     margin: 0;
+                    transition: color 0.3s ease;
 
                     @media ${device.sm} {
                         font-size: 1.25rem;
@@ -225,10 +231,11 @@ export const StyledProjects = styled.section`
                 .project-description {
                     font-family: var(--font-general-sans);
                     font-size: 0.95rem;
-                    color: #888;
+                    color: var(--text-secondary);
                     line-height: 1.6;
                     margin: 0;
                     font-weight: 300;
+                    transition: color 0.3s ease;
 
                     @media ${device.sm} {
                         font-size: 0.875rem;
@@ -242,14 +249,15 @@ export const StyledProjects = styled.section`
 
                     .tech-tag {
                         padding: 6px 12px;
-                        background-color: rgb(41, 41, 41);
+                        background-color: var(--bg-secondary);
                         border-radius: 6px;
                         font-family: var(--font-general-sans);
                         font-size: 0.75rem;
-                        color: #888;
+                        color: var(--text-secondary);
                         font-weight: 400;
                         text-transform: uppercase;
                         letter-spacing: 0.5px;
+                        transition: all 0.3s ease;
 
                         @media ${device.sm} {
                             font-size: 0.7rem;

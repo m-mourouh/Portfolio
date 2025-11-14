@@ -19,6 +19,7 @@ const GridCanvas = styled.canvas`
 
 export default function GridBackground() {
     const [canvasRef, setCanvasRef] = useState<HTMLCanvasElement | null>(null)
+    const [theme, setTheme] = useState<string>('dark')
 
     useEffect(() => {
         if (!canvasRef) return
@@ -26,6 +27,10 @@ export default function GridBackground() {
         const canvas = canvasRef
         const ctx = canvas.getContext('2d')
         if (!ctx) return
+
+        // Check current theme - if no attribute set, default to dark mode
+        const currentTheme = document.documentElement.getAttribute('data-theme')
+        const isDarkMode = !currentTheme || currentTheme === 'dark'
 
         // Set canvas size to match display size
         const dpr = window.devicePixelRatio || 1
@@ -38,8 +43,8 @@ export default function GridBackground() {
         const cols = Math.ceil(rect.width / squareSize)
         const rows = Math.ceil(rect.height / squareSize)
 
-        // Draw grid lines
-        ctx.strokeStyle = 'rgba(255, 255, 255, 0.05)'
+        // Draw grid lines - use black for light mode, white for dark mode
+        ctx.strokeStyle = isDarkMode ? 'rgba(255, 255, 255, 0.05)' : 'rgba(0, 0, 0, 0.05)'
         ctx.lineWidth = 1
 
         for (let i = 0; i <= cols; i++) {
@@ -56,8 +61,8 @@ export default function GridBackground() {
             ctx.stroke()
         }
 
-        // Fill random squares
-        ctx.fillStyle = 'rgba(255, 255, 255, 0.02)'
+        // Fill random squares - use black for light mode, white for dark mode
+        ctx.fillStyle = isDarkMode ? 'rgba(255, 255, 255, 0.02)' : 'rgba(0, 0, 0, 0.02)'
         const fillProbability = 0.05 // 5% of squares will be filled
 
         for (let row = 0; row < rows; row++) {
@@ -75,6 +80,9 @@ export default function GridBackground() {
 
         // Handle window resize
         const handleResize = () => {
+            const currentTheme = document.documentElement.getAttribute('data-theme')
+            const isDarkMode = !currentTheme || currentTheme === 'dark'
+
             const rect = canvas.getBoundingClientRect()
             canvas.width = rect.width * dpr
             canvas.height = rect.height * dpr
@@ -84,7 +92,7 @@ export default function GridBackground() {
             const cols = Math.ceil(rect.width / squareSize)
             const rows = Math.ceil(rect.height / squareSize)
 
-            ctx.strokeStyle = 'rgba(255, 255, 255, 0.05)'
+            ctx.strokeStyle = isDarkMode ? 'rgba(255, 255, 255, 0.05)' : 'rgba(0, 0, 0, 0.05)'
             ctx.lineWidth = 1
 
             for (let i = 0; i <= cols; i++) {
@@ -101,7 +109,7 @@ export default function GridBackground() {
                 ctx.stroke()
             }
 
-            ctx.fillStyle = 'rgba(255, 255, 255, 0.02)'
+            ctx.fillStyle = isDarkMode ? 'rgba(255, 255, 255, 0.02)' : 'rgba(0, 0, 0, 0.02)'
             for (let row = 0; row < rows; row++) {
                 for (let col = 0; col < cols; col++) {
                     if (Math.random() < fillProbability) {
@@ -116,9 +124,32 @@ export default function GridBackground() {
             }
         }
 
+        // Handle theme changes
+        const handleThemeChange = () => {
+            const newTheme = document.documentElement.getAttribute('data-theme') || 'dark'
+            setTheme(newTheme)
+        }
+
+        // Listen for theme changes
+        const observer = new MutationObserver((mutations) => {
+            mutations.forEach((mutation) => {
+                if (mutation.attributeName === 'data-theme') {
+                    handleThemeChange()
+                }
+            })
+        })
+
+        observer.observe(document.documentElement, {
+            attributes: true,
+            attributeFilter: ['data-theme']
+        })
+
         window.addEventListener('resize', handleResize)
-        return () => window.removeEventListener('resize', handleResize)
-    }, [canvasRef])
+        return () => {
+            window.removeEventListener('resize', handleResize)
+            observer.disconnect()
+        }
+    }, [canvasRef, theme])
 
     return (
         <GridContainer>

@@ -32,24 +32,27 @@ export const StyledSection = styled.section`
             font-size: clamp(2.5rem, 5vw, 4rem);
             font-weight: 400;
             line-height: 1.2;
-            color: var(--white);
+            color: var(--text-primary);
             margin: 0 0 20px 0;
+            transition: color 0.3s ease;
             ${selection(true, '#fff')}
 
             .secondary-text {
-                color: #888;
+                color: var(--text-secondary);
                 font-weight: 300;
+                transition: color 0.3s ease;
             }
         }
 
         .subtitle {
             font-family: var(--font-general-sans);
             font-size: clamp(1rem, 2vw, 1.25rem);
-            color: #888;
+            color: var(--text-secondary);
             font-weight: 300;
             line-height: 1.6;
             max-width: 600px;
             margin: 0 auto;
+            transition: color 0.3s ease;
         }
     }
     form {
@@ -60,10 +63,11 @@ export const StyledSection = styled.section`
         align-self: center;
         gap: 24px;
         margin: 0 auto;
-        background-color: rgb(28, 28, 28);
-        border: 1px solid rgb(41, 41, 41);
+        background-color: var(--card-bg);
+        border: 1px solid var(--border-color);
         border-radius: 24px;
         padding: 48px;
+        transition: background-color 0.3s ease, border-color 0.3s ease;
 
         @media ${device.sm} {
             padding: 32px 24px;
@@ -87,10 +91,10 @@ export const StyledSection = styled.section`
 
         input {
             width: 100%;
-            background-color: rgb(20, 20, 20);
+            background-color: var(--bg-tertiary);
             outline: none;
-            border: 1px solid rgb(41, 41, 41);
-            color: var(--white);
+            border: 1px solid var(--border-color);
+            color: var(--text-primary);
             border-radius: 12px;
             padding: 16px 20px;
             font-family: var(--font-general-sans);
@@ -98,12 +102,12 @@ export const StyledSection = styled.section`
             transition: all 0.3s ease;
 
             &::placeholder {
-                color: #888;
+                color: var(--text-secondary);
             }
 
             &:focus {
                 border-color: #c4ff00;
-                background-color: rgb(28, 28, 28);
+                background-color: var(--bg-secondary);
 
                 &::placeholder {
                     color: #aaa;
@@ -113,8 +117,8 @@ export const StyledSection = styled.section`
             &:-webkit-autofill,
             &:-webkit-autofill:hover,
             &:-webkit-autofill:focus {
-                -webkit-text-fill-color: var(--white);
-                -webkit-box-shadow: 0 0 0px 1000px rgb(20, 20, 20) inset;
+                -webkit-text-fill-color: var(--text-primary);
+                -webkit-box-shadow: 0 0 0px 1000px var(--bg-tertiary) inset;
                 transition: background-color 5000s ease-in-out 0s;
             }
 
@@ -126,10 +130,10 @@ export const StyledSection = styled.section`
 
         textarea {
             width: 100%;
-            background-color: rgb(20, 20, 20);
+            background-color: var(--bg-tertiary);
             outline: none;
-            border: 1px solid rgb(41, 41, 41);
-            color: var(--white);
+            border: 1px solid var(--border-color);
+            color: var(--text-primary);
             border-radius: 12px;
             padding: 16px 20px;
             font-family: var(--font-general-sans);
@@ -139,12 +143,12 @@ export const StyledSection = styled.section`
             min-height: 160px;
 
             &::placeholder {
-                color: #888;
+                color: var(--text-secondary);
             }
 
             &:focus {
                 border-color: #c4ff00;
-                background-color: rgb(28, 28, 28);
+                background-color: var(--bg-secondary);
 
                 &::placeholder {
                     color: #aaa;
@@ -154,8 +158,8 @@ export const StyledSection = styled.section`
             &:-webkit-autofill,
             &:-webkit-autofill:hover,
             &:-webkit-autofill:focus {
-                -webkit-text-fill-color: var(--white);
-                -webkit-box-shadow: 0 0 0px 1000px rgb(20, 20, 20) inset;
+                -webkit-text-fill-color: var(--text-primary);
+                -webkit-box-shadow: 0 0 0px 1000px var(--bg-tertiary) inset;
                 transition: background-color 5000s ease-in-out 0s;
             }
 

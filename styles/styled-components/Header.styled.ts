@@ -23,7 +23,7 @@ export const StyledHeader = styled.header`
     > nav {
         max-width: 1400px;
         width: 100%;
-        background-color: rgb(28, 28, 28);
+        background-color: var(--nav-bg);
         backdrop-filter: blur(0px);
         -webkit-backdrop-filter: blur(0px);
         border-radius: 12px;
@@ -33,9 +33,19 @@ export const StyledHeader = styled.header`
         border-bottom-width: 1px;
         border-left-width: 1px;
         border-style: solid;
-        border-color: rgb(41, 41, 41);
+        border-color: var(--border-color);
         opacity: 1;
         transition: all 0.3s ease-in-out;
+
+        [data-theme="light"] & {
+            background-color: rgba(255, 255, 255, 0.95);
+            border-color: rgba(0, 0, 0, 0.08);
+        }
+
+        [data-theme="dark"] & {
+            background-color: rgba(28, 28, 28, 0.95);
+            border-color: rgb(41, 41, 41);
+        }
 
         @media ${device.sm} {
             border-radius: 12px;
@@ -45,8 +55,18 @@ export const StyledHeader = styled.header`
 
     &.scrolling {
         > nav {
-            background-color: rgb(28, 28, 28);
-            border-color: rgb(41, 41, 41);
+            background-color: var(--nav-bg);
+            border-color: var(--border-color);
+
+            [data-theme="light"] & {
+                background-color: rgba(255, 255, 255, 0.95);
+                border-color: rgba(0, 0, 0, 0.08);
+            }
+
+            [data-theme="dark"] & {
+                background-color: rgba(28, 28, 28, 0.95);
+                border-color: rgb(41, 41, 41);
+            }
         }
     }
 `

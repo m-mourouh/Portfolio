@@ -21,11 +21,12 @@ export const StyledAbout = styled.section`
 
         .about__content {
             width: 100%;
-            background-color: rgb(28, 28, 28);
-            border: 1px solid rgb(41, 41, 41);
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
             border-radius: 24px;
             padding: 80px;
             position: relative;
+            transition: background-color 0.3s ease, border-color 0.3s ease;
 
             @media ${device.md} {
                 padding: 60px 40px;
@@ -41,16 +42,18 @@ export const StyledAbout = styled.section`
                 font-size: clamp(1.25rem, 2.5vw, 1.875rem);
                 font-weight: 400;
                 line-height: 1.6;
-                color: var(--white);
+                color: var(--text-primary);
                 margin-bottom: 60px;
+                transition: color 0.3s ease;
 
                 @media ${device.sm} {
                     font-size: clamp(1rem, 3.5vw, 1.5rem);
                 }
 
                 .gray-text {
-                    color: #888;
+                    color: var(--text-secondary);
                     font-weight: 300;
+                    transition: color 0.3s ease;
                 }
             }
 
@@ -84,9 +87,10 @@ export const StyledAbout = styled.section`
                         font-family: var(--font-general-sans);
                         font-size: clamp(3rem, 8vw, 5rem);
                         font-weight: 300;
-                        color: var(--white);
+                        color: var(--text-primary);
                         margin-bottom: 10px;
                         line-height: 1;
+                        transition: color 0.3s ease;
                         /* font-weight: 600; */
                         .accent {
                             color: #c4ff00;
@@ -97,10 +101,11 @@ export const StyledAbout = styled.section`
                     .stat-label {
                         font-family: var(--font-general-sans);
                         font-size: 0.875rem;
-                        color: #888;
+                        color: var(--text-secondary);
                         text-transform: uppercase;
                         letter-spacing: 1px;
                         font-weight: 600;
+                        transition: color 0.3s ease;
                     }
                 }
             }

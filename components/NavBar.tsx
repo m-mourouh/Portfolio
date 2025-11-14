@@ -9,6 +9,7 @@ import { StyledButton } from '@/styles/styled-components/Button.styled'
 import { gsap } from 'gsap'
 import Image from 'next/image'
 import Logo from '@/public/images/logo.svg'
+import ThemeToggle from './ThemeToggle'
 export default function NavBar() {
     const [toggle, setToggle] = useState(false)
     const container = useRef<HTMLDivElement>(null)
@@ -103,6 +104,7 @@ export default function NavBar() {
                 </StyledButton>
             </div>
             <div className="nav-button-wrapper">
+                <ThemeToggle />
                 <StyledButton
                     className={`link ${fira_code.variable} nav-btn`}
                     as="a"
