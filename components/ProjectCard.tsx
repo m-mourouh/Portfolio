@@ -20,6 +20,7 @@ type ProjectType = {
 // Helper function to map project names to translation keys
 const getProjectKey = (projectName: string): string => {
     const keyMap: { [key: string]: string } = {
+        'Quran AI': 'quranAi',
         'Carrefour': 'carrefour',
         'Channel': 'channel',
         'Visilab': 'visilab',

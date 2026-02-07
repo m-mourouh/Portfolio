@@ -8,7 +8,7 @@ import { gsap } from 'gsap'
 import GalaxyEffect from './GalaxyEffect'
 import { Link } from 'react-scroll'
 import Image from 'next/image'
-import ProfilePic from '@/public/images/mohamed_mourouh.png'
+import ProfilePic from '@/public/images/mohamed_mourouh.jpeg'
 import { useLanguage } from '@/contexts/LanguageContext'
 
 export default function Head() {

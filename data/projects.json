@@ -1,6 +1,17 @@
 {
     "data": [
         {
+            "name": "Quran AI",
+            "description": "AI-powered Quran companion featuring smart tafsir assistant, semantic verse search, audio recitations, personalized study plans, and smart bookmarking across 114 Surahs and 45+ languages.",
+            "stack": ["Next.js", "React", "TypeScript", "SupaBase", "AI"],
+            "links": {
+                "github": "",
+                "website": "https://quran-ai-app.vercel.app/"
+            },
+            "image": "quran-ai-app.jpg",
+            "hidden": false
+        },
+        {
             "name": "Carrefour",
             "description": "A comprehensive e-commerce platform for Carrefour, featuring product browsing, shopping cart, and order management.",
             "stack": ["Angular 20", "Java", "Spring boot"],

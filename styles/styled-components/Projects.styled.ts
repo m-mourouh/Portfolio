@@ -105,7 +105,7 @@ export const StyledProjects = styled.section`
             .project-image {
                 position: relative;
                 width: 100%;
-                height: 280px;
+                height: 400px;
                 overflow: hidden;
                 background-color: rgb(20, 20, 20);
 
