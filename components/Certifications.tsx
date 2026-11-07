@@ -1,7 +1,15 @@
 'use client'
 import React, { useEffect, useRef, useState } from 'react'
 import { gsap } from 'gsap'
-import { FaReact, FaJava, FaVuejs, FaPython, FaHtml5, FaCss3Alt, FaJs, FaNetworkWired, FaExternalLinkAlt } from 'react-icons/fa'
+import {
+    FaReact,
+    FaVuejs,
+    FaPython,
+    FaHtml5,
+    FaJs,
+    FaExternalLinkAlt,
+    FaJava,
+} from 'react-icons/fa'
 import { SiSpring, SiCisco } from 'react-icons/si'
 import { CertContainer } from '@/styles/styled-components/Skills.styled'
 import { useLanguage } from '@/contexts/LanguageContext'
@@ -22,81 +30,88 @@ export default function Certifications() {
     // Certifications data - from LinkedIn
     const certifications: Certification[] = [
         {
+            nameKey: 'Oracle Certified Associate, Java SE 8 Programmer',
+            issuer: 'Oracle University',
+            year: '',
+            icon: <FaJava />,
+            url: 'https://catalog-education.oracle.com/ords/certview/sharebadge?id=6BA641800CA1E3BBBFE08F41D7DD8E93972DFAE3B352D6ACEB567A9CEA2C5860',
+        },
+        {
             nameKey: 'certifications.advancedReact',
             issuer: 'Meta',
             year: '',
             icon: <FaReact />,
-            url: 'https://www.coursera.org/account/accomplishments/verify/2J393YWKG8AA'
+            url: 'https://www.coursera.org/account/accomplishments/verify/2J393YWKG8AA',
         },
         {
             nameKey: 'certifications.javaMicroservices',
             issuer: 'Google',
             year: '',
             icon: <FaJava />,
-            url: 'https://www.coursera.org/account/accomplishments/verify/G2CLPCRBY5ZY'
+            url: 'https://www.coursera.org/account/accomplishments/verify/G2CLPCRBY5ZY',
         },
         {
             nameKey: 'certifications.dataStructuresBackend',
             issuer: 'Board Infinity',
             year: '',
             icon: <FaJava />,
-            url: 'https://www.coursera.org/account/accomplishments/verify/2J3BFV8ZLKWF'
+            url: 'https://www.coursera.org/account/accomplishments/verify/2J3BFV8ZLKWF',
         },
         {
             nameKey: 'certifications.springMvcBoot',
             issuer: 'LearnQuest',
             year: '',
             icon: <SiSpring />,
-            url: 'https://www.coursera.org/account/accomplishments/verify/TCMC6PRGQJ52'
+            url: 'https://www.coursera.org/account/accomplishments/verify/TCMC6PRGQJ52',
         },
         {
             nameKey: 'certifications.vueStorefront',
             issuer: 'Alokai',
             year: '',
             icon: <FaVuejs />,
-            url: 'https://academy.alokai.com/certificates/ip9bna7zxl'
+            url: 'https://academy.alokai.com/certificates/ip9bna7zxl',
         },
         {
             nameKey: 'certifications.responsiveWebsite',
             issuer: 'University of London',
             year: '',
             icon: <FaHtml5 />,
-            url: 'https://www.coursera.org/account/accomplishments/verify/85Z74A87DWK7'
+            url: 'https://www.coursera.org/account/accomplishments/verify/85Z74A87DWK7',
         },
         {
             nameKey: 'certifications.introductionIot',
             issuer: 'Cisco',
             year: '',
             icon: <SiCisco />,
-            url: 'https://www.credly.com/badges/3e91fc07-e8c1-4e21-9923-ee5746382401'
+            url: 'https://www.credly.com/badges/3e91fc07-e8c1-4e21-9923-ee5746382401',
         },
         {
             nameKey: 'certifications.pythonDataScience',
             issuer: 'IBM',
             year: '',
             icon: <FaPython />,
-            url: 'https://www.credly.com/badges/9abc7d66-b198-4d9a-8c4c-7a6d3616fd72/public_url'
+            url: 'https://www.credly.com/badges/9abc7d66-b198-4d9a-8c4c-7a6d3616fd72/public_url',
         },
         {
             nameKey: 'certifications.javaProgramming',
             issuer: 'OpenClassrooms',
             year: '',
             icon: <FaJava />,
-            url: 'https://openclassrooms.com/fr/course-certificates/6073370022'
+            url: 'https://openclassrooms.com/fr/course-certificates/6073370022',
         },
         {
             nameKey: 'certifications.jquery',
             issuer: 'OpenClassrooms',
             year: '',
             icon: <FaJs />,
-            url: 'https://openclassrooms.com/fr/course-certificates/3046679991'
+            url: 'https://openclassrooms.com/fr/course-certificates/3046679991',
         },
         {
             nameKey: 'certifications.jsProgramming',
             issuer: 'OpenClassrooms',
             year: '',
             icon: <FaJs />,
-            url: 'https://openclassrooms.com/fr/course-certificates/2402166741'
+            url: 'https://openclassrooms.com/fr/course-certificates/2402166741',
         },
     ]
 
@@ -136,9 +151,7 @@ export default function Certifications() {
                     rel="noopener noreferrer"
                     className="cert-item"
                 >
-                    <div className="cert-icon">
-                        {cert.icon}
-                    </div>
+                    <div className="cert-icon">{cert.icon}</div>
                     <div className="cert-content">
                         <div className="cert-name">{t(cert.nameKey)}</div>
                         <div className="cert-issuer">{cert.issuer}</div>
