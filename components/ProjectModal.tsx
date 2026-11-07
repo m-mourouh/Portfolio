@@ -3,7 +3,6 @@ import Image from 'next/image'
 import { useEffect, useRef } from 'react'
 import styled from 'styled-components'
 import { gsap } from 'gsap'
-import { useTranslation } from 'react-i18next'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { Navigation, Pagination, Keyboard, A11y } from 'swiper'
 import 'swiper/css'
@@ -16,18 +15,10 @@ import Modal from './ui/Modal'
 import { StyledButton } from '@/styles/styled-components/Button.styled'
 import { device } from '@/styles/styled-components/Breakpoints'
 import { useLanguage } from '@/contexts/LanguageContext'
-import { getProjectKey } from './ProjectCard'
-
-export type ModalProject = {
-    name: string
-    stack: string[]
-    links: { github: string; website: string }
-    image: string
-    gallery?: string[]
-}
+import { Project, pick, pickList } from '@/lib/projects'
 
 type Props = {
-    project: ModalProject
+    project: Project
     /** The card image the popup grows out of (and shrinks back into). */
     originEl: HTMLElement | null
     onClose: () => void
@@ -55,19 +46,31 @@ const createFlyer = (src: string, rect: DOMRect, radius: string) => {
     const img = document.createElement('img')
     img.src = src
     img.alt = ''
-    Object.assign(img.style, { width: '100%', height: '100%', objectFit: 'cover', display: 'block' })
+    Object.assign(img.style, { width: '100%', height: '100%', objectFit: 'cover', display: 'block', filter: COLOR_FILTER })
+    // same duotone tint as the cards (hidden while in color)
+    const tint = document.createElement('span')
+    Object.assign(tint.style, {
+        position: 'absolute',
+        inset: '0',
+        background: 'linear-gradient(160deg, #b5e61a 0%, #4f6112 100%)',
+        mixBlendMode: 'multiply',
+        opacity: '0',
+    })
     flyer.appendChild(img)
+    flyer.appendChild(tint)
     document.body.appendChild(flyer)
     return flyer
 }
 
+// Card images rest in duotone; these let the flying copy blend between duotone and color
+const COLOR_FILTER = 'grayscale(0) contrast(1) brightness(1)'
+const DUOTONE_FILTER = 'grayscale(1) contrast(1.2) brightness(0.52)'
+const DUOTONE_TINT = 0.42
+
 const boxOf = (rect: DOMRect) => ({ left: rect.left, top: rect.top, width: rect.width, height: rect.height })
 
-// Card image only has rounded top corners (the card clips it)
-const cardImageRadius = (cardImage: HTMLElement) => {
-    const r = getComputedStyle(cardImage.closest('.project-card') || cardImage).borderTopLeftRadius
-    return `${r} ${r} 0 0`
-}
+// Same rounded corners as the card's image frame
+const cardImageRadius = (cardImage: HTMLElement) => getComputedStyle(cardImage).borderRadius || '0px'
 
 const imageSrc = (container: Element | null) => {
     const img =
@@ -77,16 +80,12 @@ const imageSrc = (container: Element | null) => {
 }
 
 export default function ProjectModal({ project, originEl, onClose }: Props) {
-    const { t } = useLanguage()
-    const { i18n } = useTranslation()
-    const key = getProjectKey(project.name)
+    const { t, language } = useLanguage()
     const images = project.gallery?.length ? project.gallery : [project.image]
     // Projects with only the placeholder image get a text-only popup
     const hasMedia = (project.gallery?.length ?? 0) > 0 || (!!project.image && project.image !== 'default-image.jpg')
-    const role = i18n.exists(`projects.details.${key}.role`) ? t(`projects.details.${key}.role`) : null
-    const highlights = i18n.exists(`projects.details.${key}.highlights`)
-        ? (i18n.t(`projects.details.${key}.highlights`, { returnObjects: true }) as string[])
-        : []
+    const role = pick(project.role, language)
+    const highlights = pickList(project.highlights, language)
 
     // Remove any flyer left behind if an animation is interrupted (or on unmount)
     const flyers = useRef(new Set<HTMLElement>())
@@ -97,10 +96,25 @@ export default function ProjectModal({ project, originEl, onClose }: Props) {
             set.clear()
         }
     }, [])
-    const fly = (tl: gsap.core.Timeline, src: string, from: DOMRect, fromRadius: string, to: DOMRect, toRadius: string, vars: gsap.TweenVars, at: number) => {
+    const fly = (
+        tl: gsap.core.Timeline,
+        src: string,
+        from: DOMRect,
+        fromRadius: string,
+        to: DOMRect,
+        toRadius: string,
+        vars: gsap.TweenVars,
+        at: number,
+        endInDuotone = false
+    ) => {
         const flyer = createFlyer(src, from, fromRadius)
         flyers.current.add(flyer)
         tl.to(flyer, { ...boxOf(to), borderRadius: toRadius, ...vars }, at)
+        if (endInDuotone) {
+            // flying back to a duotone card: fade to the same look so it lands without a color pop
+            tl.to(flyer.querySelector('img'), { filter: DUOTONE_FILTER, duration: vars.duration, ease: 'power1.in' }, at)
+            tl.to(flyer.querySelector('span'), { opacity: DUOTONE_TINT, duration: vars.duration, ease: 'power1.in' }, at)
+        }
         tl.call(() => {
             flyer.remove()
             flyers.current.delete(flyer)
@@ -166,7 +180,8 @@ export default function ProjectModal({ project, originEl, onClose }: Props) {
                 originEl.getBoundingClientRect(),
                 cardImageRadius(originEl),
                 { duration: 0.5, ease: 'power3.inOut' },
-                0
+                0,
+                true
             )
         } else {
             tl.to(panel, { opacity: 0, y: 30, duration: 0.3, ease: 'power2.in' }, 0)
@@ -212,7 +227,7 @@ export default function ProjectModal({ project, originEl, onClose }: Props) {
                             </Swiper>
                         ) : (
                             <div className="pm-image">
-                                <Image src={loadImage(images[0])} alt={project.name} fill sizes="(max-width: 960px) 100vw, 960px" priority />
+                                <Image src={loadImage(images[0])} alt={project.name} fill sizes="(max-width: 960px) 100vw, 960px" priority style={project.focus ? { objectPosition: project.focus } : undefined} />
                             </div>
                         )}
                     </div>
@@ -221,8 +236,9 @@ export default function ProjectModal({ project, originEl, onClose }: Props) {
                     <div className={`pm-body${hasMedia ? '' : ' no-media'}`}>
                         <h2 id="project-modal-title" className="pm-reveal">
                             {project.name}
+                            {project.appName && <span className="pm-app"> · {project.appName}</span>}
                         </h2>
-                        <p className="pm-description pm-reveal">{t(`projects.descriptions.${key}`)}</p>
+                        <p className="pm-description pm-reveal">{pick(project.description, language)}</p>
 
                         {role && (
                             <div className="pm-block pm-reveal">

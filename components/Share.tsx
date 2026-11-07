@@ -106,9 +106,9 @@ export default function Share({ orientation }: { orientation: string }) {
                                 windowWidth={800}
                                 windowHeight={700}
                             >
-                                <Link href={''} className="icon share-icon">
+                                <span className="icon share-icon" aria-hidden="false">
                                     <FaLinkedinIn />
-                                </Link>
+                                <span className="sr-only">Share on LinkedIn</span></span>
                             </LinkedinShareButton>
                         </li>
                         <li>
@@ -121,9 +121,9 @@ export default function Share({ orientation }: { orientation: string }) {
                                 title={"Mohamed Mourouh's Portfolio: "}
                                 hashtags={['portfolio', 'Mohamed_Mourouh']}
                             >
-                                <Link href={''} className="icon share-icon">
+                                <span className="icon share-icon" aria-hidden="false">
                                     <RiTwitterXLine  />
-                                </Link>
+                                <span className="sr-only">Share on X</span></span>
                             </TwitterShareButton>
                         </li>
                         <li>
@@ -137,9 +137,9 @@ export default function Share({ orientation }: { orientation: string }) {
                                 title={"Mohamed Mourouh's Portfolio: "}
                                 hashtag={'#Portfolio'}
                             >
-                                <Link href={''} className="icon share-icon">
+                                <span className="icon share-icon" aria-hidden="false">
                                     <FaFacebook />
-                                </Link>
+                                <span className="sr-only">Share on Facebook</span></span>
                             </FacebookShareButton>
                         </li>
                     </ul>

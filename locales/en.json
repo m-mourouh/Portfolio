@@ -1,33 +1,83 @@
 {
   "nav": {
     "home": "Home",
-    "skills": "Skills",
+    "skills": "Expertise",
     "work": "Work",
-    "articles": "Articles",
+    "articles": "Journal",
     "about": "About",
     "contact": "Contact",
-    "contactMe": "Contact Me"
+    "contactMe": "Contact Me",
+    "skip": "Skip to content",
+    "menu": "Open menu",
+    "closeMenu": "Close menu",
+    "search": "Search",
+    "expand": "Show all sections",
+    "startProject": "Start a project",
+    "localTime": "Local time",
+    "copyEmail": "Copy email",
+    "copied": "Copied to clipboard",
+    "sendEmail": "Send an email"
   },
   "hero": {
     "greeting": "Hi 👋, my name is",
     "subtitle": "Mohamed Mourouh Is A Software Engineer Who <span>Builds Scalable Web Platforms, Enterprise Systems & AI-Powered Products.</span>",
     "viewWork": "Hire Me",
     "contactMe": "Scroll Down ↓",
-    "available": "Available for work"
+    "available": "Available for work",
+    "identity": "Mohamed Mourouh — Software Engineer",
+    "h1a": "I build digital",
+    "h1accent": "systems",
+    "h1b": "that move the world forward.",
+    "supporting": "Senior Software Engineer crafting scalable platforms, intelligent products and meaningful digital experiences.",
+    "ctaPrimary": "Start a project",
+    "ctaSecondary": "Selected work",
+    "scroll": "Scroll",
+    "location": "Casablanca, Morocco",
+    "readout": {
+      "coords": "Coordinates",
+      "time": "Local time",
+      "stack": "Core stack",
+      "experience": "Experience",
+      "years": "years"
+    },
+    "layers": {
+      "label": "The layers I build. Select one to send a request through the system",
+      "request": "Request",
+      "tap": "Tap a layer"
+    }
   },
   "about": {
     "title": "About Me",
     "introduction": "I'm a software engineer based in <span class=\"morocco\">Morocco</span>. For 7+ years I've been designing and building software end to end: enterprise e-commerce platforms with Java & Spring Boot for brands like Carrefour and Chanel, modern front-ends in React, Angular and Vue, and AI-powered products. <span class=\"secondary-text\">I care about clean architecture, performance and great user experience, and I help teams turn complex requirements into reliable products.</span>",
     "thankYou": "Thank you for taking the time to learn more about me and my work.",
     "yearsExperience": "Years of Experience",
-    "projectsCompleted": "Projects Completed",
-    "clientSatisfaction": "Client Satisfaction"
+    "heading": "Engineering with <span class=\"serif\">purpose.</span>",
+    "technologies": "Technologies",
+    "certifications": "Certifications",
+    "portraitAlt": "Portrait of Mohamed Mourouh",
+    "facts": {
+      "years": "years",
+      "certs": "certifications",
+      "techs": "technologies",
+      "label": "Key facts"
+    },
+    "career": {
+      "title": "Career path",
+      "present": "Present",
+      "list": "Career history"
+    },
+    "terms": {
+      "open": "Open project",
+      "expertise": "See in Expertise",
+      "usedIn": "Used in",
+      "close": "Close"
+    }
   },
   "skills": {
     "title": "Technical <span class=\"secondary-text\">Expertise</span>",
-    "subtitle": "A comprehensive overview of my development skills",
-    "proficiency": "Proficiency",
-    "proficiencyDesc": "Overall skill proficiency across all categories",
+    "subtitle": "The layers I design, build and connect.",
+    "proficiency": "Systems map",
+    "proficiencyDesc": "How the layers I work on connect. Select a layer to explore it.",
     "frontend": "Front-end",
     "frontendDesc": "Building beautiful, responsive user interfaces",
     "backend": "Back-end",
@@ -37,7 +87,47 @@
     "tools": "Tools",
     "toolsDesc": "Development tools and workflows",
     "certifications": "Certifications",
-    "certificationsDesc": "Professional credentials & achievements"
+    "certificationsDesc": "Professional credentials & achievements",
+    "ai": "AI",
+    "links": {
+      "api": "REST APIs",
+      "data": "Persistence",
+      "ai": "Integrations",
+      "delivery": "CI/CD"
+    },
+    "mapHint": "Systems map: select a layer to see its technologies and connections",
+    "layer": {
+      "ui": "Building beautiful, responsive user interfaces",
+      "api": "Server-side development and APIs",
+      "services": "Business logic and application services",
+      "data": "Data management and storage",
+      "ai": "AI tools and integrations",
+      "delivery": "Version control, CI/CD, monitoring and the tooling around it"
+    },
+    "links2": {
+      "api": "REST APIs",
+      "logic": "Business logic",
+      "data": "Persistence",
+      "ai": "Integrations",
+      "delivery": "CI/CD"
+    },
+    "trace": "Trace a project",
+    "traceNone": "None",
+    "panelHint": "Select a layer, or trace a project through the system.",
+    "daily": "Daily drivers",
+    "also": "Also worked with",
+    "technologies": "Technologies",
+    "connections": "Connections",
+    "viewProject": "View project",
+    "notMapped": "Not in the diagram",
+    "lit": "Lit in the diagram",
+    "stack": "Stack (as recorded)",
+    "reset": "Reset",
+    "showAllCerts": "Show all {{count}}",
+    "showFewerCerts": "Show fewer",
+    "diagram": "Architecture diagram: use the arrow keys to move between layers, Enter to select, Escape to reset",
+    "layersList": "Layers and technologies",
+    "crossCutting": "Cross-cutting"
   },
   "certifications": {
     "advancedReact": "Advanced React",
@@ -58,35 +148,29 @@
     "showLess": "Show Less",
     "liveDemo": "Live Demo",
     "sourceCode": "Source Code",
-    "descriptions": {
-      "quranAi": "AI-powered Quran companion featuring smart tafsir assistant, semantic verse search, audio recitations, personalized study plans, and smart bookmarking across 114 Surahs and 45+ languages.",
-      "carrefour": "A comprehensive e-commerce platform for Carrefour, featuring product browsing, shopping cart, and order management.",
-      "channel": "Luxury high jewelry showcase for Chanel featuring elegant product displays, interactive catalogs, and premium shopping experience.",
-      "visilab": "Modern e-commerce platform for optical products, offering eyeglasses, sunglasses, and eye care services with online booking.",
-      "mcoptic": "Swiss optical retail website featuring designer eyewear collections, vision testing services, and appointment scheduling.",
-      "linsenmax": "Online store for contact lenses and eye care products with advanced product filtering and prescription management.",
-      "chatGptV10": "AI-powered chatbot application with real-time conversations, Firebase authentication, and chat history management.",
-      "chatGptV11": "Enhanced AI chatbot with improved UI/UX, persistent conversations, and advanced state management using Redux.",
-      "translationApp": "Multi-language translation application with real-time text translation, language detection, and translation history.",
-      "hospitalManagement": "Complete hospital management solution with patient records, appointment scheduling, doctor management, and medical inventory.",
-      "covidDetection": "Machine learning web application for COVID-19 detection from chest X-ray images using deep learning algorithms.",
-      "edenCosmetique": "Cosmetics and beauty products e-commerce platform with product catalog, shopping cart, and secure payment integration.",
-      "junglePizza": "Pizzeria website with online ordering, menu display, delivery zone coverage, and real-time order tracking."
-    },
     "viewDetails": "View details",
     "close": "Close",
     "techStack": "Tech stack",
     "role": "My role",
-    "highlights": "Highlights"
+    "highlights": "Highlights",
+    "layers": "Layers",
+    "overview": "Overview",
+    "back": "Back to projects",
+    "screenshots": "Screenshots",
+    "category": "Category",
+    "year": "Year",
+    "featured": "Featured projects",
+    "progress": "Project",
+    "layersNote": "System layers this project involved, derived from its tech stack"
   },
   "contact": {
-    "title": "Get In <span class=\"secondary-text\">Touch</span>",
-    "subtitle": "Have a project in mind? Let's work together to create something amazing.",
+    "title": "Let’s build something <span class=\"serif\">meaningful.</span>",
+    "subtitle": "Have an ambitious idea, an interesting challenge or a project worth building? Let’s talk.",
     "name": "Your Name",
     "lastName": "Last Name",
     "email": "Your Email",
     "message": "Your Message",
-    "send": "Send Message",
+    "send": "Send message",
     "sending": "Sending...",
     "errors": {
       "firstNameMin": "First name must be at least 3 characters",
@@ -99,6 +183,64 @@
       "emailRequired": "Email is required",
       "messageMin": "Message must be at least 5 characters",
       "messageRequired": "Message is required"
+    },
+    "success": "Thank you! Your message was sent. I’ll get back to you soon.",
+    "error": {
+      "failed": "Your message could not be sent right now. Please try again, or email me directly:",
+      "network": "Network problem: your message was not sent. Please try again, or email me directly:",
+      "invalid": "Please check the fields above and try again, or email me directly:"
+    },
+    "hi": "Hi Mohamed, I’m",
+    "from": "from",
+    "build": "I’d like to build",
+    "reach": "You can reach me at",
+    "more": "Tell me a bit more",
+    "available": "Available for new projects",
+    "localTime": "Casablanca local time",
+    "elsewhere": "Elsewhere",
+    "copyEmail": "Copy my email",
+    "copied": "Email copied",
+    "tryAgain": "Try again",
+    "label": {
+      "name": "Name",
+      "company": "Company (optional)",
+      "email": "Email",
+      "types": "What would you like to build? (optional)",
+      "message": "Message"
+    },
+    "ph": {
+      "name": "your name",
+      "company": "your company",
+      "email": "you@company.com",
+      "message": "Goals, timeline, links… anything that helps."
+    },
+    "types": {
+      "web": "Web platform",
+      "ai": "AI product",
+      "ui": "Front-end / UI",
+      "consulting": "Consulting",
+      "other": "Something else"
+    },
+    "v": {
+      "nameRequired": "Please tell me your name.",
+      "nameMin": "Your name needs at least 2 characters.",
+      "nameMax": "Please keep your name under 60 characters.",
+      "companyMax": "Please keep the company name under 80 characters.",
+      "emailRequired": "I need an email address to reply to you.",
+      "emailInvalid": "That email address looks incomplete (e.g. you@company.com).",
+      "messageRequired": "Add a few words about your project.",
+      "messageMin": "A little more detail, please (at least 5 characters).",
+      "messageMax": "Please keep the message under 5000 characters."
+    },
+    "state": {
+      "sending": "Sending your message…",
+      "ok": "Message sent. Thank you, I’ll get back to you soon.",
+      "invalid": "The server rejected the form: please check the fields.",
+      "unavailable": "The contact service isn’t configured right now, so your message was not sent.",
+      "failed": "The mail server didn’t accept the message, so it was not sent.",
+      "network": "No connection to the server: your message was not sent.",
+      "rate": "Too many messages in a short time. Please wait a few minutes.",
+      "keep": "Your text is still in the form. You can try again, or email me directly."
     }
   },
   "share": {
@@ -117,7 +259,12 @@
   "footer": {
     "madeWith": "Made with",
     "by": "by",
-    "name": "Mohamed Mourouh"
+    "name": "Mohamed Mourouh",
+    "cta": "Have a project in mind? Write to me",
+    "socials": "Elsewhere",
+    "localTime": "Local time",
+    "backToTop": "Back to top",
+    "colophon": "Designed & engineered on the grid. Next.js · Three.js · GSAP"
   },
   "contactDrawer": {
     "title": "Let's work together",
@@ -132,7 +279,14 @@
   "articles": {
     "title": "Latest <span class=\"secondary-text\">Writing</span>",
     "viewAll": "More on Medium",
-    "minRead": "{{count}} min read"
+    "minRead": "{{count}} min read",
+    "latest": "Latest",
+    "readOn": "Read on Medium",
+    "showAll": "Show all articles",
+    "showLess": "Show less",
+    "all": "All",
+    "filter": "Filter articles by topic",
+    "noCover": "No cover image"
   },
   "cmd": {
     "buttonLabel": "Search & quick actions",
@@ -150,6 +304,13 @@
       "projects": "Projects",
       "actions": "Actions",
       "language": "Language"
-    }
+    },
+    "toggleMusic": "Play / pause music"
+  },
+  "music": {
+    "play": "Play background music",
+    "pause": "Pause background music",
+    "on": "Sound on",
+    "off": "Sound off"
   }
 }

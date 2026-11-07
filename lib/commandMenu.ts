@@ -9,9 +9,9 @@ export const onOpenCommandMenu = (handler: () => void) => {
     return () => window.removeEventListener(OPEN_MENU, handler)
 }
 
-export const openProject = (name: string) => window.dispatchEvent(new CustomEvent(OPEN_PROJECT, { detail: name }))
+export const openProject = (id: string) => window.dispatchEvent(new CustomEvent(OPEN_PROJECT, { detail: id }))
 
-export const onOpenProject = (handler: (name: string) => void) => {
+export const onOpenProject = (handler: (id: string) => void) => {
     const listener = (e: Event) => handler((e as CustomEvent<string>).detail)
     window.addEventListener(OPEN_PROJECT, listener)
     return () => window.removeEventListener(OPEN_PROJECT, listener)

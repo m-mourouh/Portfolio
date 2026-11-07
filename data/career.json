@@ -1,0 +1,52 @@
+{
+    "data": [
+        {
+            "id": "fiverr",
+            "role": "Web Developer",
+            "company": "Fiverr (Freelance)",
+            "location": "Casablanca",
+            "start": "2019-08",
+            "end": "2020-10",
+            "summary": {
+                "en": "Built websites and front-end apps for international clients with Vue.js, Angular and React.js.",
+                "fr": "Création de sites web et d'applications front-end pour des clients internationaux avec Vue.js, Angular et React.js.",
+                "ar": "بناء مواقع وتطبيقات واجهات أمامية لعملاء دوليين باستخدام Vue.js و Angular و React.js."
+            }
+        },
+        {
+            "id": "futur-digital",
+            "role": "Frontend Developer",
+            "company": "Futur Digital",
+            "location": "Casablanca-Settat",
+            "start": "2021-09",
+            "end": "2022-10",
+            "summary": {
+                "en": "Designed and developed modern, responsive web interfaces for client projects.",
+                "fr": "Conception et développement d'interfaces web modernes et responsives pour des projets clients.",
+                "ar": "تصميم وتطوير واجهات ويب حديثة ومتجاوبة لمشاريع العملاء."
+            }
+        },
+        {
+            "id": "sqli",
+            "role": "Software Engineer",
+            "company": "SQLI Digital Experience",
+            "location": "Casablanca",
+            "start": "2022-11",
+            "end": "2026-03",
+            "summary": {
+                "en": "Full-stack work (Java, Spring Boot, front-end), enterprise e-commerce including Carrefour and Chanel.",
+                "fr": "Travail full-stack (Java, Spring Boot, front-end), e-commerce d'entreprise, notamment Carrefour et Chanel.",
+                "ar": "عمل متكامل (Java و Spring Boot والواجهات الأمامية) في التجارة الإلكترونية المؤسسية، بما في ذلك Carrefour و Chanel."
+            }
+        },
+        {
+            "id": "cegid",
+            "role": "Senior Software Engineer",
+            "company": "Cegid",
+            "location": "Casablanca",
+            "start": "2026-03",
+            "end": null,
+            "summary": null
+        }
+    ]
+}

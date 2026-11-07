@@ -6,7 +6,6 @@ import { FiCopy, FiCheck, FiMail } from 'react-icons/fi'
 import { FaLinkedinIn, FaGithub } from 'react-icons/fa'
 import Modal from './ui/Modal'
 import ContactForm from './ContactForm'
-import { contactFormStyles } from '@/styles/styled-components/Contact.styled'
 import { device } from '@/styles/styled-components/Breakpoints'
 import { onOpenContactDrawer } from '@/lib/contactDrawer'
 import { useLanguage } from '@/contexts/LanguageContext'
@@ -100,7 +99,7 @@ export default function ContactDrawer() {
                             </button>
                         </div>
                     ) : (
-                        <ContactForm onSent={() => setSent(true)} />
+                        <ContactForm variant="stacked" onSent={() => setSent(true)} />
                     )}
                 </Panel>
             )}
@@ -268,26 +267,6 @@ const Panel = styled.div`
             flex: 1;
             height: 1px;
             background: rgb(45, 45, 45);
-        }
-    }
-
-    /* Reuse the Contact section form, without its card frame */
-    form {
-        ${contactFormStyles}
-        max-width: none;
-        padding: 0;
-        border: none;
-        background: none;
-        border-radius: 0;
-        gap: 16px;
-
-        @media ${device.sm} {
-            padding: 0;
-            gap: 16px;
-        }
-
-        textarea {
-            min-height: 130px;
         }
     }
 

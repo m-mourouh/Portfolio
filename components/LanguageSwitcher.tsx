@@ -38,7 +38,9 @@ export default function LanguageSwitcher({ isMobile = false }: { isMobile?: bool
             <button
                 className="language-button"
                 onClick={() => setIsOpen(!isOpen)}
-                aria-label="Change language"
+                aria-label={`${currentLanguage.code.toUpperCase()} – change language`}
+                aria-expanded={isOpen}
+                aria-haspopup="listbox"
             >
                 <HiGlobeAlt className="globe-icon" />
                 <span className="current-lang">{currentLanguage.code.toUpperCase()}</span>

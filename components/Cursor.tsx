@@ -7,6 +7,8 @@ export default function Cursor() {
     const tl = useRef<GSAPTimeline | null>(null)
 
     useEffect(() => {
+        // touch / coarse pointers: no custom cursor at all
+        if (!window.matchMedia('(hover: hover) and (pointer: fine)').matches) return
         let cursor = document.querySelector('.cursor')
         let follower = document.querySelector('.cursor-follower')
         let posX = 0,
@@ -39,13 +41,27 @@ export default function Cursor() {
             })
         }, conatiner)
 
-        window.document.addEventListener('mousemove', (e) => {
+        const onMove = (e: MouseEvent) => {
             mouseX = e.clientX
             mouseY = e.clientY
-        })
-        // 
-        
-        return () => ctx.revert()
+        }
+        // Feedback: the ring grows (lime) over interactive things, steps aside over text fields
+        const root = conatiner.current
+        const onOver = (e: MouseEvent) => {
+            const el = e.target as Element | null
+            const field = !!el?.closest('input, textarea, select, [contenteditable="true"]')
+            const interactive = !field && !!el?.closest('a, button, [role="button"], label, .project-card, .article-card, .row')
+            root?.classList.toggle('is-hover', interactive)
+            root?.classList.toggle('is-field', field)
+        }
+        document.addEventListener('mousemove', onMove)
+        document.addEventListener('mouseover', onOver)
+
+        return () => {
+            document.removeEventListener('mousemove', onMove)
+            document.removeEventListener('mouseover', onOver)
+            ctx.revert()
+        }
     }, [])
 
     return (

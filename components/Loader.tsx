@@ -2,6 +2,7 @@
 import { StyledSection } from '@/styles/styled-components/Loader.styled'
 import React, { useEffect, useRef, useState } from 'react'
 import { gsap } from 'gsap'
+import { signalLoaderExit } from '@/lib/heroStack'
 export default function Loader() {
     const [showLoader, setShowLoader] = useState(true)
     const conatiner = useRef<HTMLDivElement>(null)
@@ -15,13 +16,13 @@ export default function Loader() {
                     .timeline()
                     .set(path, { strokeDasharray: path.getTotalLength() })
                     .from(path, {
-                        duration: 2,
+                        duration: 0.5,
                         strokeDashoffset: path.getTotalLength(),
                         delay: 0,
                         stroke: '#fff',
                     })
                     .to(path, {
-                        duration: 2,
+                        duration: 0.4,
                         strokeDashoffset: 0,
                         stroke: 'rgba(255, 255, 255, 0)',
                         fill: '#ffffff',
@@ -38,9 +39,9 @@ export default function Loader() {
         let timer: NodeJS.Timeout
 
         timer = setTimeout(() => {
-            gsap.to('.loader', { yPercent: 100, delay: 1 })
-            
-        }, 800)
+            // Short intro: the curtain lifts at ~0.7s; the hero entrance plays in time with it
+            gsap.to('.loader', { yPercent: 100, duration: 0.8, ease: 'expo.inOut', delay: 0.1, onStart: signalLoaderExit })
+        }, 600)
 
         return () => clearTimeout(timer)
     }, [])
@@ -48,7 +49,7 @@ export default function Loader() {
         let timer: NodeJS.Timeout
         timer = setTimeout(() => {
             setShowLoader(false)
-        }, 3500)
+        }, 1500)
         return () => clearTimeout(timer)
     }, [])
     
@@ -56,6 +57,7 @@ export default function Loader() {
         return (
             <div ref={conatiner} className="loader-wrapper">
                 <StyledSection className="loader">
+                    <span className="loader-grid" aria-hidden="true" />
                     <svg
                         width="100"
                         height="100"

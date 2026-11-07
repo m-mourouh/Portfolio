@@ -15,6 +15,7 @@ import {
     FiGlobe,
     FiFolder,
     FiCornerDownLeft,
+    FiMusic,
 } from 'react-icons/fi'
 import { FaDev, FaMedium } from 'react-icons/fa'
 import Modal from './ui/Modal'
@@ -22,8 +23,9 @@ import Notification from './Notification'
 import { useLanguage } from '@/contexts/LanguageContext'
 import { getLenis } from '@/lib/lenis'
 import { openContactDrawer } from '@/lib/contactDrawer'
+import { toggleMusic } from './BackgroundMusic'
 import { onOpenCommandMenu, openProject } from '@/lib/commandMenu'
-import projectData from '@/data/projects.json'
+import { projects } from '@/lib/projects'
 import profiles from '@/data/profiles.json'
 import userData from '@/data/user.json'
 
@@ -45,7 +47,8 @@ const normalize = (s: string) =>
 
 const scrollToSection = (id: string) => {
     const el = document.getElementById(id)
-    if (!el) return
+    // not on the home page (e.g. a case study): go to the section there
+    if (!el) return window.location.assign(id === 'head' ? '/' : `/#${id}`)
     const lenis = getLenis()
     if (lenis) lenis.scrollTo(el, { offset: id === 'head' ? 0 : -90 })
     else el.scrollIntoView({ behavior: 'smooth' })
@@ -107,16 +110,16 @@ export default function CommandMenu() {
             { id: 'nav-articles', group: nav, label: t('cmd.articles'), keywords: 'articles blog writing medium', icon: <FiEdit3 />, run: () => scrollToSection('articles') },
             { id: 'nav-contact', group: nav, label: t('nav.contact'), keywords: 'contact', icon: <FiMail />, run: () => scrollToSection('contact') },
         ]
-        projectData.data
+        projects
             .filter((p) => !p.hidden)
             .forEach((p) =>
                 list.push({
-                    id: `project-${p.name}`,
+                    id: `project-${p.id}`,
                     group: proj,
                     label: p.name,
                     keywords: p.stack.join(' '),
                     icon: <FiFolder />,
-                    run: () => openProject(p.name),
+                    run: () => (document.getElementById('projects') ? openProject(p.id) : window.location.assign(`/work/${p.id}`)),
                 })
             )
         list.push(
@@ -137,6 +140,7 @@ export default function CommandMenu() {
                 },
             }
         )
+        list.push({ id: 'act-music', group: act, label: t('cmd.toggleMusic'), keywords: 'music sound audio musique son', icon: <FiMusic />, run: toggleMusic })
         if (profiles.data.github)
             list.push({ id: 'act-github', group: act, label: 'GitHub', keywords: 'github code', icon: <FiGithub />, run: () => window.open(profiles.data.github, '_blank', 'noopener') })
         if (profiles.data.linkedin)

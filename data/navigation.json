@@ -1,3 +1,10 @@
 {
-    "navigation": ["Home", "Skills", "Work", "Articles", "About", "Contact"]
+    "navigation": [
+        "Home",
+        "About",
+        "Skills",
+        "Work",
+        "Articles",
+        "Contact"
+    ]
 }

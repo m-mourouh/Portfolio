@@ -1,148 +1,533 @@
 {
     "data": [
         {
+            "id": "quran-ai",
             "name": "Quran AI",
-            "description": "AI-powered Quran companion featuring smart tafsir assistant, semantic verse search, audio recitations, personalized study plans, and smart bookmarking across 114 Surahs and 45+ languages.",
-            "stack": ["Next.js", "React", "TypeScript", "SupaBase", "AI"],
+            "appName": "",
+            "description": {
+                "en": "AI-powered Quran companion featuring smart tafsir assistant, semantic verse search, audio recitations, personalized study plans, and smart bookmarking across 114 Surahs and 45+ languages.",
+                "fr": "Compagnon coranique intelligent avec assistant tafsir IA, recherche sémantique de versets, récitations audio, plans d'étude personnalisés et marque-pages intelligents couvrant 114 sourates et plus de 45 langues.",
+                "ar": "رفيقك الذكي للقرآن الكريم مع مساعد تفسير بالذكاء الاصطناعي، بحث دلالي في الآيات، تلاوات صوتية، خطط دراسة مخصصة، وعلامات مرجعية ذكية تغطي 114 سورة وأكثر من 45 لغة."
+            },
+            "category": {
+                "en": "AI app",
+                "fr": "Application IA",
+                "ar": "تطبيق ذكاء اصطناعي"
+            },
+            "role": {
+                "en": "",
+                "fr": "",
+                "ar": ""
+            },
+            "highlights": {
+                "en": [],
+                "fr": [],
+                "ar": []
+            },
+            "year": "",
+            "stack": [
+                "Next.js",
+                "React",
+                "TypeScript",
+                "SupaBase",
+                "AI"
+            ],
             "links": {
                 "github": "",
                 "website": "https://quran-ai-app.vercel.app/"
             },
             "image": "quran-ai-app.jpg",
-            "gallery": ["quran-ai-app.jpg", "quran-ai-app-1.png"],
+            "focus": "",
+            "gallery": [
+                "quran-ai-app.jpg",
+                "quran-ai-app-1.png"
+            ],
             "hidden": false
         },
         {
-            "name": "Carrefour",
-            "description": "A comprehensive e-commerce platform for Carrefour, featuring product browsing, shopping cart, and order management.",
-            "stack": ["Angular 20", "Java", "Spring boot"],
-            "links": {
-                "github": "",
-                "website": "https://www.carrefour.com/en"
-            },
-            "image": "carrefour.png",
-            "hidden": false
-        },
-        {
+            "id": "chanel",
             "name": "Chanel",
-            "description": "Luxury high jewelry showcase for Chanel featuring elegant product displays, interactive catalogs, and premium shopping experience.",
-            "stack": ["JSTL", "SCSS", "JS", "React"],
+            "appName": "",
+            "description": {
+                "en": "Luxury high jewelry showcase for Chanel featuring elegant product displays, interactive catalogs, and premium shopping experience.",
+                "fr": "Vitrine de haute joaillerie de luxe pour Chanel avec des présentations élégantes, catalogues interactifs et expérience d'achat premium.",
+                "ar": "معرض مجوهرات راقية لشانيل يتميز بعروض منتجات أنيقة وكتالوجات تفاعلية وتجربة تسوق متميزة."
+            },
+            "category": {
+                "en": "Luxury showcase",
+                "fr": "Vitrine de luxe",
+                "ar": "واجهة عرض فاخرة"
+            },
+            "role": {
+                "en": "",
+                "fr": "",
+                "ar": ""
+            },
+            "highlights": {
+                "en": [],
+                "fr": [],
+                "ar": []
+            },
+            "year": "",
+            "stack": [
+                "JSTL",
+                "SCSS",
+                "JS",
+                "React"
+            ],
             "links": {
                 "github": "",
                 "website": "https://www.chanel.com/us/high-jewelry"
             },
             "image": "chanel.jpg",
+            "focus": "84% 50%",
+            "gallery": [],
             "hidden": false
         },
         {
+            "id": "carrefour",
+            "name": "Carrefour",
+            "appName": "",
+            "description": {
+                "en": "A comprehensive e-commerce platform for Carrefour, featuring product browsing, shopping cart, and order management.",
+                "fr": "Une plateforme e-commerce complète pour Carrefour, avec navigation de produits, panier d'achat et gestion des commandes.",
+                "ar": "منصة تجارة إلكترونية شاملة لكارفور، تتميز بتصفح المنتجات وعربة التسوق وإدارة الطلبات."
+            },
+            "category": {
+                "en": "E-commerce platform",
+                "fr": "Plateforme e-commerce",
+                "ar": "منصة تجارة إلكترونية"
+            },
+            "role": {
+                "en": "",
+                "fr": "",
+                "ar": ""
+            },
+            "highlights": {
+                "en": [],
+                "fr": [],
+                "ar": []
+            },
+            "year": "",
+            "stack": [
+                "Angular 20",
+                "Java",
+                "Spring boot"
+            ],
+            "links": {
+                "github": "",
+                "website": "https://www.carrefour.fr"
+            },
+            "image": "carrefour.jpg",
+            "focus": "",
+            "gallery": [],
+            "hidden": false
+        },
+        {
+            "id": "visilab",
             "name": "Visilab",
-            "description": "Modern e-commerce platform for optical products, offering eyeglasses, sunglasses, and eye care services with online booking.",
-            "stack": ["Vue", "SCSS", "JS", "TS"],
+            "appName": "",
+            "description": {
+                "en": "Modern e-commerce platform for optical products, offering eyeglasses, sunglasses, and eye care services with online booking.",
+                "fr": "Plateforme e-commerce moderne pour produits optiques, proposant lunettes de vue, lunettes de soleil et services de soins oculaires avec réservation en ligne.",
+                "ar": "منصة تجارة إلكترونية حديثة للمنتجات البصرية، تقدم النظارات الطبية والشمسية وخدمات العناية بالعيون مع الحجز عبر الإنترنت."
+            },
+            "category": {
+                "en": "E-commerce platform",
+                "fr": "Plateforme e-commerce",
+                "ar": "منصة تجارة إلكترونية"
+            },
+            "role": {
+                "en": "",
+                "fr": "",
+                "ar": ""
+            },
+            "highlights": {
+                "en": [],
+                "fr": [],
+                "ar": []
+            },
+            "year": "",
+            "stack": [
+                "Vue",
+                "SCSS",
+                "JS",
+                "TS"
+            ],
             "links": {
                 "github": "",
                 "website": "https://www.visilab.ch/en"
             },
             "image": "visilab.jpg",
+            "focus": "",
+            "gallery": [],
             "hidden": false
         },
         {
+            "id": "mcoptic",
             "name": "Mcoptic",
-            "description": "Swiss optical retail website featuring designer eyewear collections, vision testing services, and appointment scheduling.",
-            "stack": ["Vue", "SCSS", "JS", "TS"],
+            "appName": "",
+            "description": {
+                "en": "Swiss optical retail website featuring designer eyewear collections, vision testing services, and appointment scheduling.",
+                "fr": "Site web de vente optique suisse proposant des collections de lunettes design, services de tests visuels et prise de rendez-vous.",
+                "ar": "موقع بيع بصريات سويسري يتميز بمجموعات نظارات مصممة وخدمات فحص البصر وجدولة المواعيد."
+            },
+            "category": {
+                "en": "",
+                "fr": "",
+                "ar": ""
+            },
+            "role": {
+                "en": "",
+                "fr": "",
+                "ar": ""
+            },
+            "highlights": {
+                "en": [],
+                "fr": [],
+                "ar": []
+            },
+            "year": "",
+            "stack": [
+                "Vue",
+                "SCSS",
+                "JS",
+                "TS"
+            ],
             "links": {
                 "github": "",
                 "website": "https://www.mcoptic.ch/fr"
             },
             "image": "mcoptic.jpg",
+            "focus": "",
+            "gallery": [],
             "hidden": false
         },
         {
+            "id": "linsenmax",
             "name": "Linsenmax",
-            "description": "Online store for contact lenses and eye care products with advanced product filtering and prescription management.",
-            "stack": ["Vue", "SCSS", "JS", "TS"],
+            "appName": "",
+            "description": {
+                "en": "Online store for contact lenses and eye care products with advanced product filtering and prescription management.",
+                "fr": "Boutique en ligne pour lentilles de contact et produits de soins oculaires avec filtrage avancé et gestion des prescriptions.",
+                "ar": "متجر إلكتروني للعدسات اللاصقة ومنتجات العناية بالعيون مع فلترة متقدمة للمنتجات وإدارة الوصفات الطبية."
+            },
+            "category": {
+                "en": "",
+                "fr": "",
+                "ar": ""
+            },
+            "role": {
+                "en": "",
+                "fr": "",
+                "ar": ""
+            },
+            "highlights": {
+                "en": [],
+                "fr": [],
+                "ar": []
+            },
+            "year": "",
+            "stack": [
+                "Vue",
+                "SCSS",
+                "JS",
+                "TS"
+            ],
             "links": {
                 "github": "",
                 "website": "https://www.linsenmax.ch/en"
             },
             "image": "default-image.jpg",
+            "focus": "",
+            "gallery": [],
             "hidden": false
         },
         {
+            "id": "chat-gpt-clone-v-1-0",
             "name": "Chat GPT Clone V.1.0",
-            "description": "AI-powered chatbot application with real-time conversations, Firebase authentication, and chat history management.",
-            "stack": ["Next", "TS", "Redux", "Tailwind CSS", "FireBase"],
+            "appName": "",
+            "description": {
+                "en": "AI-powered chatbot application with real-time conversations, Firebase authentication, and chat history management.",
+                "fr": "Application chatbot IA avec conversations en temps réel, authentification Firebase et gestion de l'historique des discussions.",
+                "ar": "تطبيق روبوت دردشة مدعوم بالذكاء الاصطناعي مع محادثات في الوقت الفعلي ومصادقة Firebase وإدارة سجل الدردشة."
+            },
+            "category": {
+                "en": "",
+                "fr": "",
+                "ar": ""
+            },
+            "role": {
+                "en": "",
+                "fr": "",
+                "ar": ""
+            },
+            "highlights": {
+                "en": [],
+                "fr": [],
+                "ar": []
+            },
+            "year": "",
+            "stack": [
+                "Next",
+                "TS",
+                "Redux",
+                "Tailwind CSS",
+                "FireBase"
+            ],
             "links": {
                 "github": "",
                 "website": "https://chat-gpt-clone-v10.vercel.app/"
             },
             "image": "default-image.jpg",
+            "focus": "",
+            "gallery": [],
             "hidden": false
         },
         {
+            "id": "chat-gpt-clone-v-1-1",
             "name": "Chat GPT Clone V.1.1",
-            "description": "Enhanced AI chatbot with improved UI/UX, persistent conversations, and advanced state management using Redux.",
-            "stack": ["Next", "TS", "Redux", "Tailwind CSS", "FireBase"],
+            "appName": "",
+            "description": {
+                "en": "Enhanced AI chatbot with improved UI/UX, persistent conversations, and advanced state management using Redux.",
+                "fr": "Chatbot IA amélioré avec UI/UX optimisée, conversations persistantes et gestion d'état avancée avec Redux.",
+                "ar": "روبوت دردشة ذكي محسّن مع واجهة مستخدم محسّنة ومحادثات مستمرة وإدارة حالة متقدمة باستخدام Redux."
+            },
+            "category": {
+                "en": "",
+                "fr": "",
+                "ar": ""
+            },
+            "role": {
+                "en": "",
+                "fr": "",
+                "ar": ""
+            },
+            "highlights": {
+                "en": [],
+                "fr": [],
+                "ar": []
+            },
+            "year": "",
+            "stack": [
+                "Next",
+                "TS",
+                "Redux",
+                "Tailwind CSS",
+                "FireBase"
+            ],
             "links": {
                 "github": "",
                 "website": "https://chat-gpt-clone-v11.vercel.app/"
             },
             "image": "default-image.jpg",
+            "focus": "",
+            "gallery": [],
             "hidden": false
         },
         {
+            "id": "translation-app",
             "name": "Translation APP",
-            "description": "Multi-language translation application with real-time text translation, language detection, and translation history.",
-            "stack": ["React", "Redux", "Next", "Tailwind CSS"],
+            "appName": "",
+            "description": {
+                "en": "Multi-language translation application with real-time text translation, language detection, and translation history.",
+                "fr": "Application de traduction multilingue avec traduction de texte en temps réel, détection de langue et historique de traduction.",
+                "ar": "تطبيق ترجمة متعدد اللغات مع ترجمة نصية في الوقت الفعلي واكتشاف اللغة وسجل الترجمة."
+            },
+            "category": {
+                "en": "",
+                "fr": "",
+                "ar": ""
+            },
+            "role": {
+                "en": "",
+                "fr": "",
+                "ar": ""
+            },
+            "highlights": {
+                "en": [],
+                "fr": [],
+                "ar": []
+            },
+            "year": "",
+            "stack": [
+                "React",
+                "Redux",
+                "Next",
+                "Tailwind CSS"
+            ],
             "links": {
                 "github": "https://github.com/m-mourouh/translation-app",
                 "website": "https://translation-app-omega.vercel.app"
             },
             "image": "default-image.jpg",
+            "focus": "",
+            "gallery": [],
             "hidden": false
         },
         {
+            "id": "hospital-management-system",
             "name": "Hospital Management System",
-            "description": "Complete hospital management solution with patient records, appointment scheduling, doctor management, and medical inventory.",
-            "stack": ["Java", "Spring Boot", "JPA", "Hibernate", "MySQL"],
+            "appName": "",
+            "description": {
+                "en": "Complete hospital management solution with patient records, appointment scheduling, doctor management, and medical inventory.",
+                "fr": "Solution complète de gestion hospitalière avec dossiers patients, planification de rendez-vous, gestion des médecins et inventaire médical.",
+                "ar": "حل شامل لإدارة المستشفيات مع سجلات المرضى وجدولة المواعيد وإدارة الأطباء والمخزون الطبي."
+            },
+            "category": {
+                "en": "",
+                "fr": "",
+                "ar": ""
+            },
+            "role": {
+                "en": "",
+                "fr": "",
+                "ar": ""
+            },
+            "highlights": {
+                "en": [],
+                "fr": [],
+                "ar": []
+            },
+            "year": "",
+            "stack": [
+                "Java",
+                "Spring Boot",
+                "JPA",
+                "Hibernate",
+                "MySQL"
+            ],
             "links": {
                 "github": "https://github.com/m-mourouh/hospital_app",
                 "website": ""
             },
             "image": "default-image.jpg",
+            "focus": "",
+            "gallery": [],
             "hidden": false
         },
         {
+            "id": "covid-19-detection-app",
             "name": "COVID-19 DETECTION APP",
-            "description": "Machine learning web application for COVID-19 detection from chest X-ray images using deep learning algorithms.",
-            "stack": ["HTML", "SCSS", "JS", "Python", "Flask", "ML"],
+            "appName": "",
+            "description": {
+                "en": "Machine learning web application for COVID-19 detection from chest X-ray images using deep learning algorithms.",
+                "fr": "Application web d'apprentissage automatique pour la détection du COVID-19 à partir d'images radiographiques thoraciques utilisant des algorithmes d'apprentissage profond.",
+                "ar": "تطبيق ويب للتعلم الآلي للكشف عن COVID-19 من صور الأشعة السينية للصدر باستخدام خوارزميات التعلم العميق."
+            },
+            "category": {
+                "en": "",
+                "fr": "",
+                "ar": ""
+            },
+            "role": {
+                "en": "",
+                "fr": "",
+                "ar": ""
+            },
+            "highlights": {
+                "en": [],
+                "fr": [],
+                "ar": []
+            },
+            "year": "",
+            "stack": [
+                "HTML",
+                "SCSS",
+                "JS",
+                "Python",
+                "Flask",
+                "ML"
+            ],
             "links": {
                 "github": "https://github.com/m-mourouh/Covid-19-Detection-Web-Application",
                 "website": ""
             },
             "image": "default-image.jpg",
+            "focus": "",
+            "gallery": [],
             "hidden": false
         },
         {
+            "id": "eden-cosmetique",
             "name": "Eden cosmetique",
-            "description": "Cosmetics and beauty products e-commerce platform with product catalog, shopping cart, and secure payment integration.",
-            "stack": ["HTML", "CSS", "JS", "PHP", "MYSQL"],
+            "appName": "",
+            "description": {
+                "en": "Cosmetics and beauty products e-commerce platform with product catalog, shopping cart, and secure payment integration.",
+                "fr": "Plateforme e-commerce de cosmétiques et produits de beauté avec catalogue de produits, panier d'achat et intégration de paiement sécurisé.",
+                "ar": "منصة تجارة إلكترونية لمنتجات التجميل ومستحضرات التجميل مع كتالوج المنتجات وعربة التسوق وتكامل الدفع الآمن."
+            },
+            "category": {
+                "en": "",
+                "fr": "",
+                "ar": ""
+            },
+            "role": {
+                "en": "",
+                "fr": "",
+                "ar": ""
+            },
+            "highlights": {
+                "en": [],
+                "fr": [],
+                "ar": []
+            },
+            "year": "",
+            "stack": [
+                "HTML",
+                "CSS",
+                "JS",
+                "PHP",
+                "MYSQL"
+            ],
             "links": {
                 "github": "",
                 "website": "https://www.edencosmetique.fr"
             },
             "image": "default-image.jpg",
+            "focus": "",
+            "gallery": [],
             "hidden": true
         },
-
         {
+            "id": "jungle-pizza",
             "name": "Jungle Pizza",
-            "description": "Pizzeria website with online ordering, menu display, delivery zone coverage, and real-time order tracking.",
-            "stack": ["HTML", "CSS", "JS", "PHP", "MYSQL"],
+            "appName": "",
+            "description": {
+                "en": "Pizzeria website with online ordering, menu display, delivery zone coverage, and real-time order tracking.",
+                "fr": "Site web de pizzeria avec commande en ligne, affichage du menu, couverture de zone de livraison et suivi de commande en temps réel.",
+                "ar": "موقع مطعم بيتزا مع طلب عبر الإنترنت وعرض القائمة وتغطية منطقة التوصيل وتتبع الطلبات في الوقت الفعلي."
+            },
+            "category": {
+                "en": "",
+                "fr": "",
+                "ar": ""
+            },
+            "role": {
+                "en": "",
+                "fr": "",
+                "ar": ""
+            },
+            "highlights": {
+                "en": [],
+                "fr": [],
+                "ar": []
+            },
+            "year": "",
+            "stack": [
+                "HTML",
+                "CSS",
+                "JS",
+                "PHP",
+                "MYSQL"
+            ],
             "links": {
                 "github": "",
                 "website": "https://www.junglepizzanice06.fr"
             },
             "image": "default-image.jpg",
+            "focus": "",
+            "gallery": [],
             "hidden": true
         }
     ]

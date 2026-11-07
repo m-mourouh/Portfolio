@@ -1,203 +1,112 @@
 'use client'
-import { StyledAbout } from '@/styles/styled-components/About.styled'
-import data from '@/data/user.json'
-import { useEffect, useRef, useState } from 'react'
+import { useEffect, useRef } from 'react'
+import Image from 'next/image'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import { StyledAbout } from '@/styles/styled-components/About.styled'
+import data from '@/data/user.json'
 import { useLanguage } from '@/contexts/LanguageContext'
+import SectionIndex from './SectionIndex'
+import { counts } from '@/lib/expertise'
+import AboutIntro from './about/AboutIntro'
+import CareerPath from './about/CareerPath'
+import Portrait from '@/public/images/mohamed_mourouh.jpeg'
 
-gsap.registerPlugin(ScrollTrigger)
-
+/**
+ * About: asymmetric editorial layout. Portrait (real photo, duotone, technical frame) beside the
+ * headline and an interactive paragraph; then the career as a system path and a facts strip.
+ * Every figure is computed from the repo's data.
+ */
 export default function About() {
-    const { t } = useLanguage()
-    const currentYear = new Date().getFullYear()
-    const yearsOfExperience = currentYear - data.user.startedAt
+    const { t, language } = useLanguage()
+    const lang = (['en', 'fr', 'ar'].includes(language) ? language : 'en') as 'en' | 'fr' | 'ar'
 
-    const [projectsCount, setProjectsCount] = useState(0)
-    const [experienceCount, setExperienceCount] = useState(0)
-    const [satisfactionCount, setSatisfactionCount] = useState(0)
+    // facts, computed from data (no hard-coded numbers)
+    const years = new Date().getFullYear() - data.user.startedAt
+    const technologyCount = counts.technologies
+    const certificationCount = counts.certifications
 
-    const sectionRef = useRef<HTMLDivElement>(null)
-    const headingRef = useRef<HTMLHeadingElement>(null)
-    const signatureRef = useRef<HTMLDivElement>(null)
-    const statsRef = useRef<HTMLDivElement>(null)
+    const sectionRef = useRef<HTMLElement>(null)
 
     useEffect(() => {
         const section = sectionRef.current
-        const heading = headingRef.current
-        const signature = signatureRef.current
-        const stats = statsRef.current
-
-        if (!section || !heading || !signature || !stats) return
-
-        // Fade in animation from right to left
-        gsap.fromTo(
-            heading,
-            { opacity: 0, x: 100 },
-            {
-                opacity: 1,
-                x: 0,
-                duration: 1,
-                scrollTrigger: {
-                    trigger: section,
-                    start: 'top 80%',
-                    once: true,
-                },
-            }
-        )
-
-        // Signature drawing animation (like Loader)
-        const signaturePath = signature?.querySelector('.signature-path') as SVGPathElement
-
-        if (signaturePath) {
-            const pathLength = signaturePath.getTotalLength()
-
-            gsap.timeline({
-                scrollTrigger: {
-                    trigger: section,
-                    start: 'top 80%',
-                    once: true,
-                },
+        if (!section || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return
+        gsap.registerPlugin(ScrollTrigger)
+        const ctx = gsap.context(() => {
+            const ease = 'expo.out' // same easing as the hero entrance
+            // portrait: mask reveal from the bottom, the image settles inside it
+            gsap.fromTo('.portrait-frame', { clipPath: 'inset(100% 0% 0% 0%)' }, {
+                clipPath: 'inset(0% 0% 0% 0%)', duration: 1.4, ease,
+                scrollTrigger: { trigger: '.portrait', start: 'top 80%', once: true },
             })
-            .set(signaturePath, {
-                strokeDasharray: pathLength,
+            gsap.fromTo('.portrait-frame img', { scale: 1.15 }, {
+                scale: 1, duration: 1.8, ease,
+                scrollTrigger: { trigger: '.portrait', start: 'top 80%', once: true },
             })
-            .fromTo(
-                signaturePath,
-                {
-                    strokeDashoffset: pathLength,
-                    stroke: '#888888',
-                    opacity: 0.5,
-                },
-                {
-                    duration: 2,
-                    strokeDashoffset: 0,
-                    delay: 0.3,
-                }
-            )
-            .to(signaturePath, {
-                duration: 1,
-                stroke: 'rgba(136, 136, 136, 0)',
-                fill: '#888888',
-                opacity: 0.5,
-                ease: 'Expo.easeOut',
+            // staggered text reveal
+            gsap.fromTo('.about__text > *', { y: 28, opacity: 0 }, {
+                y: 0, opacity: 1, duration: 1.1, ease, stagger: 0.09,
+                scrollTrigger: { trigger: '.about__text', start: 'top 80%', once: true },
             })
-        }
-
-        // Stats counting animation
-        ScrollTrigger.create({
-            trigger: stats,
-            start: 'top 80%',
-            onEnter: () => {
-                // Animate projects count
-                gsap.to({ val: 0 }, {
-                    val: 35,
-                    duration: 2,
-                    ease: 'power1.out',
-                    onUpdate: function() {
-                        setProjectsCount(Math.round(this.targets()[0].val))
-                    }
-                })
-
-                // Animate experience count
-                gsap.to({ val: 0 }, {
-                    val: yearsOfExperience,
-                    duration: 2,
-                    ease: 'power1.out',
-                    onUpdate: function() {
-                        setExperienceCount(Math.round(this.targets()[0].val))
-                    }
-                })
-
-                // Animate satisfaction count
-                gsap.to({ val: 0 }, {
-                    val: 100,
-                    duration: 2,
-                    ease: 'power1.out',
-                    onUpdate: function() {
-                        setSatisfactionCount(Math.round(this.targets()[0].val))
-                    }
-                })
-            },
-            once: true,
-        })
-
-        gsap.fromTo(
-            stats.children,
-            { opacity: 0, y: 50 },
-            {
-                opacity: 1,
-                y: 0,
-                duration: 0.8,
-                stagger: 0.2,
-                scrollTrigger: {
-                    trigger: stats,
-                    start: 'top 80%',
-                    once: true,
-                },
-            }
-        )
-
-        return () => {
-            ScrollTrigger.getAll().forEach(trigger => trigger.kill())
-        }
-    }, [yearsOfExperience])
+            gsap.fromTo('.facts li', { y: 12, opacity: 0 }, {
+                y: 0, opacity: 1, duration: 0.8, ease, stagger: 0.06,
+                scrollTrigger: { trigger: '.facts', start: 'top 92%', once: true },
+            })
+        }, section)
+        return () => ctx.revert()
+    }, [])
 
     return (
         <StyledAbout className="about" id="about" ref={sectionRef}>
-            <div className="about__content">
-                <h1 ref={headingRef} dangerouslySetInnerHTML={{
-                    __html: t('about.introduction')
-                }} />
+            <div className="about__grid">
+                <figure className="portrait">
+                    <div className="portrait-frame">
+                        <Image
+                            src={Portrait}
+                            alt={t('about.portraitAlt')}
+                            fill
+                            sizes="(max-width: 768px) 92vw, (max-width: 1280px) 40vw, 520px"
+                            placeholder="blur"
+                            quality={70}
+                        />
+                        <span className="tint" aria-hidden="true" />
+                        <span className="grid" aria-hidden="true" />
+                        <span className="corner tl" aria-hidden="true" />
+                        <span className="corner tr" aria-hidden="true" />
+                        <span className="corner bl" aria-hidden="true" />
+                        <span className="corner br" aria-hidden="true" />
+                    </div>
+                    <figcaption>CASABLANCA · 33.57°N 7.59°W</figcaption>
+                </figure>
 
-                <div title='MOHAMED MOUROUH' className="signature" ref={signatureRef}>
-                    <svg
-                        version="1.0"
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="150"
-                        height="70"
-                        viewBox="0 0 108.000000 53.000000"
-                        preserveAspectRatio="xMidYMid meet"
-                    >
-                        <g transform="translate(0.000000,53.000000) scale(0.100000,-0.100000)">
-                            <path
-                                className="signature-path"
-                                d="M560 469 c-186 -16 -386 -84 -446 -150 -40 -44 -13 -118 56 -154 32
-                                -17 167 -45 215 -45 34 0 35 -1 29 -28 -10 -42 -10 -44 3 -49 6 -2 14 13 18
-                                38 l7 42 139 -6 c76 -3 141 -2 144 3 9 15 -27 20 -151 20 -136 0 -143 4 -103
-                                54 24 31 36 32 69 6 44 -34 79 -24 94 28 10 31 -12 29 -24 -3 -11 -30 -24 -31
-                                -57 -5 -38 29 -74 26 -106 -11 -15 -17 -27 -40 -27 -50 0 -23 -16 -24 -121 -5
-                                -146 26 -205 78 -169 147 24 44 215 114 382 140 76 11 304 7 361 -6 17 -5 27
-                                -3 27 3 0 27 -191 45 -340 31z"
-                                fill="none"
-                                stroke="#888888"
-                                strokeWidth="2"
-                                opacity="0.5"
-                            />
-                        </g>
-                    </svg>
+                <div className="about__text">
+                    <SectionIndex n={1} label={t('nav.about')} />
+                    <h2 className="about__heading" dangerouslySetInnerHTML={{ __html: t('about.heading') }} />
+                    <AboutIntro
+                        html={t('about.introduction')}
+                        lang={lang}
+                        t={t}
+                        labels={{ open: t('about.terms.open'), expertise: t('about.terms.expertise'), usedIn: t('about.terms.usedIn'), close: t('about.terms.close') }}
+                    />
                 </div>
+            </div>
 
-                <div className="stats" ref={statsRef}>
-                    <div className="stat-item">
-                        <div className="stat-number">
-                            {projectsCount}<span className="accent">+</span>
-                        </div>
-                        <div className="stat-label">{t('about.projectsCompleted').toUpperCase()}</div>
-                    </div>
-                    <div className="stat-item">
-                        <div className="stat-number">
-                            {experienceCount}<span className="accent">+</span>
-                        </div>
-                        <div className="stat-label">{t('about.yearsExperience').toUpperCase()}</div>
-                    </div>
-                    <div className="stat-item">
-                        <div className="stat-number">
-                            {satisfactionCount}<span className="accent">%</span>
-                        </div>
-                        <div className="stat-label">{t('about.clientSatisfaction').toUpperCase()}</div>
-                    </div>
-                </div>
+            <CareerPath lang={lang} labels={{ title: t('about.career.title'), present: t('about.career.present'), list: t('about.career.list') }} />
+
+            <div className="about__foot">
+                <ul className="facts" aria-label={t('about.facts.label')}>
+                    <li>
+                        {years}+ {t('about.facts.years')}
+                    </li>
+                    <li>Java / Spring Boot</li>
+                    <li>React / Angular / Vue</li>
+                    <li>
+                        {certificationCount} {t('about.facts.certs')}
+                    </li>
+                    <li>
+                        {technologyCount} {t('about.facts.techs')}
+                    </li>
+                </ul>
             </div>
         </StyledAbout>
     )

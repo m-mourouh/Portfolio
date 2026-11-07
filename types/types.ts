@@ -6,10 +6,13 @@ export type ProjectType = {
     image: string
 }
 export type EmailType = {
-    firstName: string
-    lastName: string
-    message: string
+    name: string
+    company: string
+    projectTypes: string[]
     email: string
+    message: string
+    /** honeypot, always empty for people */
+    website: string
 }
 
 export type NotificationType = {

@@ -2,6 +2,10 @@
 import { useEffect, useMemo, useRef } from 'react'
 import { Canvas, useFrame, useThree } from '@react-three/fiber'
 import * as THREE from 'three'
+import { gsap } from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import HeroArchitecture from './HeroArchitecture'
+import { heroIntro } from '@/lib/heroStack'
 
 /**
  * Interactive 3D grid for the hero section.
@@ -11,6 +15,9 @@ import * as THREE from 'three'
  */
 
 const ACCENT = '#c4ff00'
+// Intro timing (seconds since the scene started), synced with the loader leaving
+const INTRO_DELAY = 0.5
+const INTRO_DURATION = 1.6
 const BASE = '#ffffff'
 
 const vertexShader = /* glsl */ `
@@ -19,6 +26,7 @@ const vertexShader = /* glsl */ `
     uniform float uStrength;
     uniform vec2 uClick;
     uniform float uClickAge;
+    uniform float uIntro;
 
     varying vec2 vXZ;
     varying float vHeight;
@@ -46,6 +54,8 @@ const vertexShader = /* glsl */ `
         h += wave;
 
         p.y += h;
+        // intro: the floor rises into place (and far rows arrive slightly later)
+        p.y -= (1.0 - uIntro) * (2.2 + max(0.0, -xz.y) * 0.08);
 
         vXZ = xz;
         vHeight = h;
@@ -63,6 +73,7 @@ const fragmentShader = /* glsl */ `
     uniform float uCell;
     uniform float uFogNear;
     uniform float uFogFar;
+    uniform float uIntro;
 
     varying vec2 vXZ;
     varying float vHeight;
@@ -80,7 +91,7 @@ const fragmentShader = /* glsl */ `
         vec3 color = mix(uBase, uAccent, vGlow);
 
         // Resting lines match the flat background grid (white @ ~5-6%)
-        float alpha = line * fog * mix(0.06, 0.9, vGlow);
+        float alpha = line * fog * mix(0.06, 0.9, vGlow) * uIntro;
         alpha += line * fog * clamp(vHeight, 0.0, 1.0) * 0.4;
 
         // ~5% of cells faintly filled, like the flat background grid
@@ -98,16 +109,19 @@ type PointerState = {
     speed: number
     inside: boolean
     clickNdc: THREE.Vector2 | null
+    tapNdc: THREE.Vector2 | null
 }
 
 function GridPlane({
     pointer,
     segments,
     reducedMotion,
+    scroll,
 }: {
     pointer: React.MutableRefObject<PointerState>
     segments: number
     reducedMotion: boolean
+    scroll: React.MutableRefObject<number>
 }) {
     const { camera } = useThree()
     const material = useRef<THREE.ShaderMaterial>(null)
@@ -127,6 +141,7 @@ function GridPlane({
             uStrength: { value: 0.2 },
             uClick: { value: new THREE.Vector2(0, 0) },
             uClickAge: { value: 100 },
+            uIntro: { value: 0 },
             uBase: { value: new THREE.Color(BASE) },
             uAccent: { value: new THREE.Color(ACCENT) },
             uCell: { value: 0.5 },
@@ -152,12 +167,20 @@ function GridPlane({
         return hit ? new THREE.Vector2(hit.x, hit.z) : null
     }
 
+    const introStart = useRef(-1)
     useFrame((_, delta) => {
         const u = uniforms
         const p = pointer.current
         const dt = Math.min(delta, 1 / 30)
 
         if (!reducedMotion) u.uTime.value += dt
+        // Rise in once the loader has slid away (~1.8s), over ~1.6s with an ease-out
+        // the grid rises when the hero timeline starts (failsafe: after 4 s anyway)
+        if (u.uIntro.value < 1 && (heroIntro.atmosphere || u.uTime.value > 4)) {
+            if (introStart.current < 0) introStart.current = u.uTime.value
+            const t = Math.min(1, Math.max(0, (u.uTime.value - introStart.current) / INTRO_DURATION))
+            u.uIntro.value = reducedMotion ? 1 : 1 - Math.pow(1 - t, 3)
+        }
 
         if (p.inside) {
             const hit = toFloor(p.ndc)
@@ -166,7 +189,7 @@ function GridPlane({
         u.uMouse.value.lerp(helpers.target, 1 - Math.pow(0.001, dt))
 
         // Faster pointer -> stronger bump, decays back to a resting level
-        const goal = p.inside ? 0.3 + Math.min(p.speed * 4, 0.5) : 0.1
+        const goal = p.inside ? 0.3 + Math.min(p.speed * 4, 0.5) : 0
         u.uStrength.value += (goal - u.uStrength.value) * (1 - Math.pow(0.02, dt))
         p.speed *= Math.pow(0.05, dt)
 
@@ -183,12 +206,16 @@ function GridPlane({
         // Gentle camera parallax following the pointer
         if (!reducedMotion) {
             camera.position.x += (p.ndc.x * 0.1 - camera.position.x) * (1 - Math.pow(0.05, dt))
-            camera.position.y += (2.4 + p.ndc.y * 0.1 - camera.position.y) * (1 - Math.pow(0.05, dt))
+            const settle = u.uIntro.value // 0 → 1 during the intro
+            camera.position.y += (1.5 + settle * 0.9 + p.ndc.y * 0.1 + scroll.current * 0.9 - camera.position.y) * (1 - Math.pow(0.05, dt))
+            camera.position.z += (4.6 + settle * 1.4 - scroll.current * 0.6 - camera.position.z) * (1 - Math.pow(0.08, dt))
             camera.lookAt(0, 0, -4)
         }
     })
 
     return (
+        <>
+        <HeroArchitecture shared={uniforms} pointer={pointer} scroll={scroll} buildDelay={INTRO_DELAY + 0.5} reducedMotion={reducedMotion} />
         <mesh geometry={geometry} frustumCulled={false}>
             <shaderMaterial
                 ref={material}
@@ -200,16 +227,35 @@ function GridPlane({
                 side={THREE.DoubleSide}
             />
         </mesh>
+        </>
     )
 }
 
 export default function HeroGridScene() {
     const wrapper = useRef<HTMLDivElement>(null)
+    // 0 at the top of the page → 1 once the hero has scrolled out of view
+    const scroll = useRef(0)
+    // scroll-linked (no hijacking): progress of the hero leaving the screen, from a ScrollTrigger
+    useEffect(() => {
+        gsap.registerPlugin(ScrollTrigger)
+        const head = document.getElementById('head')
+        if (!head) return
+        const st = ScrollTrigger.create({
+            trigger: head,
+            start: 'top top',
+            end: 'bottom top',
+            onUpdate: (self) => (scroll.current = self.progress),
+            onRefresh: (self) => (scroll.current = self.progress),
+        })
+        return () => st.kill()
+    }, [])
+
     const pointer = useRef<PointerState>({
         ndc: new THREE.Vector2(0, -0.3),
         speed: 0,
         inside: false,
         clickNdc: null,
+        tapNdc: null,
     })
 
     const isMobile = typeof window !== 'undefined' && window.matchMedia('(max-width: 768px)').matches
@@ -245,7 +291,10 @@ export default function HeroGridScene() {
         }
         const onDown = (e: PointerEvent) => {
             const n = toNdc(e)
-            if (n.inside) pointer.current.clickNdc = new THREE.Vector2(n.x, n.y)
+            if (n.inside) {
+                pointer.current.clickNdc = new THREE.Vector2(n.x, n.y)
+                pointer.current.tapNdc = new THREE.Vector2(n.x, n.y)
+            }
         }
         const onLeave = () => {
             pointer.current.inside = false
@@ -266,21 +315,27 @@ export default function HeroGridScene() {
     useEffect(() => {
         const el = wrapper.current
         if (!el) return
+        // render only while the hero is on screen and the tab is visible
+        let onScreen = true
+        const apply = () => canvasState.current.setFrameloop?.(onScreen && !document.hidden ? 'always' : 'never')
         const io = new IntersectionObserver(([entry]) => {
-            canvasState.current.setFrameloop?.(
-                entry.isIntersecting ? (reducedMotion ? 'demand' : 'always') : 'never'
-            )
+            onScreen = entry.isIntersecting
+            apply()
         })
         io.observe(el)
-        return () => io.disconnect()
-    }, [reducedMotion])
+        document.addEventListener('visibilitychange', apply)
+        return () => {
+            io.disconnect()
+            document.removeEventListener('visibilitychange', apply)
+        }
+    }, [])
 
     return (
         <div ref={wrapper} style={{ position: 'absolute', inset: 0 }}>
             <Canvas
                 dpr={[1, isMobile ? 1.25 : 1.5]}
-                frameloop={reducedMotion ? 'demand' : 'always'}
-                camera={{ position: [0, 2.4, 6], fov: 50, near: 0.1, far: 100 }}
+                frameloop="always"
+                camera={{ position: [0, 1.5, 4.6], fov: 50, near: 0.1, far: 100 }}
                 gl={{ antialias: true, alpha: true, powerPreference: 'high-performance' }}
                 onCreated={(state) => {
                     state.camera.lookAt(0, 0, -4)
@@ -288,7 +343,7 @@ export default function HeroGridScene() {
                 }}
                 style={{ pointerEvents: 'none' }}
             >
-                <GridPlane pointer={pointer} segments={segments} reducedMotion={reducedMotion} />
+                <GridPlane pointer={pointer} segments={segments} reducedMotion={reducedMotion} scroll={scroll} />
             </Canvas>
         </div>
     )

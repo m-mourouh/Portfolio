@@ -3,50 +3,46 @@ import styled from 'styled-components'
 import { device } from './Breakpoints'
 
 export const StyledHeader = styled.header`
-    padding: 20px 50px;
-    width: 100%;
-    height: auto;
     position: sticky;
     top: 0;
     z-index: 99999999;
-    transition: all 0.5s ease-in-out;
     display: flex;
-    align-items: center;
     justify-content: center;
-    transition: 0.25s ease-in-out;
+    width: 100%;
+    padding: 18px 40px;
+    pointer-events: none; /* only the pill itself takes clicks */
+    transition: transform 0.45s var(--ease-out);
 
-    /* media queries */
     @media ${device.sm} {
-        padding: 10px 20px;
+        padding: 10px 16px;
     }
 
-    > nav {
-        max-width: 1400px;
-        width: 100%;
-        background-color: rgb(28, 28, 28);
-        backdrop-filter: blur(0px);
-        -webkit-backdrop-filter: blur(0px);
-        border-radius: 12px;
-        padding: 5px 20px;
-        border-top-width: 1px;
-        border-right-width: 1px;
-        border-bottom-width: 1px;
-        border-left-width: 1px;
-        border-style: solid;
-        border-color: rgb(41, 41, 41);
-        opacity: 1;
-        transition: all 0.3s ease-in-out;
+    /* hidden while scrolling down, back on scroll up */
+    &.is-hidden {
+        transform: translateY(-130%);
+    }
 
-        @media ${device.sm} {
-            border-radius: 12px;
-            padding: 5px 20px;
+    .skip {
+        position: absolute;
+        left: 16px;
+        top: -80px;
+        z-index: 2;
+        padding: 12px 18px;
+        border-radius: 10px;
+        background: var(--c-accent);
+        color: #111;
+        font-weight: 600;
+        text-decoration: none;
+        pointer-events: auto;
+
+        &:focus {
+            top: 12px;
+            outline: 2px solid var(--c-text);
+            outline-offset: 2px;
         }
     }
 
-    &.scrolling {
-        > nav {
-            background-color: rgb(28, 28, 28);
-            border-color: rgb(41, 41, 41);
-        }
+    @media (prefers-reduced-motion: reduce) {
+        transition: none;
     }
 `

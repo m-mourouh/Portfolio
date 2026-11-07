@@ -21,16 +21,22 @@ export function selection(fill: boolean = false, color?: string): RuleSet {
 }
 export function padding(): RuleSet {
 
+    // Horizontal page gutters only: never touches vertical padding, so sections keep
+    // their --section-space rhythm at every breakpoint
     return css`
-        padding: 0 150px;
+        padding-left: 150px;
+        padding-right: 150px;
         @media (max-width: 1061px) {
-            padding: 0px 80px;
+            padding-left: 80px;
+            padding-right: 80px;
         }
         @media ${device.sm} {
-            padding: 0 40px;
+            padding-left: 40px;
+            padding-right: 40px;
         }
         @media (max-width: 450px) {
-            padding: 0 20px;
+            padding-left: 20px;
+            padding-right: 20px;
         }
     `
 }

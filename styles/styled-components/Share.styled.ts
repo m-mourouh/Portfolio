@@ -76,6 +76,10 @@ export const StyledDiv = styled.div`
     &.vertical {
         bottom: 100px;
         left: 20px;
+        /* side rail: mouse devices only (hidden on touch, incl. tablets in landscape) */
+        @media (hover: none) {
+            display: none;
+        }
         @media ${device.sm} {
             display: none;
         }

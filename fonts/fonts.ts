@@ -23,7 +23,9 @@ export const space_grotesk = localFont({
     weight: '300 700',
     style: 'normal',
     variable: '--font-space-grotesk',
-    display: 'swap',
+    // 'optional': used if ready at first paint (preloaded, ~22KB), never swapped in later,
+    // so text can't re-wrap and shift the layout (CLS). Repeat visits always get it from cache.
+    display: 'optional',
     fallback: ['system-ui', 'Arial', 'sans-serif'],
 })
 
@@ -37,5 +39,19 @@ export const tajawal = localFont({
     ],
     variable: '--font-tajawal',
     display: 'swap',
+    // Arabic only: don't preload it on every page (it competed with the Latin fonts on slow networks)
+    preload: false,
     fallback: ['Tahoma', 'Arial', 'sans-serif'],
+})
+
+// Instrument Serif italic: editorial display accent (e.g. one emphasized word in headlines)
+export const instrument_serif = localFont({
+    src: './InstrumentSerif-Italic-latin.woff2',
+    weight: '400',
+    style: 'italic',
+    variable: '--font-serif-display',
+    display: 'optional',
+    // size-matched serif fallback so the swap doesn't re-flow the hero headline (layout shift)
+    adjustFontFallback: 'Times New Roman',
+    fallback: ['Georgia', 'Times New Roman', 'serif'],
 })

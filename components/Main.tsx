@@ -1,3 +1,4 @@
+import type { Article } from '@/lib/articles'
 import { StyledMain } from '@/styles/styled-components/Main.styled'
 import Head from './Head'
 import About from './About'
@@ -12,18 +13,19 @@ import Loader from './Loader'
 import Cursor from './Cursor'
 import GridBackground from './GridBackground'
 import ClickEffect from './ClickEffect'
+import GridCrosshair from './GridCrosshair'
+import BackgroundMusic from './BackgroundMusic'
 import MotionEffects from './MotionEffects'
-import ContactDrawer from './ContactDrawer'
-import CommandMenu from './CommandMenu'
-export default function Main() {
+import DeferredWidgets from './DeferredWidgets'
+export default function Main({ articles }: { articles: Article[] }) {
     return (
-        <StyledMain>
+        <StyledMain id="main" tabIndex={-1}>
             <GridBackground />
             <Head />
             <About />
             <Skills />
             <Projects />
-            <Articles />
+            <Articles articles={articles} />
             <Profiles option={false} />
             <Share orientation='vertical'/>
             <Contact />
@@ -31,9 +33,10 @@ export default function Main() {
             <Loader/>
             <Cursor/>
             <ClickEffect />
+            <GridCrosshair />
+            <BackgroundMusic />
             <MotionEffects />
-            <ContactDrawer />
-            <CommandMenu />
+            <DeferredWidgets />
         </StyledMain>
     )
 }

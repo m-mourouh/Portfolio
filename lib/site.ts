@@ -1,6 +1,6 @@
 // Public URL of the site, used for metadata, sitemap and structured data.
-// Set NEXT_PUBLIC_SITE_URL in production (e.g. https://your-domain.com).
+// NEXT_PUBLIC_SITE_URL can override it (e.g. for a staging domain).
 export const siteUrl = (
     process.env.NEXT_PUBLIC_SITE_URL ||
-    (process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : 'http://localhost:3000')
+    (process.env.NODE_ENV === 'production' ? 'https://www.mmourouh.dev' : 'http://localhost:3000')
 ).replace(/\/$/, '')

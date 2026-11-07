@@ -1,25 +1,8 @@
-import GoogleAnalytics from '@/components/GoogleAnalytics'
-import Header from '@/components/Header'
 import data from '@/data/user.json'
-import profiles from '@/data/profiles.json'
 import { siteUrl } from '@/lib/site'
-import { roboto, tajawal, space_grotesk } from '@/fonts/fonts'
-import { GlobalStyle } from '@/styles/styled-components/Global'
+import { roboto, tajawal, space_grotesk, instrument_serif } from '@/fonts/fonts'
 import StyledComponentsRegistry from '../lib/registry'
 import { Provider } from './providers'
-
-// Structured data so search engines understand who the site is about (rich results)
-const personJsonLd = {
-    '@context': 'https://schema.org',
-    '@type': 'Person',
-    name: data.user.name,
-    jobTitle: data.user.title,
-    url: siteUrl,
-    image: `${siteUrl}/opengraph-image`,
-    address: { '@type': 'PostalAddress', addressLocality: 'Casablanca', addressCountry: 'MA' },
-    sameAs: Object.values(profiles.data).filter(Boolean),
-    knowsAbout: ['Java', 'Spring Boot', 'React', 'Next.js', 'Angular', 'Vue.js', 'TypeScript', 'Node.js', 'Python', 'AI'],
-}
 
 const title = `${data.user.name} | ${data.user.title} | Portfolio`
 const description = `${data.user.name}, ${data.user.title} based in ${data.user.address}. I build scalable web platforms, enterprise systems and AI-powered products with Java, Spring Boot, React and Next.js.`
@@ -50,27 +33,23 @@ export default function RootLayout({
     children: React.ReactNode
 }) {
     return (
-        <html lang="en">
-            <body className={`${roboto.variable} ${tajawal.variable} ${space_grotesk.variable}`}>
-                <GoogleAnalytics GA_MEASUREMENT_ID={process.env.GA_TRACKING_ID!} />
+        <html lang="en" suppressHydrationWarning>
+            <head>
+                {/* Before first paint: lets CSS start the hero words hidden inside their reserved space
+                    (no layout jump, no flash). A CSS fallback reveals them if JS never runs the animation. */}
                 <script
-                    type="application/ld+json"
-                    dangerouslySetInnerHTML={{ __html: JSON.stringify(personJsonLd) }}
+                    dangerouslySetInnerHTML={{
+                        __html: "try{if(!matchMedia('(prefers-reduced-motion: reduce)').matches)document.documentElement.classList.add('js-anim')}catch(e){}",
+                    }}
                 />
-                <noscript>
-                    <iframe
-                        src={`https://www.googletagmanager.com/ns.html?id=${process.env.GA_TRACKING_ID!}`}
-                        height="0"
-                        width="0"
-                        className="gtm-iframe"
-                    ></iframe>
-                </noscript>
+            </head>
+            {/* GSAP ScrollTrigger touches body.style while measuring (before hydration): not a real mismatch */}
+            <body
+                className={`${roboto.variable} ${tajawal.variable} ${space_grotesk.variable} ${instrument_serif.variable}`}
+                suppressHydrationWarning
+            >
                 <StyledComponentsRegistry>
-                    <Provider>
-                        <GlobalStyle />
-                        <Header />
-                        {children}
-                    </Provider>
+                    <Provider>{children}</Provider>
                 </StyledComponentsRegistry>
             </body>
         </html>

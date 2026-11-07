@@ -24,6 +24,9 @@ export const StyledDiv = styled.div`
         }
     }
     .links {
+        @media (hover: none) {
+            display: none !important;
+        }
         position: fixed;
         right: 10px;
         bottom: 20px;
