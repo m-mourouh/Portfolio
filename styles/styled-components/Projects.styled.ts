@@ -79,6 +79,118 @@ export const StyledProjects = styled.section`
         }
     }
 
+    /* "View All Projects": compact list of the remaining projects */
+    .more-projects {
+        list-style: none;
+        margin: 40px 0 0;
+        padding: 0;
+        border-top: 1px solid rgb(41, 41, 41);
+    }
+
+    .more-row {
+        width: 100%;
+        display: grid;
+        grid-template-columns: minmax(180px, 1.1fr) 2fr minmax(140px, 1fr) 24px;
+        gap: 24px;
+        align-items: center;
+        padding: 22px 12px;
+        background: none;
+        border: none;
+        border-bottom: 1px solid rgb(41, 41, 41);
+        color: inherit;
+        text-align: start;
+        cursor: pointer;
+        font-family: var(--font-general-sans);
+        transition: background-color 0.25s ease;
+
+        .more-name {
+            font-size: 1.15rem;
+            font-weight: 500;
+            color: var(--white);
+            transition: color 0.25s ease;
+        }
+
+        .more-desc {
+            color: #888;
+            font-size: 0.95rem;
+            line-height: 1.5;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .more-stack {
+            color: #666;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .more-arrow {
+            font-size: 1.2rem;
+            color: #666;
+            transition: color 0.25s ease, transform 0.25s ease;
+        }
+
+        &:hover,
+        &:focus-visible {
+            background-color: rgb(26, 26, 26);
+            outline: none;
+
+            .more-name,
+            .more-arrow {
+                color: #c4ff00;
+            }
+
+            .more-arrow {
+                transform: translate(2px, -2px);
+            }
+        }
+
+        @media ${device.sm} {
+            grid-template-columns: 1fr 24px;
+            gap: 6px 12px;
+            padding: 18px 4px;
+
+            .more-desc,
+            .more-stack {
+                grid-column: 1 / 2;
+            }
+
+            .more-arrow {
+                grid-row: 1;
+                grid-column: 2;
+            }
+        }
+    }
+
+    .view-all-wrap {
+        display: flex;
+        justify-content: center;
+        margin-top: 48px;
+    }
+
+    .view-all-toggle {
+        padding: 14px 28px;
+        border-radius: 12px;
+        border: 1px solid rgb(57, 57, 57);
+        background: rgb(32, 32, 32);
+        color: var(--white);
+        font-family: var(--font-general-sans);
+        font-size: 1rem;
+        font-weight: 500;
+        cursor: pointer;
+        transition: border-color 0.25s ease, background-color 0.25s ease;
+
+        &:hover,
+        &:focus-visible {
+            border-color: #c4ff00;
+            background: rgb(40, 40, 40);
+            outline: none;
+        }
+    }
+
     .projects-list {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
@@ -96,6 +208,41 @@ export const StyledProjects = styled.section`
             border: 1px solid rgb(41, 41, 41);
             border-radius: 16px;
             overflow: hidden;
+            cursor: pointer;
+            transition: border-color 0.3s ease;
+
+            &:hover,
+            &:focus-visible {
+                border-color: rgb(70, 70, 70);
+                outline: none;
+            }
+
+            &:focus-visible {
+                border-color: #c4ff00;
+            }
+
+            /* "View details" hint shown on hover */
+            .view-details {
+                position: absolute;
+                left: 20px;
+                bottom: 20px;
+                padding: 8px 16px;
+                border-radius: 999px;
+                background: rgba(20, 20, 20, 0.85);
+                border: 1px solid rgba(196, 255, 0, 0.4);
+                color: #c4ff00;
+                font-size: 0.9rem;
+                font-weight: 500;
+                opacity: 0;
+                transform: translateY(10px);
+                transition: opacity 0.3s ease, transform 0.3s ease;
+                pointer-events: none;
+
+                @media ${device.sm} {
+                    left: 16px;
+                    bottom: 16px;
+                }
+            }
 
             .card-link {
                 display: block;
@@ -184,6 +331,11 @@ export const StyledProjects = styled.section`
 
                     .image-overlay {
                         opacity: 1;
+
+                        .view-details {
+                            opacity: 1;
+                            transform: translateY(0);
+                        }
 
                         .link-icon {
                             opacity: 1;

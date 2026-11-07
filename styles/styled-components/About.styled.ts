@@ -65,15 +65,6 @@ export const StyledAbout = styled.section`
                     gap: 8px;
                     /* color: #c4ff00; */
                     font-weight: 500;
-
-                    .flag {
-                        display: inline-block;
-                        width: 28px;
-                        height: 20px;
-                        object-fit: cover;
-                        border-radius: 2px;
-                        vertical-align: middle;
-                    }
                 }
             }
 

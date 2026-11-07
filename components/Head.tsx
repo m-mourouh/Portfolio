@@ -1,15 +1,15 @@
 'use client'
 import { StyledSelection } from '@/styles/styled-components/Head.styled'
 import data from '@/data/user.json'
-import profilesData from '@/data/profiles.json'
 import { StyledButton } from '@/styles/styled-components/Button.styled'
 import { useEffect, useRef } from 'react'
 import { gsap } from 'gsap'
-import GalaxyEffect from './GalaxyEffect'
+import HeroGrid3D from './HeroGrid3D'
 import { Link } from 'react-scroll'
 import Image from 'next/image'
 import ProfilePic from '@/public/images/mohamed_mourouh.jpeg'
 import { useLanguage } from '@/contexts/LanguageContext'
+import { openContactDrawer } from '@/lib/contactDrawer'
 
 export default function Head() {
     const { t } = useLanguage()
@@ -27,7 +27,7 @@ export default function Head() {
                     opacity: 0,
                     stagger: 0.1,
                     y: 10,
-                    delay: 3,
+                    delay: 1.9,
                 })
                 .to(block, {
                     y: 0,
@@ -47,7 +47,7 @@ export default function Head() {
 
     return (
         <StyledSelection ref={container} id='head'>
-            <GalaxyEffect />
+            <HeroGrid3D />
             <div className="wrapper">
                 <div className="status animate">
                     <div className="status-image">
@@ -67,10 +67,9 @@ export default function Head() {
                 <h1 className="animate" dangerouslySetInnerHTML={{ __html: t('hero.subtitle') }} />
                 <div className="buttons-wrapper animate">
                     <StyledButton
-                        as="a"
-                        href={profilesData.data.linkedin}
-                        target="_blank"
-                        rel="noopener noreferrer"
+                        as="button"
+                        onClick={openContactDrawer}
+                        aria-haspopup="dialog"
                         $primary
                     >
                         {t('hero.viewWork')}

@@ -9,6 +9,7 @@
                 "website": "https://quran-ai-app.vercel.app/"
             },
             "image": "quran-ai-app.jpg",
+            "gallery": ["quran-ai-app.jpg", "quran-ai-app-1.png"],
             "hidden": false
         },
         {
@@ -23,7 +24,7 @@
             "hidden": false
         },
         {
-            "name": "Channel",
+            "name": "Chanel",
             "description": "Luxury high jewelry showcase for Chanel featuring elegant product displays, interactive catalogs, and premium shopping experience.",
             "stack": ["JSTL", "SCSS", "JS", "React"],
             "links": {
@@ -111,34 +112,12 @@
             "hidden": false
         },
         {
-            "name": "Socotec",
-            "description": "Construction inspection and monitoring platform for technical control, compliance verification, and project management.",
-            "stack": ["Vue", "Python", "Django"],
-            "links": {
-                "github": "",
-                "website": "https://amos.socotec.com"
-            },
-            "image": "default-image.jpg",
-            "hidden": false
-        },
-        {
             "name": "COVID-19 DETECTION APP",
             "description": "Machine learning web application for COVID-19 detection from chest X-ray images using deep learning algorithms.",
             "stack": ["HTML", "SCSS", "JS", "Python", "Flask", "ML"],
             "links": {
                 "github": "https://github.com/m-mourouh/Covid-19-Detection-Web-Application",
                 "website": ""
-            },
-            "image": "default-image.jpg",
-            "hidden": false
-        },
-        {
-            "name": "Instant beauté",
-            "description": "Beauty salon website with online booking system, service catalog, gallery, and customer appointment management.",
-            "stack": ["HTML", "CSS", "JS", "PHP", "MYSQL"],
-            "links": {
-                "github": "",
-                "website": "https://www.instant-beaute-by-anastasia.fr"
             },
             "image": "default-image.jpg",
             "hidden": false
@@ -154,51 +133,7 @@
             "image": "default-image.jpg",
             "hidden": true
         },
-        {
-            "name": "LE NEW GOA",
-            "description": "Indian restaurant website featuring online menu, table reservations, food ordering system, and delivery tracking.",
-            "stack": ["HTML", "CSS", "JS", "PHP", "MYSQL"],
-            "links": {
-                "github": "",
-                "website": "https://www.restaurantindien-toulouse.fr"
-            },
-            "image": "default-image.jpg",
-            "hidden": false
-        },
-        {
-            "name": "BOIS DÉTAIL",
-            "description": "Woodworking and carpentry business website showcasing custom furniture, renovation projects, and service portfolio.",
-            "stack": ["HTML", "CSS", "JS", "PHP", "MYSQL"],
-            "links": {
-                "github": "",
-                "website": "https://www.bois-detail.fr"
-            },
-            "image": "default-image.jpg",
-            "hidden": false
-        },
 
-        {
-            "name": "Solene Delacroix",
-            "description": "Professional photographer portfolio featuring wedding, portrait, and event photography with gallery and booking system.",
-            "stack": ["HTML", "CSS", "JS", "PHP", "MYSQL"],
-            "links": {
-                "github": "",
-                "website": "https://www.s-delacroix-photographe.fr"
-            },
-            "image": "default-image.jpg",
-            "hidden": false
-        },
-        {
-            "name": "2MJ",
-            "description": "Interior design and home fitting company website with project showcase, service descriptions, and quote request system.",
-            "stack": ["HTML", "CSS", "JS", "PHP", "MYSQL"],
-            "links": {
-                "github": "",
-                "website": "https://www.2mjagencement.fr"
-            },
-            "image": "default-image.jpg",
-            "hidden": false
-        },
         {
             "name": "Jungle Pizza",
             "description": "Pizzeria website with online ordering, menu display, delivery zone coverage, and real-time order tracking.",
@@ -209,63 +144,6 @@
             },
             "image": "default-image.jpg",
             "hidden": true
-        },
-        {
-            "name": "Boutin David",
-            "description": "Professional painting services website featuring project gallery, service offerings, and customer quote management system.",
-            "stack": ["HTML", "CSS", "JS", "PHP", "MYSQL"],
-            "links": {
-                "github": "",
-                "website": "https://www.boutin-peinture.fr"
-            },
-            "image": "default-image.jpg",
-            "hidden": false
-        },
-        {
-            "name": "GARAGE ONCINS",
-            "description": "Auto repair garage website with service booking, vehicle diagnostics, maintenance packages, and customer portal.",
-            "stack": ["HTML", "CSS", "JS", "PHP", "MYSQL"],
-            "links": {
-                "github": "",
-                "website": "https://www.garage-oncins.fr"
-            },
-            "image": "default-image.jpg",
-            "hidden": false
-        },
-        {
-            "name": "Gourvat",
-            "description": "Landscaping and gardening services website showcasing outdoor projects, maintenance plans, and online consultation booking.",
-            "stack": ["HTML", "CSS", "JS", "PHP", "MYSQL"],
-            "links": {
-                "github": "",
-                "website": "https://www.gourvat-paysagiste.com"
-            },
-            "image": "default-image.jpg",
-            "hidden": false
-        },
-
-        {
-            "name": "AURELIE LEJEUNE",
-            "description": "Artist and photographer portfolio website featuring creative works, exhibition calendar, and artwork purchase system.",
-            "stack": ["HTML", "CSS", "JS", "PHP", "MYSQL"],
-            "links": {
-                "github": "",
-                "website": "https://www.aurelielejeune.fr"
-            },
-            "image": "default-image.jpg",
-            "hidden": false
-        },
-
-        {
-            "name": "LE GRAND MENAGE",
-            "description": "Professional cleaning services platform with online booking, service packages, recurring appointments, and customer management.",
-            "stack": ["HTML", "CSS", "JS", "PHP", "MYSQL"],
-            "links": {
-                "github": "",
-                "website": "https://www.legrandmenage33.fr"
-            },
-            "image": "default-image.jpg",
-            "hidden": false
         }
     ]
 }

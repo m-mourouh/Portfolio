@@ -10,9 +10,15 @@ import Image from 'next/image'
 import Logo from '@/public/images/logo.svg'
 import LanguageSwitcher from './LanguageSwitcher'
 import { useLanguage } from '@/contexts/LanguageContext'
+import { openContactDrawer } from '@/lib/contactDrawer'
+import { openCommandMenu } from '@/lib/commandMenu'
+import { FiSearch } from 'react-icons/fi'
 export default function NavBar() {
     const { t } = useLanguage()
     const [toggle, setToggle] = useState(false)
+    // Shortcut hint: ⌘K on Apple devices, Ctrl K elsewhere (detected after mount to avoid hydration mismatch)
+    const [isMac, setIsMac] = useState(false)
+    useEffect(() => setIsMac(/Mac|iPhone|iPad/.test(navigator.platform)), [])
     const container = useRef<HTMLDivElement>(null)
     const tl = useRef<GSAPTimeline | null>(null)
     useEffect(() => {
@@ -100,20 +106,40 @@ export default function NavBar() {
                 </div>
                 <StyledButton
                     className="link mobile-btn nav-btn"
-                    onClick={toggleMenu}
+                    onClick={(e: React.MouseEvent) => {
+                        e.preventDefault()
+                        toggleMenu()
+                        openContactDrawer()
+                    }}
                     as="a"
                     href={`mailto:${userData.user.email}`}
+                    aria-haspopup="dialog"
                     $outline
                 >
                     {t('nav.contactMe')}
                 </StyledButton>
             </div>
             <div className="nav-button-wrapper">
+                <button
+                    type="button"
+                    className="cmd-btn"
+                    onClick={openCommandMenu}
+                    aria-label={t('cmd.buttonLabel')}
+                    title={t('cmd.buttonLabel')}
+                >
+                    <FiSearch aria-hidden="true" />
+                    <kbd>{isMac ? '⌘K' : 'Ctrl K'}</kbd>
+                </button>
                 <LanguageSwitcher />
                 <StyledButton
                     className="link nav-btn"
                     as="a"
                     href={`mailto:${userData.user.email}`}
+                    onClick={(e: React.MouseEvent) => {
+                        e.preventDefault()
+                        openContactDrawer()
+                    }}
+                    aria-haspopup="dialog"
                     $outline
                 >
                     {t('nav.contactMe')}

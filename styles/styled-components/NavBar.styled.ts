@@ -175,6 +175,44 @@ export const StyledNav = styled.nav`
         .link {
             display: inline-block;
         }
+
+        /* Opens the command menu (Ctrl+K / ⌘K) */
+        .cmd-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            height: 50px;
+            padding: 0 14px;
+            border-radius: 12px;
+            border: 1px solid rgb(57, 57, 57);
+            background: rgb(44, 44, 44);
+            color: #bbb;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: border-color 0.25s ease, color 0.25s ease;
+
+            kbd {
+                font-family: var(--font-general-sans);
+                font-size: 0.75rem;
+                padding: 2px 7px;
+                border-radius: 6px;
+                border: 1px solid rgb(70, 70, 70);
+                color: #999;
+            }
+
+            &:hover,
+            &:focus-visible {
+                border-color: rgb(90, 90, 90);
+                color: var(--white);
+                outline: none;
+            }
+
+            @media ${device.lg} {
+                kbd {
+                    display: none;
+                }
+            }
+        }
     }
 
     .menu-icon {

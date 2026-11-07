@@ -3,20 +3,21 @@
     "home": "Accueil",
     "skills": "Compétences",
     "work": "Projets",
+    "articles": "Articles",
     "about": "À propos",
     "contact": "Contact",
     "contactMe": "Contactez-Moi"
   },
   "hero": {
     "greeting": "Salut 👋, je m'appelle",
-    "subtitle": "Mohamed Mourouh Est Un Ingénieur Logiciel Expérimenté Qui <span>Crée Des Sites Web Performants Et Magnifiques.</span>",
+    "subtitle": "Mohamed Mourouh Est Un Ingénieur Logiciel Qui <span>Conçoit Des Plateformes Web Évolutives, Des Systèmes D'Entreprise Et Des Produits Propulsés Par L'IA.</span>",
     "viewWork": "Engagez-Moi",
     "contactMe": "Défiler Vers Le Bas ↓",
     "available": "Disponible pour travailler"
   },
   "about": {
     "title": "À Propos de Moi",
-    "introduction": "Je suis un ingénieur logiciel passionné basé au <span class=\"morocco\">Maroc <img src=\"/images/morocco.png\" alt=\"Drapeau du Maroc\" class=\"flag\" /></span> Je crée des applications web créatives qui sont à la fois visuellement époustouflantes et conviviales. Je m'engage à fournir des solutions de haute qualité qui dépassent les attentes. <span class=\"secondary-text\">En mettant l'accent sur l'innovation et la résolution de problèmes, je me consacre à aider les entreprises et les particuliers à atteindre leurs objectifs numériques.</span>",
+    "introduction": "Je suis ingénieur logiciel basé au <span class=\"morocco\">Maroc</span>. Depuis plus de 7 ans, je conçois et développe des logiciels de bout en bout : des plateformes e-commerce d'entreprise en Java & Spring Boot pour des marques comme Carrefour et Chanel, des interfaces modernes en React, Angular et Vue, ainsi que des produits propulsés par l'IA. <span class=\"secondary-text\">J'attache une grande importance à une architecture propre, à la performance et à l'expérience utilisateur, et j'aide les équipes à transformer des besoins complexes en produits fiables.</span>",
     "thankYou": "Merci d'avoir pris le temps d'en savoir plus sur moi et mon travail.",
     "yearsExperience": "Années d'Expérience",
     "projectsCompleted": "Projets Réalisés",
@@ -54,6 +55,7 @@
   "projects": {
     "title": "Mes <span class=\"secondary-text\">Projets</span> Phares",
     "viewAll": "Voir Tous les Projets",
+    "showLess": "Voir Moins",
     "liveDemo": "Démo en Direct",
     "sourceCode": "Code Source",
     "descriptions": {
@@ -67,21 +69,15 @@
       "chatGptV11": "Chatbot IA amélioré avec UI/UX optimisée, conversations persistantes et gestion d'état avancée avec Redux.",
       "translationApp": "Application de traduction multilingue avec traduction de texte en temps réel, détection de langue et historique de traduction.",
       "hospitalManagement": "Solution complète de gestion hospitalière avec dossiers patients, planification de rendez-vous, gestion des médecins et inventaire médical.",
-      "socotec": "Plateforme d'inspection et de suivi de construction pour contrôle technique, vérification de conformité et gestion de projets.",
       "covidDetection": "Application web d'apprentissage automatique pour la détection du COVID-19 à partir d'images radiographiques thoraciques utilisant des algorithmes d'apprentissage profond.",
-      "instantBeaute": "Site web de salon de beauté avec système de réservation en ligne, catalogue de services, galerie et gestion des rendez-vous clients.",
       "edenCosmetique": "Plateforme e-commerce de cosmétiques et produits de beauté avec catalogue de produits, panier d'achat et intégration de paiement sécurisé.",
-      "leNewGoa": "Site web de restaurant indien proposant menu en ligne, réservations de tables, système de commande de nourriture et suivi de livraison.",
-      "boisDetail": "Site web d'entreprise de menuiserie et ébénisterie présentant meubles sur mesure, projets de rénovation et portfolio de services.",
-      "soleneDelacroix": "Portfolio de photographe professionnelle présentant photographie de mariage, portraits et événements avec galerie et système de réservation.",
-      "2mj": "Site web d'entreprise de design d'intérieur et d'agencement avec présentation de projets, descriptions de services et système de demande de devis.",
-      "junglePizza": "Site web de pizzeria avec commande en ligne, affichage du menu, couverture de zone de livraison et suivi de commande en temps réel.",
-      "boutinDavid": "Site web de services de peinture professionnels présentant galerie de projets, offres de services et système de gestion de devis clients.",
-      "garageOncins": "Site web de garage de réparation automobile avec réservation de services, diagnostics véhicules, forfaits d'entretien et portail client.",
-      "gourvat": "Site web de services d'aménagement paysager et de jardinage présentant projets extérieurs, plans d'entretien et réservation de consultation en ligne.",
-      "aurelieLejeune": "Site web portfolio d'artiste et photographe présentant œuvres créatives, calendrier d'expositions et système d'achat d'œuvres d'art.",
-      "leGrandMenage": "Plateforme de services de nettoyage professionnels avec réservation en ligne, forfaits de services, rendez-vous récurrents et gestion client."
-    }
+      "junglePizza": "Site web de pizzeria avec commande en ligne, affichage du menu, couverture de zone de livraison et suivi de commande en temps réel."
+    },
+    "viewDetails": "Voir les détails",
+    "close": "Fermer",
+    "techStack": "Technologies",
+    "role": "Mon rôle",
+    "highlights": "Points forts"
   },
   "contact": {
     "title": "Prenons <span class=\"secondary-text\">Contact</span>",
@@ -122,5 +118,38 @@
     "madeWith": "Fait avec",
     "by": "par",
     "name": "Mohamed Mourouh"
+  },
+  "contactDrawer": {
+    "title": "Travaillons ensemble",
+    "subtitle": "Parlez-moi de votre projet ou contactez-moi directement. Je réponds généralement sous 24 heures.",
+    "copy": "Copier",
+    "copied": "Copié !",
+    "orMessage": "ou envoyez un message",
+    "sentTitle": "Message envoyé !",
+    "sentText": "Merci pour votre message. Je vous répondrai très bientôt.",
+    "close": "Fermer"
+  },
+  "articles": {
+    "title": "Derniers <span class=\"secondary-text\">Articles</span>",
+    "viewAll": "Plus sur Medium",
+    "minRead": "{{count}} min de lecture"
+  },
+  "cmd": {
+    "buttonLabel": "Recherche et actions rapides",
+    "placeholder": "Tapez une commande ou recherchez…",
+    "noResults": "Aucun résultat",
+    "articles": "Articles",
+    "openContact": "Ouvrir le formulaire de contact",
+    "copyEmail": "Copier l'adresse e-mail",
+    "emailCopied": "E-mail copié dans le presse-papiers",
+    "hintNavigate": "naviguer",
+    "hintSelect": "choisir",
+    "hintClose": "fermer",
+    "groups": {
+      "navigation": "Navigation",
+      "projects": "Projets",
+      "actions": "Actions",
+      "language": "Langue"
+    }
   }
 }

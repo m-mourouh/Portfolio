@@ -20,6 +20,7 @@ export const StyledSelection = styled.section`
 
     .wrapper {
         position: relative;
+        z-index: 1;
         display: flex;
         flex-direction: column;
         justify-content: center;

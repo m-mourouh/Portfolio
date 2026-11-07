@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import { HiOutlineExternalLink } from 'react-icons/hi'
 import { VscGithubAlt } from 'react-icons/vsc'
-import Link from 'next/link'
+import { useRef } from 'react'
 import { useLanguage } from '@/contexts/LanguageContext'
 
 type ProjectType = {
@@ -15,14 +15,16 @@ type ProjectType = {
         }
         image: string
     }
+    /** Opens the project popup; receives the card image to animate from. */
+    onOpen?: (imageEl: HTMLElement | null) => void
 }
 
 // Helper function to map project names to translation keys
-const getProjectKey = (projectName: string): string => {
+export const getProjectKey = (projectName: string): string => {
     const keyMap: { [key: string]: string } = {
         'Quran AI': 'quranAi',
         'Carrefour': 'carrefour',
-        'Channel': 'channel',
+        'Chanel': 'channel',
         'Visilab': 'visilab',
         'Mcoptic': 'mcoptic',
         'Linsenmax': 'linsenmax',
@@ -30,29 +32,34 @@ const getProjectKey = (projectName: string): string => {
         'Chat GPT Clone V.1.1': 'chatGptV11',
         'Translation APP': 'translationApp',
         'Hospital Management System': 'hospitalManagement',
-        'Socotec': 'socotec',
         'COVID-19 DETECTION APP': 'covidDetection',
-        'Instant beauté': 'instantBeaute',
         'Eden cosmetique': 'edenCosmetique',
-        'LE NEW GOA': 'leNewGoa',
-        'BOIS DÉTAIL': 'boisDetail',
-        'Solene Delacroix': 'soleneDelacroix',
-        '2MJ': '2mj',
-        'Jungle Pizza': 'junglePizza',
-        'Boutin David': 'boutinDavid',
-        'GARAGE ONCINS': 'garageOncins',
-        'Gourvat': 'gourvat',
-        'AURELIE LEJEUNE': 'aurelieLejeune',
-        'LE GRAND MENAGE': 'leGrandMenage'
+        'Jungle Pizza': 'junglePizza'
     }
     return keyMap[projectName] || projectName.toLowerCase().replace(/\s+/g, '')
 }
 
-export default function ProjectCard({ project }: ProjectType) {
+export default function ProjectCard({ project, onOpen }: ProjectType) {
     const { t } = useLanguage()
+    const imageRef = useRef<HTMLDivElement>(null)
+    const open = () => onOpen?.(imageRef.current)
+
     return (
-        <div className="project-card">
-            <div className="project-image">
+        <div
+            className="project-card"
+            role="button"
+            tabIndex={0}
+            aria-haspopup="dialog"
+            aria-label={`${t('projects.viewDetails')}: ${project.name}`}
+            onClick={open}
+            onKeyDown={(e) => {
+                if (e.target === e.currentTarget && (e.key === 'Enter' || e.key === ' ')) {
+                    e.preventDefault()
+                    open()
+                }
+            }}
+        >
+            <div className="project-image" ref={imageRef}>
                 <Image
                     src={require(`../public/images/${
                         project.image || 'default-image.jpg'
@@ -61,6 +68,7 @@ export default function ProjectCard({ project }: ProjectType) {
                     loading="lazy"
                 />
                 <div className="image-overlay">
+                    <span className="view-details">{t('projects.viewDetails')} →</span>
                     <div className="card-links">
                         {project.links.github && (
                             <a

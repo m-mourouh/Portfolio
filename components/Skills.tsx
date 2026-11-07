@@ -23,7 +23,7 @@ export default function Skills() {
 
         const cards = section.querySelectorAll('.skill-card')
 
-        gsap.fromTo(
+        const tween = gsap.fromTo(
             cards,
             { opacity: 0, y: 60, scale: 0.95 },
             {
@@ -41,8 +41,10 @@ export default function Skills() {
             }
         )
 
+        // Only clean up this section's animation, not every ScrollTrigger on the page
         return () => {
-            ScrollTrigger.getAll().forEach(trigger => trigger.kill())
+            tween.scrollTrigger?.kill()
+            tween.kill()
         }
     }, [])
 

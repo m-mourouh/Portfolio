@@ -1,58 +1,10 @@
 'use client'
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 import { device } from './Breakpoints'
 import { padding, selection, titleFont, titleLine } from './Helpers'
 
-export const StyledSection = styled.section`
-    ${padding()}
-    padding-top: 120px;
-    padding-bottom: 100px;
-    position: relative;
-    min-height: 100vh;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-
-    @media ${device.sm} {
-        padding-top: 80px;
-        padding-bottom: 80px;
-    }
-
-    .contact-header {
-        text-align: center;
-        margin-bottom: 60px;
-
-        @media ${device.sm} {
-            margin-bottom: 40px;
-        }
-
-        h1 {
-            font-family: var(--font-general-sans);
-            font-size: clamp(2.5rem, 5vw, 4rem);
-            font-weight: 400;
-            line-height: 1.2;
-            color: var(--white);
-            margin: 0 0 20px 0;
-            ${selection(true, '#fff')}
-
-            .secondary-text {
-                color: #888;
-                font-weight: 300;
-            }
-        }
-
-        .subtitle {
-            font-family: var(--font-general-sans);
-            font-size: clamp(1rem, 2vw, 1.25rem);
-            color: #888;
-            font-weight: 300;
-            line-height: 1.6;
-            max-width: 600px;
-            margin: 0 auto;
-        }
-    }
-    form {
+// Form styles shared by the Contact section and the contact popup
+export const contactFormStyles = css`
         max-width: 700px;
         width: 100%;
         display: flex;
@@ -204,5 +156,58 @@ export const StyledSection = styled.section`
                 font-size: 0.95rem;
             }
         }
+`
+
+export const StyledSection = styled.section`
+    ${padding()}
+    padding-top: 120px;
+    padding-bottom: 100px;
+    position: relative;
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    @media ${device.sm} {
+        padding-top: 80px;
+        padding-bottom: 80px;
+    }
+
+    .contact-header {
+        text-align: center;
+        margin-bottom: 60px;
+
+        @media ${device.sm} {
+            margin-bottom: 40px;
+        }
+
+        h1 {
+            font-family: var(--font-general-sans);
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-weight: 400;
+            line-height: 1.2;
+            color: var(--white);
+            margin: 0 0 20px 0;
+            ${selection(true, '#fff')}
+
+            .secondary-text {
+                color: #888;
+                font-weight: 300;
+            }
+        }
+
+        .subtitle {
+            font-family: var(--font-general-sans);
+            font-size: clamp(1rem, 2vw, 1.25rem);
+            color: #888;
+            font-weight: 300;
+            line-height: 1.6;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+    }
+    form {
+        ${contactFormStyles}
     }
 `

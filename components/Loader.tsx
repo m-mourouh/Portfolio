@@ -38,7 +38,7 @@ export default function Loader() {
         let timer: NodeJS.Timeout
 
         timer = setTimeout(() => {
-            gsap.to('.loader', { yPercent: 100, delay: 2 })
+            gsap.to('.loader', { yPercent: 100, delay: 1 })
             
         }, 800)
 
@@ -48,7 +48,7 @@ export default function Loader() {
         let timer: NodeJS.Timeout
         timer = setTimeout(() => {
             setShowLoader(false)
-        }, 5000)
+        }, 3500)
         return () => clearTimeout(timer)
     }, [])
     

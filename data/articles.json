@@ -1,0 +1,29 @@
+{
+    "profile": "https://medium.com/@mmourouh.dev",
+    "data": [
+        {
+            "title": "The Sprint Where Everything Was Built and Nothing Was Released",
+            "url": "https://medium.com/@mmourouh.job/the-sprint-where-everything-was-built-and-nothing-was-released-1e4a92e75aaa",
+            "date": "2026-11-07",
+            "readingTime": 4,
+            "tags": ["Agile", "DevOps", "AI"],
+            "image": "https://cdn-images-1.medium.com/max/1024/1*Nd7r3uaOmy8lnrQc8ph1CQ.jpeg"
+        },
+        {
+            "title": "Angular 21: The Production-Ready Developer’s Guide to What Actually Matters",
+            "url": "https://medium.com/@mmourouh.dev/angular-21-the-production-ready-developers-guide-to-what-actually-matters-cbae59cd9b63",
+            "date": "2025-11-17",
+            "readingTime": 7,
+            "tags": ["Angular", "TypeScript", "Web Dev"],
+            "image": "https://cdn-images-1.medium.com/max/1024/1*cnYnMZG6lc8QXeBZ3okqwA.jpeg"
+        },
+        {
+            "title": "Java Exceptions",
+            "url": "https://medium.com/@mmourouh.dev/java-exceptions-52acd4aa749e",
+            "date": "2024-01-03",
+            "readingTime": 2,
+            "tags": ["Java", "Error Handling"],
+            "image": "https://cdn-images-1.medium.com/max/1024/0*yEYZiE4zMCKlxGU4.png"
+        }
+    ]
+}

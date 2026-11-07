@@ -142,7 +142,8 @@ export const StyledSkills = styled.section`
             }
 
             &.wide {
-                grid-column: span 2;
+                /* 3 of 4 columns so the last row (Certifications + Tools) is full */
+                grid-column: span 3;
                 grid-row: span 1;
 
                 @media ${device.lg} {

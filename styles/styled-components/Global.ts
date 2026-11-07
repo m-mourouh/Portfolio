@@ -44,6 +44,17 @@ export const GlobalStyle = createGlobalStyle`
       }
     }
 
+    /* Lenis smooth scroll: native smooth-behavior must be off while Lenis runs */
+    html.lenis, html.lenis body {
+        height: auto;
+    }
+    .lenis.lenis-smooth {
+        scroll-behavior: auto !important;
+    }
+    .lenis.lenis-stopped {
+        overflow: hidden;
+    }
+
     /* Apply Tajawal font for Arabic (RTL) - must come after body rules */
     html[dir="rtl"] body,
     html[dir="rtl"] * {

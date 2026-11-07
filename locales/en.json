@@ -3,20 +3,21 @@
     "home": "Home",
     "skills": "Skills",
     "work": "Work",
+    "articles": "Articles",
     "about": "About",
     "contact": "Contact",
     "contactMe": "Contact Me"
   },
   "hero": {
     "greeting": "Hi 👋, my name is",
-    "subtitle": "Mohamed Mourouh Is An Experienced Software Engineer Who <span>Creates High-Performing & Beautiful Websites.</span>",
+    "subtitle": "Mohamed Mourouh Is A Software Engineer Who <span>Builds Scalable Web Platforms, Enterprise Systems & AI-Powered Products.</span>",
     "viewWork": "Hire Me",
     "contactMe": "Scroll Down ↓",
     "available": "Available for work"
   },
   "about": {
     "title": "About Me",
-    "introduction": "I'm a passionate software engineer based in <span class=\"morocco\">Morocco <img src=\"/images/morocco.png\" alt=\"Morocco Flag\" class=\"flag\" /></span> I build creative web apps that are both visually stunning and user-friendly. I'm committed to delivering high-quality solutions that exceed expectations. <span class=\"secondary-text\">With a focus on innovation and problem-solving, I'm dedicated to helping businesses and individuals achieve their digital goals.</span>",
+    "introduction": "I'm a software engineer based in <span class=\"morocco\">Morocco</span>. For 7+ years I've been designing and building software end to end: enterprise e-commerce platforms with Java & Spring Boot for brands like Carrefour and Chanel, modern front-ends in React, Angular and Vue, and AI-powered products. <span class=\"secondary-text\">I care about clean architecture, performance and great user experience, and I help teams turn complex requirements into reliable products.</span>",
     "thankYou": "Thank you for taking the time to learn more about me and my work.",
     "yearsExperience": "Years of Experience",
     "projectsCompleted": "Projects Completed",
@@ -54,6 +55,7 @@
   "projects": {
     "title": "My Featured <span class=\"secondary-text\">Projects</span>",
     "viewAll": "View All Projects",
+    "showLess": "Show Less",
     "liveDemo": "Live Demo",
     "sourceCode": "Source Code",
     "descriptions": {
@@ -67,21 +69,15 @@
       "chatGptV11": "Enhanced AI chatbot with improved UI/UX, persistent conversations, and advanced state management using Redux.",
       "translationApp": "Multi-language translation application with real-time text translation, language detection, and translation history.",
       "hospitalManagement": "Complete hospital management solution with patient records, appointment scheduling, doctor management, and medical inventory.",
-      "socotec": "Construction inspection and monitoring platform for technical control, compliance verification, and project management.",
       "covidDetection": "Machine learning web application for COVID-19 detection from chest X-ray images using deep learning algorithms.",
-      "instantBeaute": "Beauty salon website with online booking system, service catalog, gallery, and customer appointment management.",
       "edenCosmetique": "Cosmetics and beauty products e-commerce platform with product catalog, shopping cart, and secure payment integration.",
-      "leNewGoa": "Indian restaurant website featuring online menu, table reservations, food ordering system, and delivery tracking.",
-      "boisDetail": "Woodworking and carpentry business website showcasing custom furniture, renovation projects, and service portfolio.",
-      "soleneDelacroix": "Professional photographer portfolio featuring wedding, portrait, and event photography with gallery and booking system.",
-      "2mj": "Interior design and home fitting company website with project showcase, service descriptions, and quote request system.",
-      "junglePizza": "Pizzeria website with online ordering, menu display, delivery zone coverage, and real-time order tracking.",
-      "boutinDavid": "Professional painting services website featuring project gallery, service offerings, and customer quote management system.",
-      "garageOncins": "Auto repair garage website with service booking, vehicle diagnostics, maintenance packages, and customer portal.",
-      "gourvat": "Landscaping and gardening services website showcasing outdoor projects, maintenance plans, and online consultation booking.",
-      "aurelieLejeune": "Artist and photographer portfolio website featuring creative works, exhibition calendar, and artwork purchase system.",
-      "leGrandMenage": "Professional cleaning services platform with online booking, service packages, recurring appointments, and customer management."
-    }
+      "junglePizza": "Pizzeria website with online ordering, menu display, delivery zone coverage, and real-time order tracking."
+    },
+    "viewDetails": "View details",
+    "close": "Close",
+    "techStack": "Tech stack",
+    "role": "My role",
+    "highlights": "Highlights"
   },
   "contact": {
     "title": "Get In <span class=\"secondary-text\">Touch</span>",
@@ -122,5 +118,38 @@
     "madeWith": "Made with",
     "by": "by",
     "name": "Mohamed Mourouh"
+  },
+  "contactDrawer": {
+    "title": "Let's work together",
+    "subtitle": "Tell me about your project, or reach me directly. I usually reply within 24 hours.",
+    "copy": "Copy",
+    "copied": "Copied!",
+    "orMessage": "or send a message",
+    "sentTitle": "Message sent!",
+    "sentText": "Thanks for reaching out. I'll get back to you soon.",
+    "close": "Close"
+  },
+  "articles": {
+    "title": "Latest <span class=\"secondary-text\">Writing</span>",
+    "viewAll": "More on Medium",
+    "minRead": "{{count}} min read"
+  },
+  "cmd": {
+    "buttonLabel": "Search & quick actions",
+    "placeholder": "Type a command or search…",
+    "noResults": "No results",
+    "articles": "Articles",
+    "openContact": "Open contact form",
+    "copyEmail": "Copy email address",
+    "emailCopied": "Email copied to clipboard",
+    "hintNavigate": "navigate",
+    "hintSelect": "select",
+    "hintClose": "close",
+    "groups": {
+      "navigation": "Navigation",
+      "projects": "Projects",
+      "actions": "Actions",
+      "language": "Language"
+    }
   }
 }
